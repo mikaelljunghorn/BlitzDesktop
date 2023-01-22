@@ -7,7 +7,7 @@ BlitzDesktop will make you able to run the sp_Blitz* stored procedures (provided
 -	You can save the output to disk in Excel files. These are named by server, stored procedure and date so you will have history saved.
 
 ## Prerequisites:
--	You need to have the sp_Blitz* stored procedures installed on your SQL server(s) found at https://www.brentozar.com/first-aid/.
+-	You need to have the sp_Blitz* stored procedures installed on your SQL server(s). The stored procedures can be found at https://www.brentozar.com/first-aid/.
 
 ## Preknowledge:
 -	You should be familiar with the sp_Blitz* stored procedures known as the First Responder Kit by Brent Ozar.
