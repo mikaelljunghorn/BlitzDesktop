@@ -47,7 +47,13 @@ Public Class Data
 
     Public Shared Function AsDataTable(serverName As String, commandText As String, commandType As CommandType, Optional connString As String = "") As DataTable
 
-        Return AsDataSet(serverName, commandText, commandType, connString).Tables(0)
+        Dim returnInfo As DataSet = AsDataSet(serverName, commandText, commandType, connString)
+
+        Try
+            Return returnInfo.Tables(0)
+        Catch ex As Exception
+            Return New DataTable
+        End Try
 
     End Function
 
