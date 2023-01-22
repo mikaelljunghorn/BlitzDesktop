@@ -15,18 +15,6 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_098B26AFEA83E7187CF001A31FFDEEA4"
-        "OwnerKey" = "8:_0E421E58E785B0A9737D8AE3DA47CC71"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_098B26AFEA83E7187CF001A31FFDEEA4"
-        "OwnerKey" = "8:_6F8AA891216D4D5FBC6B36826607C376"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_09A5E923B50246138C6FF2310479AD73"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -82,6 +70,18 @@
         "Entry"
         {
         "MsmKey" = "8:_49C9E094FF223A7C35AFB1ED7EB70844"
+        "OwnerKey" = "8:_6F8AA891216D4D5FBC6B36826607C376"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_4DF2315F77CA68C4E10DBCAD4425980F"
+        "OwnerKey" = "8:_0E421E58E785B0A9737D8AE3DA47CC71"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_4DF2315F77CA68C4E10DBCAD4425980F"
         "OwnerKey" = "8:_6F8AA891216D4D5FBC6B36826607C376"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -154,7 +154,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_098B26AFEA83E7187CF001A31FFDEEA4"
+        "OwnerKey" = "8:_4DF2315F77CA68C4E10DBCAD4425980F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -282,37 +282,6 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_098B26AFEA83E7187CF001A31FFDEEA4"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_098B26AFEA83E7187CF001A31FFDEEA4"
-                    {
-                    "Name" = "8:System.Runtime.CompilerServices.Unsafe.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:System.Runtime.CompilerServices.Unsafe.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_8CA51657469F461A8D6FFD63F748FA5B"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_09A5E923B50246138C6FF2310479AD73"
             {
             "SourcePath" = "8:..\\Readme.rtf"
@@ -491,6 +460,37 @@
                     }
                 }
             "SourcePath" = "8:System.Numerics.Vectors.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_8CA51657469F461A8D6FFD63F748FA5B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_4DF2315F77CA68C4E10DBCAD4425980F"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_4DF2315F77CA68C4E10DBCAD4425980F"
+                    {
+                    "Name" = "8:System.Runtime.CompilerServices.Unsafe.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:System.Runtime.CompilerServices.Unsafe.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_8CA51657469F461A8D6FFD63F748FA5B"
@@ -719,15 +719,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:BlitzDesktop"
-        "ProductCode" = "8:{46B86878-53F3-4BC1-BF2A-9A31A6227671}"
-        "PackageCode" = "8:{8FB7FF3F-BBFA-451A-BF34-863BFC23F862}"
+        "ProductCode" = "8:{DED0FEE2-B2CD-4F22-A60F-A22AC6790DA5}"
+        "PackageCode" = "8:{4EAB59E7-678A-4C06-BFD5-B49586EB4528}"
         "UpgradeCode" = "8:{0C752D49-A828-401A-8196-75484D134DFF}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:22.12.0"
+        "ProductVersion" = "8:22.12.1"
         "Manufacturer" = "8:Mikael Ljunghorn"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
