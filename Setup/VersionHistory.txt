@@ -1,7 +1,7 @@
 
-2022-12
+22.12.2
 Removed support for @Top for sp_BlitzWho.
 
-2022-12
+22.12.0
 First version
 

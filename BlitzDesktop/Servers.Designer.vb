@@ -22,6 +22,7 @@ Partial Class Servers
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Servers))
         Me.ddlDatabases = New System.Windows.Forms.ComboBox()
         Me.lblDatabase = New System.Windows.Forms.Label()
         Me.lblServers = New System.Windows.Forms.Label()
@@ -46,42 +47,47 @@ Partial Class Servers
         '
         Me.ddlDatabases.Enabled = False
         Me.ddlDatabases.FormattingEnabled = True
-        Me.ddlDatabases.Location = New System.Drawing.Point(447, 80)
+        Me.ddlDatabases.Location = New System.Drawing.Point(596, 98)
+        Me.ddlDatabases.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ddlDatabases.Name = "ddlDatabases"
-        Me.ddlDatabases.Size = New System.Drawing.Size(170, 21)
+        Me.ddlDatabases.Size = New System.Drawing.Size(225, 24)
         Me.ddlDatabases.TabIndex = 29
         '
         'lblDatabase
         '
         Me.lblDatabase.AutoSize = True
-        Me.lblDatabase.Location = New System.Drawing.Point(346, 82)
+        Me.lblDatabase.Location = New System.Drawing.Point(461, 101)
+        Me.lblDatabase.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblDatabase.Name = "lblDatabase"
-        Me.lblDatabase.Size = New System.Drawing.Size(93, 13)
+        Me.lblDatabase.Size = New System.Drawing.Size(117, 16)
         Me.lblDatabase.TabIndex = 28
         Me.lblDatabase.Text = "sp_Blitz database:"
         '
         'lblServers
         '
         Me.lblServers.AutoSize = True
-        Me.lblServers.Location = New System.Drawing.Point(24, 82)
+        Me.lblServers.Location = New System.Drawing.Point(32, 101)
+        Me.lblServers.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblServers.Name = "lblServers"
-        Me.lblServers.Size = New System.Drawing.Size(93, 13)
+        Me.lblServers.Size = New System.Drawing.Size(115, 16)
         Me.lblServers.TabIndex = 26
         Me.lblServers.Text = "New server name:"
         '
         'txtServer
         '
-        Me.txtServer.Location = New System.Drawing.Point(125, 80)
+        Me.txtServer.Location = New System.Drawing.Point(167, 98)
+        Me.txtServer.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtServer.Name = "txtServer"
-        Me.txtServer.Size = New System.Drawing.Size(170, 20)
+        Me.txtServer.Size = New System.Drawing.Size(225, 22)
         Me.txtServer.TabIndex = 31
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(24, 108)
+        Me.Label1.Location = New System.Drawing.Point(32, 133)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(78, 13)
+        Me.Label1.Size = New System.Drawing.Size(93, 16)
         Me.Label1.TabIndex = 32
         Me.Label1.Text = "Authentication:"
         '
@@ -89,51 +95,57 @@ Partial Class Servers
         '
         Me.ddlAuthentication.FormattingEnabled = True
         Me.ddlAuthentication.Items.AddRange(New Object() {"Windows Authentication", "SQL Server Authentication"})
-        Me.ddlAuthentication.Location = New System.Drawing.Point(125, 106)
+        Me.ddlAuthentication.Location = New System.Drawing.Point(167, 130)
+        Me.ddlAuthentication.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ddlAuthentication.Name = "ddlAuthentication"
-        Me.ddlAuthentication.Size = New System.Drawing.Size(170, 21)
+        Me.ddlAuthentication.Size = New System.Drawing.Size(225, 24)
         Me.ddlAuthentication.TabIndex = 33
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(24, 135)
+        Me.Label2.Location = New System.Drawing.Point(32, 166)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(61, 13)
+        Me.Label2.Size = New System.Drawing.Size(76, 16)
         Me.Label2.TabIndex = 34
         Me.Label2.Text = "User name:"
         '
         'txtUserName
         '
         Me.txtUserName.Enabled = False
-        Me.txtUserName.Location = New System.Drawing.Point(125, 133)
+        Me.txtUserName.Location = New System.Drawing.Point(167, 164)
+        Me.txtUserName.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtUserName.Name = "txtUserName"
-        Me.txtUserName.Size = New System.Drawing.Size(170, 20)
+        Me.txtUserName.Size = New System.Drawing.Size(225, 22)
         Me.txtUserName.TabIndex = 35
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(24, 161)
+        Me.Label3.Location = New System.Drawing.Point(32, 198)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(56, 13)
+        Me.Label3.Size = New System.Drawing.Size(70, 16)
         Me.Label3.TabIndex = 36
         Me.Label3.Text = "Password:"
         '
         'txtPassword
         '
         Me.txtPassword.Enabled = False
-        Me.txtPassword.Location = New System.Drawing.Point(125, 159)
+        Me.txtPassword.Location = New System.Drawing.Point(167, 196)
+        Me.txtPassword.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtPassword.Size = New System.Drawing.Size(170, 20)
+        Me.txtPassword.Size = New System.Drawing.Size(225, 22)
         Me.txtPassword.TabIndex = 37
         '
         'cmdConnect
         '
-        Me.cmdConnect.Location = New System.Drawing.Point(125, 195)
+        Me.cmdConnect.Location = New System.Drawing.Point(167, 240)
+        Me.cmdConnect.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cmdConnect.Name = "cmdConnect"
-        Me.cmdConnect.Size = New System.Drawing.Size(170, 23)
+        Me.cmdConnect.Size = New System.Drawing.Size(227, 28)
         Me.cmdConnect.TabIndex = 38
         Me.cmdConnect.Text = "Connect"
         Me.cmdConnect.UseVisualStyleBackColor = True
@@ -141,16 +153,18 @@ Partial Class Servers
         'ddlServers
         '
         Me.ddlServers.FormattingEnabled = True
-        Me.ddlServers.Location = New System.Drawing.Point(125, 23)
+        Me.ddlServers.Location = New System.Drawing.Point(167, 28)
+        Me.ddlServers.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ddlServers.Name = "ddlServers"
-        Me.ddlServers.Size = New System.Drawing.Size(170, 21)
+        Me.ddlServers.Size = New System.Drawing.Size(225, 24)
         Me.ddlServers.TabIndex = 39
         '
         'cmdRemoveServer
         '
-        Me.cmdRemoveServer.Location = New System.Drawing.Point(301, 23)
+        Me.cmdRemoveServer.Location = New System.Drawing.Point(401, 28)
+        Me.cmdRemoveServer.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cmdRemoveServer.Name = "cmdRemoveServer"
-        Me.cmdRemoveServer.Size = New System.Drawing.Size(140, 21)
+        Me.cmdRemoveServer.Size = New System.Drawing.Size(187, 26)
         Me.cmdRemoveServer.TabIndex = 40
         Me.cmdRemoveServer.Text = "Remove selected server"
         Me.cmdRemoveServer.UseVisualStyleBackColor = True
@@ -158,27 +172,30 @@ Partial Class Servers
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(24, 26)
+        Me.Label4.Location = New System.Drawing.Point(32, 32)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(78, 13)
+        Me.Label4.Size = New System.Drawing.Size(98, 16)
         Me.Label4.TabIndex = 41
         Me.Label4.Text = "Saved servers:"
         '
         'cmdSave
         '
         Me.cmdSave.Enabled = False
-        Me.cmdSave.Location = New System.Drawing.Point(349, 288)
+        Me.cmdSave.Location = New System.Drawing.Point(465, 354)
+        Me.cmdSave.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cmdSave.Name = "cmdSave"
-        Me.cmdSave.Size = New System.Drawing.Size(75, 23)
+        Me.cmdSave.Size = New System.Drawing.Size(100, 28)
         Me.cmdSave.TabIndex = 42
         Me.cmdSave.Text = "Save"
         Me.cmdSave.UseVisualStyleBackColor = True
         '
         'cmdCancel
         '
-        Me.cmdCancel.Location = New System.Drawing.Point(171, 288)
+        Me.cmdCancel.Location = New System.Drawing.Point(228, 354)
+        Me.cmdCancel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cmdCancel.Name = "cmdCancel"
-        Me.cmdCancel.Size = New System.Drawing.Size(75, 23)
+        Me.cmdCancel.Size = New System.Drawing.Size(100, 28)
         Me.cmdCancel.TabIndex = 43
         Me.cmdCancel.Text = "Cancel"
         Me.cmdCancel.UseVisualStyleBackColor = True
@@ -186,25 +203,28 @@ Partial Class Servers
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(346, 114)
+        Me.Label5.Location = New System.Drawing.Point(461, 140)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(261, 13)
+        Me.Label5.Size = New System.Drawing.Size(329, 16)
         Me.Label5.TabIndex = 44
         Me.Label5.Text = "Found sp_Blitz Stored Procedures in above database:"
         '
         'lbFoundSprocs
         '
         Me.lbFoundSprocs.FormattingEnabled = True
-        Me.lbFoundSprocs.Location = New System.Drawing.Point(349, 133)
+        Me.lbFoundSprocs.ItemHeight = 16
+        Me.lbFoundSprocs.Location = New System.Drawing.Point(465, 164)
+        Me.lbFoundSprocs.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.lbFoundSprocs.Name = "lbFoundSprocs"
-        Me.lbFoundSprocs.Size = New System.Drawing.Size(164, 147)
+        Me.lbFoundSprocs.Size = New System.Drawing.Size(217, 180)
         Me.lbFoundSprocs.TabIndex = 45
         '
         'Servers
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(642, 336)
+        Me.ClientSize = New System.Drawing.Size(856, 414)
         Me.Controls.Add(Me.lbFoundSprocs)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.cmdCancel)
@@ -223,6 +243,8 @@ Partial Class Servers
         Me.Controls.Add(Me.ddlDatabases)
         Me.Controls.Add(Me.lblDatabase)
         Me.Controls.Add(Me.lblServers)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "Servers"
         Me.Text = "Manage servers"
         Me.ResumeLayout(False)

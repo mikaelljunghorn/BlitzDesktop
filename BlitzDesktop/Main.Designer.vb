@@ -2674,7 +2674,7 @@ Partial Class BlitzDesktop
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "BlitzDesktop"
-        Me.Text = "BlitzDesktop - Ver. 2022-12"
+        Me.Text = "BlitzDesktop - Ver. 22.12.2"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.dgvResults, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tcFilters.ResumeLayout(False)
