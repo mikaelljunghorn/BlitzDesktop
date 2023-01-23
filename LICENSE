@@ -1,5 +1,15 @@
 MIT License
 
+Copyright for portions of sp_Blitz are held by Microsoft as part of project 
+tigertoolbox and are provided under the MIT license:
+https://github.com/Microsoft/tigertoolbox
+All other copyrights for sp_Blitz are held by Brent Ozar Unlimited, 2022 as
+described below.
+
+Copyright for other stored procedures within the SQL Server First Responder Kit and 
+used within this application are held by Brent Ozar Unlimited under the MIT license:
+https://github.com/BrentOzarULTD/SQL-Server-First-Responder-Kit/blob/main/LICENSE.md
+
 Copyright (c) 2023 Mikael Ljunghorn
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
