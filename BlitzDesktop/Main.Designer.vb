@@ -251,7 +251,7 @@ Partial Class BlitzDesktop
         Me.lblServers.Location = New System.Drawing.Point(5, 11)
         Me.lblServers.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblServers.Name = "lblServers"
-        Me.lblServers.Size = New System.Drawing.Size(166, 16)
+        Me.lblServers.Size = New System.Drawing.Size(178, 17)
         Me.lblServers.TabIndex = 0
         Me.lblServers.Text = "Select existing SQL server:"
         '
@@ -289,7 +289,7 @@ Partial Class BlitzDesktop
         Me.lblSelectSproc.Location = New System.Drawing.Point(824, 11)
         Me.lblSelectSproc.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblSelectSproc.Name = "lblSelectSproc"
-        Me.lblSelectSproc.Size = New System.Drawing.Size(218, 16)
+        Me.lblSelectSproc.Size = New System.Drawing.Size(233, 17)
         Me.lblSelectSproc.TabIndex = 3
         Me.lblSelectSproc.Text = "Select stored procedure to execute:"
         '
@@ -380,7 +380,7 @@ Partial Class BlitzDesktop
         Me.Label4.Location = New System.Drawing.Point(1059, 20)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(267, 16)
+        Me.Label4.Size = New System.Drawing.Size(285, 17)
         Me.Label4.TabIndex = 26
         Me.Label4.Text = "Below is only using TABLE hence we hide it."
         Me.Label4.Visible = False
@@ -402,7 +402,7 @@ Partial Class BlitzDesktop
         Me.lblCheckProcedureCacheFilter_Blitz.Location = New System.Drawing.Point(473, 23)
         Me.lblCheckProcedureCacheFilter_Blitz.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblCheckProcedureCacheFilter_Blitz.Name = "lblCheckProcedureCacheFilter_Blitz"
-        Me.lblCheckProcedureCacheFilter_Blitz.Size = New System.Drawing.Size(179, 16)
+        Me.lblCheckProcedureCacheFilter_Blitz.Size = New System.Drawing.Size(188, 17)
         Me.lblCheckProcedureCacheFilter_Blitz.TabIndex = 24
         Me.lblCheckProcedureCacheFilter_Blitz.Tag = "CheckProcedureCacheFilter"
         Me.lblCheckProcedureCacheFilter_Blitz.Text = "CheckProcedureCacheFilter:"
@@ -413,7 +413,7 @@ Partial Class BlitzDesktop
         Me.lblOutputType_Blitz.Location = New System.Drawing.Point(1059, 43)
         Me.lblOutputType_Blitz.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblOutputType_Blitz.Name = "lblOutputType_Blitz"
-        Me.lblOutputType_Blitz.Size = New System.Drawing.Size(80, 16)
+        Me.lblOutputType_Blitz.Size = New System.Drawing.Size(87, 17)
         Me.lblOutputType_Blitz.TabIndex = 23
         Me.lblOutputType_Blitz.Tag = "OutputType"
         Me.lblOutputType_Blitz.Text = "OutputType:"
@@ -437,7 +437,7 @@ Partial Class BlitzDesktop
         Me.chkOutputProcedureCache_Blitz.Location = New System.Drawing.Point(27, 107)
         Me.chkOutputProcedureCache_Blitz.Margin = New System.Windows.Forms.Padding(4)
         Me.chkOutputProcedureCache_Blitz.Name = "chkOutputProcedureCache_Blitz"
-        Me.chkOutputProcedureCache_Blitz.Size = New System.Drawing.Size(169, 20)
+        Me.chkOutputProcedureCache_Blitz.Size = New System.Drawing.Size(179, 21)
         Me.chkOutputProcedureCache_Blitz.TabIndex = 21
         Me.chkOutputProcedureCache_Blitz.Tag = "OutputProcedureCache;0"
         Me.chkOutputProcedureCache_Blitz.Text = "OutputProcedureCache"
@@ -449,7 +449,7 @@ Partial Class BlitzDesktop
         Me.chkCheckProcedureCache_Blitz.Location = New System.Drawing.Point(27, 79)
         Me.chkCheckProcedureCache_Blitz.Margin = New System.Windows.Forms.Padding(4)
         Me.chkCheckProcedureCache_Blitz.Name = "chkCheckProcedureCache_Blitz"
-        Me.chkCheckProcedureCache_Blitz.Size = New System.Drawing.Size(169, 20)
+        Me.chkCheckProcedureCache_Blitz.Size = New System.Drawing.Size(175, 21)
         Me.chkCheckProcedureCache_Blitz.TabIndex = 20
         Me.chkCheckProcedureCache_Blitz.Tag = "CheckProcedureCache;0"
         Me.chkCheckProcedureCache_Blitz.Text = "CheckProcedureCache"
@@ -479,7 +479,7 @@ Partial Class BlitzDesktop
         Me.lblIgnorePrioritiesAbove_Blitz.Location = New System.Drawing.Point(743, 52)
         Me.lblIgnorePrioritiesAbove_Blitz.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblIgnorePrioritiesAbove_Blitz.Name = "lblIgnorePrioritiesAbove_Blitz"
-        Me.lblIgnorePrioritiesAbove_Blitz.Size = New System.Drawing.Size(140, 16)
+        Me.lblIgnorePrioritiesAbove_Blitz.Size = New System.Drawing.Size(147, 17)
         Me.lblIgnorePrioritiesAbove_Blitz.TabIndex = 15
         Me.lblIgnorePrioritiesAbove_Blitz.Tag = "IgnorePrioritiesAbove"
         Me.lblIgnorePrioritiesAbove_Blitz.Text = "IgnorePrioritiesAbove:"
@@ -490,7 +490,7 @@ Partial Class BlitzDesktop
         Me.lblIgnorePrioritiesBelow_Blitz.Location = New System.Drawing.Point(520, 52)
         Me.lblIgnorePrioritiesBelow_Blitz.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblIgnorePrioritiesBelow_Blitz.Name = "lblIgnorePrioritiesBelow_Blitz"
-        Me.lblIgnorePrioritiesBelow_Blitz.Size = New System.Drawing.Size(137, 16)
+        Me.lblIgnorePrioritiesBelow_Blitz.Size = New System.Drawing.Size(144, 17)
         Me.lblIgnorePrioritiesBelow_Blitz.TabIndex = 13
         Me.lblIgnorePrioritiesBelow_Blitz.Tag = "IgnorePrioritiesBelow"
         Me.lblIgnorePrioritiesBelow_Blitz.Text = "IgnorePrioritiesBelow:"
@@ -503,7 +503,7 @@ Partial Class BlitzDesktop
         Me.chkSkipBlockingChecks_Blitz.Location = New System.Drawing.Point(279, 50)
         Me.chkSkipBlockingChecks_Blitz.Margin = New System.Windows.Forms.Padding(4)
         Me.chkSkipBlockingChecks_Blitz.Name = "chkSkipBlockingChecks_Blitz"
-        Me.chkSkipBlockingChecks_Blitz.Size = New System.Drawing.Size(153, 20)
+        Me.chkSkipBlockingChecks_Blitz.Size = New System.Drawing.Size(156, 21)
         Me.chkSkipBlockingChecks_Blitz.TabIndex = 7
         Me.chkSkipBlockingChecks_Blitz.Tag = "SkipBlockingChecks;1"
         Me.chkSkipBlockingChecks_Blitz.Text = "SkipBlockingChecks"
@@ -515,7 +515,7 @@ Partial Class BlitzDesktop
         Me.chkBringThePain_Blitz.Location = New System.Drawing.Point(279, 79)
         Me.chkBringThePain_Blitz.Margin = New System.Windows.Forms.Padding(4)
         Me.chkBringThePain_Blitz.Name = "chkBringThePain_Blitz"
-        Me.chkBringThePain_Blitz.Size = New System.Drawing.Size(111, 20)
+        Me.chkBringThePain_Blitz.Size = New System.Drawing.Size(116, 21)
         Me.chkBringThePain_Blitz.TabIndex = 6
         Me.chkBringThePain_Blitz.Tag = "BringThePain;0"
         Me.chkBringThePain_Blitz.Text = "BringThePain"
@@ -527,7 +527,7 @@ Partial Class BlitzDesktop
         Me.chkSummaryMode_Blitz.Location = New System.Drawing.Point(279, 22)
         Me.chkSummaryMode_Blitz.Margin = New System.Windows.Forms.Padding(4)
         Me.chkSummaryMode_Blitz.Name = "chkSummaryMode_Blitz"
-        Me.chkSummaryMode_Blitz.Size = New System.Drawing.Size(121, 20)
+        Me.chkSummaryMode_Blitz.Size = New System.Drawing.Size(124, 21)
         Me.chkSummaryMode_Blitz.TabIndex = 5
         Me.chkSummaryMode_Blitz.Tag = "SummaryMode;0"
         Me.chkSummaryMode_Blitz.Text = "SummaryMode"
@@ -539,7 +539,7 @@ Partial Class BlitzDesktop
         Me.chkCheckServerInfo_Blitz.Location = New System.Drawing.Point(27, 50)
         Me.chkCheckServerInfo_Blitz.Margin = New System.Windows.Forms.Padding(4)
         Me.chkCheckServerInfo_Blitz.Name = "chkCheckServerInfo_Blitz"
-        Me.chkCheckServerInfo_Blitz.Size = New System.Drawing.Size(128, 20)
+        Me.chkCheckServerInfo_Blitz.Size = New System.Drawing.Size(134, 21)
         Me.chkCheckServerInfo_Blitz.TabIndex = 4
         Me.chkCheckServerInfo_Blitz.Tag = "CheckServerInfo;0"
         Me.chkCheckServerInfo_Blitz.Text = "CheckServerInfo"
@@ -553,7 +553,7 @@ Partial Class BlitzDesktop
         Me.chkCheckUserDatabaseObjects_Blitz.Location = New System.Drawing.Point(27, 22)
         Me.chkCheckUserDatabaseObjects_Blitz.Margin = New System.Windows.Forms.Padding(4)
         Me.chkCheckUserDatabaseObjects_Blitz.Name = "chkCheckUserDatabaseObjects_Blitz"
-        Me.chkCheckUserDatabaseObjects_Blitz.Size = New System.Drawing.Size(202, 20)
+        Me.chkCheckUserDatabaseObjects_Blitz.Size = New System.Drawing.Size(208, 21)
         Me.chkCheckUserDatabaseObjects_Blitz.TabIndex = 3
         Me.chkCheckUserDatabaseObjects_Blitz.Tag = "CheckUserDatabaseObjects;1"
         Me.chkCheckUserDatabaseObjects_Blitz.Text = "CheckUserDatabaseObjects"
@@ -643,7 +643,7 @@ Partial Class BlitzDesktop
         Me.lblMaxDop_BlitzAnalysis.Location = New System.Drawing.Point(345, 145)
         Me.lblMaxDop_BlitzAnalysis.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblMaxDop_BlitzAnalysis.Name = "lblMaxDop_BlitzAnalysis"
-        Me.lblMaxDop_BlitzAnalysis.Size = New System.Drawing.Size(61, 16)
+        Me.lblMaxDop_BlitzAnalysis.Size = New System.Drawing.Size(63, 17)
         Me.lblMaxDop_BlitzAnalysis.TabIndex = 114
         Me.lblMaxDop_BlitzAnalysis.Text = "MaxDop:"
         '
@@ -653,7 +653,7 @@ Partial Class BlitzDesktop
         Me.chkBringThePain_BlitzAnalysis.Location = New System.Drawing.Point(687, 175)
         Me.chkBringThePain_BlitzAnalysis.Margin = New System.Windows.Forms.Padding(4)
         Me.chkBringThePain_BlitzAnalysis.Name = "chkBringThePain_BlitzAnalysis"
-        Me.chkBringThePain_BlitzAnalysis.Size = New System.Drawing.Size(111, 20)
+        Me.chkBringThePain_BlitzAnalysis.Size = New System.Drawing.Size(116, 21)
         Me.chkBringThePain_BlitzAnalysis.TabIndex = 113
         Me.chkBringThePain_BlitzAnalysis.Tag = "BringThePain;0"
         Me.chkBringThePain_BlitzAnalysis.Text = "BringThePain"
@@ -675,7 +675,7 @@ Partial Class BlitzDesktop
         Me.lblWriteLatencyThreshold_BlitzAnalysis.Location = New System.Drawing.Point(345, 46)
         Me.lblWriteLatencyThreshold_BlitzAnalysis.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblWriteLatencyThreshold_BlitzAnalysis.Name = "lblWriteLatencyThreshold_BlitzAnalysis"
-        Me.lblWriteLatencyThreshold_BlitzAnalysis.Size = New System.Drawing.Size(149, 16)
+        Me.lblWriteLatencyThreshold_BlitzAnalysis.Size = New System.Drawing.Size(159, 17)
         Me.lblWriteLatencyThreshold_BlitzAnalysis.TabIndex = 111
         Me.lblWriteLatencyThreshold_BlitzAnalysis.Text = "WriteLatencyThreshold:"
         '
@@ -695,7 +695,7 @@ Partial Class BlitzDesktop
         Me.lblReadLatencyThreshold_BlitzAnalysis.Location = New System.Drawing.Point(345, 11)
         Me.lblReadLatencyThreshold_BlitzAnalysis.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblReadLatencyThreshold_BlitzAnalysis.Name = "lblReadLatencyThreshold_BlitzAnalysis"
-        Me.lblReadLatencyThreshold_BlitzAnalysis.Size = New System.Drawing.Size(152, 16)
+        Me.lblReadLatencyThreshold_BlitzAnalysis.Size = New System.Drawing.Size(160, 17)
         Me.lblReadLatencyThreshold_BlitzAnalysis.TabIndex = 109
         Me.lblReadLatencyThreshold_BlitzAnalysis.Text = "ReadLatencyThreshold:"
         '
@@ -715,7 +715,7 @@ Partial Class BlitzDesktop
         Me.lblWaitStatsTop_BlitzAnalysis.Location = New System.Drawing.Point(345, 114)
         Me.lblWaitStatsTop_BlitzAnalysis.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblWaitStatsTop_BlitzAnalysis.Name = "lblWaitStatsTop_BlitzAnalysis"
-        Me.lblWaitStatsTop_BlitzAnalysis.Size = New System.Drawing.Size(92, 16)
+        Me.lblWaitStatsTop_BlitzAnalysis.Size = New System.Drawing.Size(97, 17)
         Me.lblWaitStatsTop_BlitzAnalysis.TabIndex = 107
         Me.lblWaitStatsTop_BlitzAnalysis.Text = "WaitStatsTop:"
         '
@@ -736,7 +736,7 @@ Partial Class BlitzDesktop
         Me.lblBlitzCacheSortOrder_BlitzAnalysis.Location = New System.Drawing.Point(345, 176)
         Me.lblBlitzCacheSortOrder_BlitzAnalysis.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblBlitzCacheSortOrder_BlitzAnalysis.Name = "lblBlitzCacheSortOrder_BlitzAnalysis"
-        Me.lblBlitzCacheSortOrder_BlitzAnalysis.Size = New System.Drawing.Size(131, 16)
+        Me.lblBlitzCacheSortOrder_BlitzAnalysis.Size = New System.Drawing.Size(141, 17)
         Me.lblBlitzCacheSortOrder_BlitzAnalysis.TabIndex = 105
         Me.lblBlitzCacheSortOrder_BlitzAnalysis.Text = "BlitzCacheSortOrder:"
         '
@@ -756,7 +756,7 @@ Partial Class BlitzDesktop
         Me.lblMaxBlitzFirstPriority_BlitzAnalysis.Location = New System.Drawing.Point(345, 79)
         Me.lblMaxBlitzFirstPriority_BlitzAnalysis.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblMaxBlitzFirstPriority_BlitzAnalysis.Name = "lblMaxBlitzFirstPriority_BlitzAnalysis"
-        Me.lblMaxBlitzFirstPriority_BlitzAnalysis.Size = New System.Drawing.Size(125, 16)
+        Me.lblMaxBlitzFirstPriority_BlitzAnalysis.Size = New System.Drawing.Size(134, 17)
         Me.lblMaxBlitzFirstPriority_BlitzAnalysis.TabIndex = 103
         Me.lblMaxBlitzFirstPriority_BlitzAnalysis.Text = "MaxBlitzFirstPriority:"
         '
@@ -766,7 +766,7 @@ Partial Class BlitzDesktop
         Me.lblDatabaseName_BlitzAnalysis.Location = New System.Drawing.Point(621, 111)
         Me.lblDatabaseName_BlitzAnalysis.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblDatabaseName_BlitzAnalysis.Name = "lblDatabaseName_BlitzAnalysis"
-        Me.lblDatabaseName_BlitzAnalysis.Size = New System.Drawing.Size(142, 16)
+        Me.lblDatabaseName_BlitzAnalysis.Size = New System.Drawing.Size(151, 17)
         Me.lblDatabaseName_BlitzAnalysis.TabIndex = 101
         Me.lblDatabaseName_BlitzAnalysis.Tag = ""
         Me.lblDatabaseName_BlitzAnalysis.Text = "DatabaseName (filter):"
@@ -777,7 +777,7 @@ Partial Class BlitzDesktop
         Me.lblServerName_BlitzAnalysis.Location = New System.Drawing.Point(621, 78)
         Me.lblServerName_BlitzAnalysis.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblServerName_BlitzAnalysis.Name = "lblServerName_BlitzAnalysis"
-        Me.lblServerName_BlitzAnalysis.Size = New System.Drawing.Size(122, 16)
+        Me.lblServerName_BlitzAnalysis.Size = New System.Drawing.Size(132, 17)
         Me.lblServerName_BlitzAnalysis.TabIndex = 99
         Me.lblServerName_BlitzAnalysis.Text = "ServerName (filter):"
         '
@@ -797,7 +797,7 @@ Partial Class BlitzDesktop
         Me.lblOutputTableNameFileStats_BlitzAnalysis.Location = New System.Drawing.Point(1048, 44)
         Me.lblOutputTableNameFileStats_BlitzAnalysis.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblOutputTableNameFileStats_BlitzAnalysis.Name = "lblOutputTableNameFileStats_BlitzAnalysis"
-        Me.lblOutputTableNameFileStats_BlitzAnalysis.Size = New System.Drawing.Size(173, 16)
+        Me.lblOutputTableNameFileStats_BlitzAnalysis.Size = New System.Drawing.Size(182, 17)
         Me.lblOutputTableNameFileStats_BlitzAnalysis.TabIndex = 97
         Me.lblOutputTableNameFileStats_BlitzAnalysis.Text = "OutputTableNameFileStats:"
         '
@@ -817,7 +817,7 @@ Partial Class BlitzDesktop
         Me.lblOutputTableNamePerfmonStats_BlitzAnalysis.Location = New System.Drawing.Point(1048, 78)
         Me.lblOutputTableNamePerfmonStats_BlitzAnalysis.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblOutputTableNamePerfmonStats_BlitzAnalysis.Name = "lblOutputTableNamePerfmonStats_BlitzAnalysis"
-        Me.lblOutputTableNamePerfmonStats_BlitzAnalysis.Size = New System.Drawing.Size(201, 16)
+        Me.lblOutputTableNamePerfmonStats_BlitzAnalysis.Size = New System.Drawing.Size(213, 17)
         Me.lblOutputTableNamePerfmonStats_BlitzAnalysis.TabIndex = 95
         Me.lblOutputTableNamePerfmonStats_BlitzAnalysis.Text = "OutputTableNamePerfmonStats:"
         '
@@ -837,7 +837,7 @@ Partial Class BlitzDesktop
         Me.lblOutputTableNameBlitzCache_BlitzAnalysis.Location = New System.Drawing.Point(1048, 144)
         Me.lblOutputTableNameBlitzCache_BlitzAnalysis.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblOutputTableNameBlitzCache_BlitzAnalysis.Name = "lblOutputTableNameBlitzCache_BlitzAnalysis"
-        Me.lblOutputTableNameBlitzCache_BlitzAnalysis.Size = New System.Drawing.Size(184, 16)
+        Me.lblOutputTableNameBlitzCache_BlitzAnalysis.Size = New System.Drawing.Size(194, 17)
         Me.lblOutputTableNameBlitzCache_BlitzAnalysis.TabIndex = 93
         Me.lblOutputTableNameBlitzCache_BlitzAnalysis.Text = "OutputTableNameBlitzCache:"
         '
@@ -857,7 +857,7 @@ Partial Class BlitzDesktop
         Me.lblOutputTableNameBlitzWho_BlitzAnalysis.Location = New System.Drawing.Point(1048, 177)
         Me.lblOutputTableNameBlitzWho_BlitzAnalysis.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblOutputTableNameBlitzWho_BlitzAnalysis.Name = "lblOutputTableNameBlitzWho_BlitzAnalysis"
-        Me.lblOutputTableNameBlitzWho_BlitzAnalysis.Size = New System.Drawing.Size(173, 16)
+        Me.lblOutputTableNameBlitzWho_BlitzAnalysis.Size = New System.Drawing.Size(183, 17)
         Me.lblOutputTableNameBlitzWho_BlitzAnalysis.TabIndex = 91
         Me.lblOutputTableNameBlitzWho_BlitzAnalysis.Text = "OutputTableNameBlitzWho:"
         '
@@ -877,7 +877,7 @@ Partial Class BlitzDesktop
         Me.lblOutputTableNameWaitStats_BlitzAnalysis.Location = New System.Drawing.Point(1048, 111)
         Me.lblOutputTableNameWaitStats_BlitzAnalysis.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblOutputTableNameWaitStats_BlitzAnalysis.Name = "lblOutputTableNameWaitStats_BlitzAnalysis"
-        Me.lblOutputTableNameWaitStats_BlitzAnalysis.Size = New System.Drawing.Size(178, 16)
+        Me.lblOutputTableNameWaitStats_BlitzAnalysis.Size = New System.Drawing.Size(188, 17)
         Me.lblOutputTableNameWaitStats_BlitzAnalysis.TabIndex = 89
         Me.lblOutputTableNameWaitStats_BlitzAnalysis.Text = "OutputTableNameWaitStats:"
         '
@@ -897,7 +897,7 @@ Partial Class BlitzDesktop
         Me.lblOutputTableNameBlitzFirst_BlitzAnalysis.Location = New System.Drawing.Point(1048, 11)
         Me.lblOutputTableNameBlitzFirst_BlitzAnalysis.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblOutputTableNameBlitzFirst_BlitzAnalysis.Name = "lblOutputTableNameBlitzFirst_BlitzAnalysis"
-        Me.lblOutputTableNameBlitzFirst_BlitzAnalysis.Size = New System.Drawing.Size(170, 16)
+        Me.lblOutputTableNameBlitzFirst_BlitzAnalysis.Size = New System.Drawing.Size(181, 17)
         Me.lblOutputTableNameBlitzFirst_BlitzAnalysis.TabIndex = 87
         Me.lblOutputTableNameBlitzFirst_BlitzAnalysis.Text = "OutputTableNameBlitzFirst:"
         '
@@ -917,7 +917,7 @@ Partial Class BlitzDesktop
         Me.lblOutputSchemaName_BlitzAnalysis.Location = New System.Drawing.Point(621, 44)
         Me.lblOutputSchemaName_BlitzAnalysis.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblOutputSchemaName_BlitzAnalysis.Name = "lblOutputSchemaName_BlitzAnalysis"
-        Me.lblOutputSchemaName_BlitzAnalysis.Size = New System.Drawing.Size(135, 16)
+        Me.lblOutputSchemaName_BlitzAnalysis.Size = New System.Drawing.Size(143, 17)
         Me.lblOutputSchemaName_BlitzAnalysis.TabIndex = 85
         Me.lblOutputSchemaName_BlitzAnalysis.Tag = ""
         Me.lblOutputSchemaName_BlitzAnalysis.Text = "OutputSchemaName:"
@@ -938,7 +938,7 @@ Partial Class BlitzDesktop
         Me.lblOutputDatabaseName_BlitzAnalysis.Location = New System.Drawing.Point(621, 11)
         Me.lblOutputDatabaseName_BlitzAnalysis.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblOutputDatabaseName_BlitzAnalysis.Name = "lblOutputDatabaseName_BlitzAnalysis"
-        Me.lblOutputDatabaseName_BlitzAnalysis.Size = New System.Drawing.Size(145, 16)
+        Me.lblOutputDatabaseName_BlitzAnalysis.Size = New System.Drawing.Size(153, 17)
         Me.lblOutputDatabaseName_BlitzAnalysis.TabIndex = 83
         Me.lblOutputDatabaseName_BlitzAnalysis.Text = "OutputDatabaseName:"
         '
@@ -978,7 +978,7 @@ Partial Class BlitzDesktop
         Me.lblEndDate_BlitzAnalysis.Location = New System.Drawing.Point(9, 43)
         Me.lblEndDate_BlitzAnalysis.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblEndDate_BlitzAnalysis.Name = "lblEndDate_BlitzAnalysis"
-        Me.lblEndDate_BlitzAnalysis.Size = New System.Drawing.Size(63, 16)
+        Me.lblEndDate_BlitzAnalysis.Size = New System.Drawing.Size(67, 17)
         Me.lblEndDate_BlitzAnalysis.TabIndex = 79
         Me.lblEndDate_BlitzAnalysis.Text = "EndDate:"
         '
@@ -998,7 +998,7 @@ Partial Class BlitzDesktop
         Me.lblStartDate_BlitzAnalysis.Location = New System.Drawing.Point(5, 11)
         Me.lblStartDate_BlitzAnalysis.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblStartDate_BlitzAnalysis.Name = "lblStartDate_BlitzAnalysis"
-        Me.lblStartDate_BlitzAnalysis.Size = New System.Drawing.Size(66, 16)
+        Me.lblStartDate_BlitzAnalysis.Size = New System.Drawing.Size(72, 17)
         Me.lblStartDate_BlitzAnalysis.TabIndex = 77
         Me.lblStartDate_BlitzAnalysis.Text = "StartDate:"
         '
@@ -1030,7 +1030,7 @@ Partial Class BlitzDesktop
         Me.lblHoursBack_BlitzBackups.Location = New System.Drawing.Point(12, 21)
         Me.lblHoursBack_BlitzBackups.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblHoursBack_BlitzBackups.Name = "lblHoursBack_BlitzBackups"
-        Me.lblHoursBack_BlitzBackups.Size = New System.Drawing.Size(77, 16)
+        Me.lblHoursBack_BlitzBackups.Size = New System.Drawing.Size(81, 17)
         Me.lblHoursBack_BlitzBackups.TabIndex = 105
         Me.lblHoursBack_BlitzBackups.Text = "HoursBack:"
         '
@@ -1075,7 +1075,7 @@ Partial Class BlitzDesktop
         Me.chkSkipAanlysis_BlitzCache.Location = New System.Drawing.Point(23, 132)
         Me.chkSkipAanlysis_BlitzCache.Margin = New System.Windows.Forms.Padding(4)
         Me.chkSkipAanlysis_BlitzCache.Name = "chkSkipAanlysis_BlitzCache"
-        Me.chkSkipAanlysis_BlitzCache.Size = New System.Drawing.Size(110, 20)
+        Me.chkSkipAanlysis_BlitzCache.Size = New System.Drawing.Size(113, 21)
         Me.chkSkipAanlysis_BlitzCache.TabIndex = 54
         Me.chkSkipAanlysis_BlitzCache.Tag = "SkipAnalysis;0"
         Me.chkSkipAanlysis_BlitzCache.Text = "Skip Analysis"
@@ -1087,7 +1087,7 @@ Partial Class BlitzDesktop
         Me.chkSortOrderAverage_Internal_BlitzCache.Location = New System.Drawing.Point(23, 103)
         Me.chkSortOrderAverage_Internal_BlitzCache.Margin = New System.Windows.Forms.Padding(4)
         Me.chkSortOrderAverage_Internal_BlitzCache.Name = "chkSortOrderAverage_Internal_BlitzCache"
-        Me.chkSortOrderAverage_Internal_BlitzCache.Size = New System.Drawing.Size(142, 20)
+        Me.chkSortOrderAverage_Internal_BlitzCache.Size = New System.Drawing.Size(150, 21)
         Me.chkSortOrderAverage_Internal_BlitzCache.TabIndex = 53
         Me.chkSortOrderAverage_Internal_BlitzCache.Tag = "Average;0"
         Me.chkSortOrderAverage_Internal_BlitzCache.Text = "SortOrder Average"
@@ -1119,7 +1119,7 @@ Partial Class BlitzDesktop
         Me.lblMinutesBack_BlitzCache.Location = New System.Drawing.Point(755, 116)
         Me.lblMinutesBack_BlitzCache.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblMinutesBack_BlitzCache.Name = "lblMinutesBack_BlitzCache"
-        Me.lblMinutesBack_BlitzCache.Size = New System.Drawing.Size(87, 16)
+        Me.lblMinutesBack_BlitzCache.Size = New System.Drawing.Size(92, 17)
         Me.lblMinutesBack_BlitzCache.TabIndex = 49
         Me.lblMinutesBack_BlitzCache.Text = "MinutesBack:"
         '
@@ -1138,7 +1138,7 @@ Partial Class BlitzDesktop
         Me.lblMinimumExecutionCount_BlitzCache.Location = New System.Drawing.Point(755, 82)
         Me.lblMinimumExecutionCount_BlitzCache.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblMinimumExecutionCount_BlitzCache.Name = "lblMinimumExecutionCount_BlitzCache"
-        Me.lblMinimumExecutionCount_BlitzCache.Size = New System.Drawing.Size(155, 16)
+        Me.lblMinimumExecutionCount_BlitzCache.Size = New System.Drawing.Size(165, 17)
         Me.lblMinimumExecutionCount_BlitzCache.TabIndex = 47
         Me.lblMinimumExecutionCount_BlitzCache.Text = "MinimumExecutionCount:"
         '
@@ -1148,7 +1148,7 @@ Partial Class BlitzDesktop
         Me.lblSlowlySearchPlansFor_BlitzCache.Location = New System.Drawing.Point(755, 149)
         Me.lblSlowlySearchPlansFor_BlitzCache.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblSlowlySearchPlansFor_BlitzCache.Name = "lblSlowlySearchPlansFor_BlitzCache"
-        Me.lblSlowlySearchPlansFor_BlitzCache.Size = New System.Drawing.Size(146, 16)
+        Me.lblSlowlySearchPlansFor_BlitzCache.Size = New System.Drawing.Size(152, 17)
         Me.lblSlowlySearchPlansFor_BlitzCache.TabIndex = 45
         Me.lblSlowlySearchPlansFor_BlitzCache.Text = "SlowlySearchPlansFor:"
         '
@@ -1169,7 +1169,7 @@ Partial Class BlitzDesktop
         Me.lblStoredProcName_BlitzCache.Location = New System.Drawing.Point(196, 53)
         Me.lblStoredProcName_BlitzCache.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblStoredProcName_BlitzCache.Name = "lblStoredProcName_BlitzCache"
-        Me.lblStoredProcName_BlitzCache.Size = New System.Drawing.Size(115, 16)
+        Me.lblStoredProcName_BlitzCache.Size = New System.Drawing.Size(120, 17)
         Me.lblStoredProcName_BlitzCache.TabIndex = 43
         Me.lblStoredProcName_BlitzCache.Text = "StoredProcName:"
         '
@@ -1189,7 +1189,7 @@ Partial Class BlitzDesktop
         Me.lblDatabaseName_BlitzCache.Location = New System.Drawing.Point(196, 20)
         Me.lblDatabaseName_BlitzCache.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblDatabaseName_BlitzCache.Name = "lblDatabaseName_BlitzCache"
-        Me.lblDatabaseName_BlitzCache.Size = New System.Drawing.Size(107, 16)
+        Me.lblDatabaseName_BlitzCache.Size = New System.Drawing.Size(110, 17)
         Me.lblDatabaseName_BlitzCache.TabIndex = 41
         Me.lblDatabaseName_BlitzCache.Text = "DatabaseName:"
         '
@@ -1211,7 +1211,7 @@ Partial Class BlitzDesktop
         Me.lblQueryFilter_BlitzCache.Location = New System.Drawing.Point(196, 85)
         Me.lblQueryFilter_BlitzCache.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblQueryFilter_BlitzCache.Name = "lblQueryFilter_BlitzCache"
-        Me.lblQueryFilter_BlitzCache.Size = New System.Drawing.Size(75, 16)
+        Me.lblQueryFilter_BlitzCache.Size = New System.Drawing.Size(82, 17)
         Me.lblQueryFilter_BlitzCache.TabIndex = 39
         Me.lblQueryFilter_BlitzCache.Text = "QueryFilter:"
         '
@@ -1221,7 +1221,7 @@ Partial Class BlitzDesktop
         Me.chkIgnoreSystemDVs_BlitzCache.Location = New System.Drawing.Point(23, 75)
         Me.chkIgnoreSystemDVs_BlitzCache.Margin = New System.Windows.Forms.Padding(4)
         Me.chkIgnoreSystemDVs_BlitzCache.Name = "chkIgnoreSystemDVs_BlitzCache"
-        Me.chkIgnoreSystemDVs_BlitzCache.Size = New System.Drawing.Size(138, 20)
+        Me.chkIgnoreSystemDVs_BlitzCache.Size = New System.Drawing.Size(142, 21)
         Me.chkIgnoreSystemDVs_BlitzCache.TabIndex = 38
         Me.chkIgnoreSystemDVs_BlitzCache.Tag = "IgnoreSystemDBs;0"
         Me.chkIgnoreSystemDVs_BlitzCache.Text = "IgnoreSystemDBs"
@@ -1233,7 +1233,7 @@ Partial Class BlitzDesktop
         Me.chkHideSummary_BlitzCache.Location = New System.Drawing.Point(24, 47)
         Me.chkHideSummary_BlitzCache.Margin = New System.Windows.Forms.Padding(4)
         Me.chkHideSummary_BlitzCache.Name = "chkHideSummary_BlitzCache"
-        Me.chkHideSummary_BlitzCache.Size = New System.Drawing.Size(115, 20)
+        Me.chkHideSummary_BlitzCache.Size = New System.Drawing.Size(118, 21)
         Me.chkHideSummary_BlitzCache.TabIndex = 37
         Me.chkHideSummary_BlitzCache.Tag = "HideSummary;0"
         Me.chkHideSummary_BlitzCache.Text = "HideSummary"
@@ -1254,7 +1254,7 @@ Partial Class BlitzDesktop
         Me.lblDurationFilter_BlitzCache.Location = New System.Drawing.Point(755, 50)
         Me.lblDurationFilter_BlitzCache.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblDurationFilter_BlitzCache.Name = "lblDurationFilter_BlitzCache"
-        Me.lblDurationFilter_BlitzCache.Size = New System.Drawing.Size(152, 16)
+        Me.lblDurationFilter_BlitzCache.Size = New System.Drawing.Size(164, 17)
         Me.lblDurationFilter_BlitzCache.TabIndex = 35
         Me.lblDurationFilter_BlitzCache.Text = "DurationFilter (seconds):"
         '
@@ -1276,7 +1276,7 @@ Partial Class BlitzDesktop
         Me.lblSortOrder_BlitzCache.Location = New System.Drawing.Point(196, 118)
         Me.lblSortOrder_BlitzCache.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblSortOrder_BlitzCache.Name = "lblSortOrder_BlitzCache"
-        Me.lblSortOrder_BlitzCache.Size = New System.Drawing.Size(68, 16)
+        Me.lblSortOrder_BlitzCache.Size = New System.Drawing.Size(75, 17)
         Me.lblSortOrder_BlitzCache.TabIndex = 33
         Me.lblSortOrder_BlitzCache.Text = "SortOrder:"
         '
@@ -1286,7 +1286,7 @@ Partial Class BlitzDesktop
         Me.chkExpertMode_BlitzCache.Location = New System.Drawing.Point(24, 18)
         Me.chkExpertMode_BlitzCache.Margin = New System.Windows.Forms.Padding(4)
         Me.chkExpertMode_BlitzCache.Name = "chkExpertMode_BlitzCache"
-        Me.chkExpertMode_BlitzCache.Size = New System.Drawing.Size(102, 20)
+        Me.chkExpertMode_BlitzCache.Size = New System.Drawing.Size(105, 21)
         Me.chkExpertMode_BlitzCache.TabIndex = 32
         Me.chkExpertMode_BlitzCache.Tag = "ExpertMode;0"
         Me.chkExpertMode_BlitzCache.Text = "ExpertMode"
@@ -1299,7 +1299,7 @@ Partial Class BlitzDesktop
         Me.chkExportToExcel_BlitzCache.Location = New System.Drawing.Point(23, 160)
         Me.chkExportToExcel_BlitzCache.Margin = New System.Windows.Forms.Padding(4)
         Me.chkExportToExcel_BlitzCache.Name = "chkExportToExcel_BlitzCache"
-        Me.chkExportToExcel_BlitzCache.Size = New System.Drawing.Size(117, 20)
+        Me.chkExportToExcel_BlitzCache.Size = New System.Drawing.Size(120, 21)
         Me.chkExportToExcel_BlitzCache.TabIndex = 31
         Me.chkExportToExcel_BlitzCache.Tag = "ExportToExcel;0"
         Me.chkExportToExcel_BlitzCache.Text = "ExportToExcel"
@@ -1321,7 +1321,7 @@ Partial Class BlitzDesktop
         Me.lblTop_BlitzCache.Location = New System.Drawing.Point(755, 18)
         Me.lblTop_BlitzCache.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblTop_BlitzCache.Name = "lblTop_BlitzCache"
-        Me.lblTop_BlitzCache.Size = New System.Drawing.Size(35, 16)
+        Me.lblTop_BlitzCache.Size = New System.Drawing.Size(37, 17)
         Me.lblTop_BlitzCache.TabIndex = 29
         Me.lblTop_BlitzCache.Text = "Top:"
         '
@@ -1368,7 +1368,7 @@ Partial Class BlitzDesktop
         Me.lblOutputType_BlitzFirst.Location = New System.Drawing.Point(284, 15)
         Me.lblOutputType_BlitzFirst.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblOutputType_BlitzFirst.Name = "lblOutputType_BlitzFirst"
-        Me.lblOutputType_BlitzFirst.Size = New System.Drawing.Size(80, 16)
+        Me.lblOutputType_BlitzFirst.Size = New System.Drawing.Size(87, 17)
         Me.lblOutputType_BlitzFirst.TabIndex = 55
         Me.lblOutputType_BlitzFirst.Text = "OutputType:"
         '
@@ -1378,7 +1378,7 @@ Partial Class BlitzDesktop
         Me.chkSinceStartup_BlitzFirst.Location = New System.Drawing.Point(27, 156)
         Me.chkSinceStartup_BlitzFirst.Margin = New System.Windows.Forms.Padding(4)
         Me.chkSinceStartup_BlitzFirst.Name = "chkSinceStartup_BlitzFirst"
-        Me.chkSinceStartup_BlitzFirst.Size = New System.Drawing.Size(105, 20)
+        Me.chkSinceStartup_BlitzFirst.Size = New System.Drawing.Size(111, 21)
         Me.chkSinceStartup_BlitzFirst.TabIndex = 53
         Me.chkSinceStartup_BlitzFirst.Tag = "SinceStartup;0"
         Me.chkSinceStartup_BlitzFirst.Text = "SinceStartup"
@@ -1400,7 +1400,7 @@ Partial Class BlitzDesktop
         Me.lblFileLatencyThresholdMS_BlitzFirst.Location = New System.Drawing.Point(284, 44)
         Me.lblFileLatencyThresholdMS_BlitzFirst.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblFileLatencyThresholdMS_BlitzFirst.Name = "lblFileLatencyThresholdMS_BlitzFirst"
-        Me.lblFileLatencyThresholdMS_BlitzFirst.Size = New System.Drawing.Size(160, 16)
+        Me.lblFileLatencyThresholdMS_BlitzFirst.Size = New System.Drawing.Size(168, 17)
         Me.lblFileLatencyThresholdMS_BlitzFirst.TabIndex = 51
         Me.lblFileLatencyThresholdMS_BlitzFirst.Tag = "FileLatencyThresholdMS"
         Me.lblFileLatencyThresholdMS_BlitzFirst.Text = "FileLatencyThresholdMS:"
@@ -1413,7 +1413,7 @@ Partial Class BlitzDesktop
         Me.chkCheckServerInfo_BlitzFirst.Location = New System.Drawing.Point(27, 71)
         Me.chkCheckServerInfo_BlitzFirst.Margin = New System.Windows.Forms.Padding(4)
         Me.chkCheckServerInfo_BlitzFirst.Name = "chkCheckServerInfo_BlitzFirst"
-        Me.chkCheckServerInfo_BlitzFirst.Size = New System.Drawing.Size(128, 20)
+        Me.chkCheckServerInfo_BlitzFirst.Size = New System.Drawing.Size(134, 21)
         Me.chkCheckServerInfo_BlitzFirst.TabIndex = 50
         Me.chkCheckServerInfo_BlitzFirst.Tag = "CheckServerInfo;1"
         Me.chkCheckServerInfo_BlitzFirst.Text = "CheckServerInfo"
@@ -1435,7 +1435,7 @@ Partial Class BlitzDesktop
         Me.lblMemoryGrantThresholdPct_BlitzFirst.Location = New System.Drawing.Point(284, 112)
         Me.lblMemoryGrantThresholdPct_BlitzFirst.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblMemoryGrantThresholdPct_BlitzFirst.Name = "lblMemoryGrantThresholdPct_BlitzFirst"
-        Me.lblMemoryGrantThresholdPct_BlitzFirst.Size = New System.Drawing.Size(171, 16)
+        Me.lblMemoryGrantThresholdPct_BlitzFirst.Size = New System.Drawing.Size(182, 17)
         Me.lblMemoryGrantThresholdPct_BlitzFirst.TabIndex = 48
         Me.lblMemoryGrantThresholdPct_BlitzFirst.Tag = "MemoryGrantThresholdPct"
         Me.lblMemoryGrantThresholdPct_BlitzFirst.Text = "MemoryGrantThresholdPct:"
@@ -1448,7 +1448,7 @@ Partial Class BlitzDesktop
         Me.chkBlitzCacheSkipAnalysis_BlitzFirst.Location = New System.Drawing.Point(27, 15)
         Me.chkBlitzCacheSkipAnalysis_BlitzFirst.Margin = New System.Windows.Forms.Padding(4)
         Me.chkBlitzCacheSkipAnalysis_BlitzFirst.Name = "chkBlitzCacheSkipAnalysis_BlitzFirst"
-        Me.chkBlitzCacheSkipAnalysis_BlitzFirst.Size = New System.Drawing.Size(170, 20)
+        Me.chkBlitzCacheSkipAnalysis_BlitzFirst.Size = New System.Drawing.Size(175, 21)
         Me.chkBlitzCacheSkipAnalysis_BlitzFirst.TabIndex = 47
         Me.chkBlitzCacheSkipAnalysis_BlitzFirst.Tag = "BlitzCacheSkipAnalysis;1"
         Me.chkBlitzCacheSkipAnalysis_BlitzFirst.Text = "BlitzCacheSkipAnalysis"
@@ -1460,7 +1460,7 @@ Partial Class BlitzDesktop
         Me.chkShowSleepingSPIDs_BlitzFirst.Location = New System.Drawing.Point(27, 128)
         Me.chkShowSleepingSPIDs_BlitzFirst.Margin = New System.Windows.Forms.Padding(4)
         Me.chkShowSleepingSPIDs_BlitzFirst.Name = "chkShowSleepingSPIDs_BlitzFirst"
-        Me.chkShowSleepingSPIDs_BlitzFirst.Size = New System.Drawing.Size(154, 20)
+        Me.chkShowSleepingSPIDs_BlitzFirst.Size = New System.Drawing.Size(157, 21)
         Me.chkShowSleepingSPIDs_BlitzFirst.TabIndex = 46
         Me.chkShowSleepingSPIDs_BlitzFirst.Tag = "ShowSleepingSPIDs;0"
         Me.chkShowSleepingSPIDs_BlitzFirst.Text = "ShowSleepingSPIDs"
@@ -1472,7 +1472,7 @@ Partial Class BlitzDesktop
         Me.chkCheckProcedureCache_BlitzFirst.Location = New System.Drawing.Point(27, 43)
         Me.chkCheckProcedureCache_BlitzFirst.Margin = New System.Windows.Forms.Padding(4)
         Me.chkCheckProcedureCache_BlitzFirst.Name = "chkCheckProcedureCache_BlitzFirst"
-        Me.chkCheckProcedureCache_BlitzFirst.Size = New System.Drawing.Size(169, 20)
+        Me.chkCheckProcedureCache_BlitzFirst.Size = New System.Drawing.Size(175, 21)
         Me.chkCheckProcedureCache_BlitzFirst.TabIndex = 45
         Me.chkCheckProcedureCache_BlitzFirst.Tag = "CheckProcedureCache;0"
         Me.chkCheckProcedureCache_BlitzFirst.Text = "CheckProcedureCache"
@@ -1494,7 +1494,7 @@ Partial Class BlitzDesktop
         Me.lblFilterPlansByDatabase_BlitzFirst.Location = New System.Drawing.Point(284, 76)
         Me.lblFilterPlansByDatabase_BlitzFirst.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblFilterPlansByDatabase_BlitzFirst.Name = "lblFilterPlansByDatabase_BlitzFirst"
-        Me.lblFilterPlansByDatabase_BlitzFirst.Size = New System.Drawing.Size(149, 16)
+        Me.lblFilterPlansByDatabase_BlitzFirst.Size = New System.Drawing.Size(155, 17)
         Me.lblFilterPlansByDatabase_BlitzFirst.TabIndex = 43
         Me.lblFilterPlansByDatabase_BlitzFirst.Text = "FilterPlansByDatabase:"
         '
@@ -1514,7 +1514,7 @@ Partial Class BlitzDesktop
         Me.lblSeconds_BlitzFirst.Location = New System.Drawing.Point(284, 144)
         Me.lblSeconds_BlitzFirst.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblSeconds_BlitzFirst.Name = "lblSeconds_BlitzFirst"
-        Me.lblSeconds_BlitzFirst.Size = New System.Drawing.Size(64, 16)
+        Me.lblSeconds_BlitzFirst.Size = New System.Drawing.Size(67, 17)
         Me.lblSeconds_BlitzFirst.TabIndex = 34
         Me.lblSeconds_BlitzFirst.Text = "Seconds:"
         '
@@ -1524,7 +1524,7 @@ Partial Class BlitzDesktop
         Me.chkExpertMode_BlitzFirst.Location = New System.Drawing.Point(27, 100)
         Me.chkExpertMode_BlitzFirst.Margin = New System.Windows.Forms.Padding(4)
         Me.chkExpertMode_BlitzFirst.Name = "chkExpertMode_BlitzFirst"
-        Me.chkExpertMode_BlitzFirst.Size = New System.Drawing.Size(102, 20)
+        Me.chkExpertMode_BlitzFirst.Size = New System.Drawing.Size(105, 21)
         Me.chkExpertMode_BlitzFirst.TabIndex = 33
         Me.chkExpertMode_BlitzFirst.Tag = "ExpertMode;0"
         Me.chkExpertMode_BlitzFirst.Text = "ExpertMode"
@@ -1568,7 +1568,7 @@ Partial Class BlitzDesktop
         Me.Label3.Location = New System.Drawing.Point(805, 81)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(255, 16)
+        Me.Label3.Size = New System.Drawing.Size(270, 17)
         Me.Label3.TabIndex = 65
         Me.Label3.Text = "Only affects @Mode = Index Usage Detail"
         '
@@ -1578,7 +1578,7 @@ Partial Class BlitzDesktop
         Me.Label1.Location = New System.Drawing.Point(805, 48)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(255, 16)
+        Me.Label1.Size = New System.Drawing.Size(270, 17)
         Me.Label1.TabIndex = 64
         Me.Label1.Text = "Only affects @Mode = Index Usage Detail"
         '
@@ -1600,7 +1600,7 @@ Partial Class BlitzDesktop
         Me.lblMode_BlitzIndex.Location = New System.Drawing.Point(495, 14)
         Me.lblMode_BlitzIndex.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblMode_BlitzIndex.Name = "lblMode_BlitzIndex"
-        Me.lblMode_BlitzIndex.Size = New System.Drawing.Size(45, 16)
+        Me.lblMode_BlitzIndex.Size = New System.Drawing.Size(47, 17)
         Me.lblMode_BlitzIndex.TabIndex = 62
         Me.lblMode_BlitzIndex.Text = "Mode:"
         '
@@ -1610,7 +1610,7 @@ Partial Class BlitzDesktop
         Me.chkShowColumnstoreOnly_BlitzIndex.Location = New System.Drawing.Point(592, 166)
         Me.chkShowColumnstoreOnly_BlitzIndex.Margin = New System.Windows.Forms.Padding(4)
         Me.chkShowColumnstoreOnly_BlitzIndex.Name = "chkShowColumnstoreOnly_BlitzIndex"
-        Me.chkShowColumnstoreOnly_BlitzIndex.Size = New System.Drawing.Size(164, 20)
+        Me.chkShowColumnstoreOnly_BlitzIndex.Size = New System.Drawing.Size(172, 21)
         Me.chkShowColumnstoreOnly_BlitzIndex.TabIndex = 61
         Me.chkShowColumnstoreOnly_BlitzIndex.Tag = "ShowColumnstoreOnly;0"
         Me.chkShowColumnstoreOnly_BlitzIndex.Text = "ShowColumnstoreOnly"
@@ -1634,7 +1634,7 @@ Partial Class BlitzDesktop
         Me.lblSortDirection_BlitzIndex.Location = New System.Drawing.Point(495, 80)
         Me.lblSortDirection_BlitzIndex.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblSortDirection_BlitzIndex.Name = "lblSortDirection_BlitzIndex"
-        Me.lblSortDirection_BlitzIndex.Size = New System.Drawing.Size(87, 16)
+        Me.lblSortDirection_BlitzIndex.Size = New System.Drawing.Size(94, 17)
         Me.lblSortDirection_BlitzIndex.TabIndex = 59
         Me.lblSortDirection_BlitzIndex.Text = "SortDirection:"
         '
@@ -1655,7 +1655,7 @@ Partial Class BlitzDesktop
         Me.lblSortOrder_BlitzIndex.Location = New System.Drawing.Point(495, 47)
         Me.lblSortOrder_BlitzIndex.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblSortOrder_BlitzIndex.Name = "lblSortOrder_BlitzIndex"
-        Me.lblSortOrder_BlitzIndex.Size = New System.Drawing.Size(68, 16)
+        Me.lblSortOrder_BlitzIndex.Size = New System.Drawing.Size(75, 17)
         Me.lblSortOrder_BlitzIndex.TabIndex = 57
         Me.lblSortOrder_BlitzIndex.Text = "SortOrder:"
         '
@@ -1665,7 +1665,7 @@ Partial Class BlitzDesktop
         Me.chkShowAllMissingIndexRequests_BlitzIndex.Location = New System.Drawing.Point(592, 138)
         Me.chkShowAllMissingIndexRequests_BlitzIndex.Margin = New System.Windows.Forms.Padding(4)
         Me.chkShowAllMissingIndexRequests_BlitzIndex.Name = "chkShowAllMissingIndexRequests_BlitzIndex"
-        Me.chkShowAllMissingIndexRequests_BlitzIndex.Size = New System.Drawing.Size(213, 20)
+        Me.chkShowAllMissingIndexRequests_BlitzIndex.Size = New System.Drawing.Size(219, 21)
         Me.chkShowAllMissingIndexRequests_BlitzIndex.TabIndex = 56
         Me.chkShowAllMissingIndexRequests_BlitzIndex.Tag = "ShowAllMissingIndexRequests;0"
         Me.chkShowAllMissingIndexRequests_BlitzIndex.Text = "ShowAllMissingIndexRequests"
@@ -1677,7 +1677,7 @@ Partial Class BlitzDesktop
         Me.chkIncludeInactiveIndexes_BlitzIndex.Location = New System.Drawing.Point(141, 166)
         Me.chkIncludeInactiveIndexes_BlitzIndex.Margin = New System.Windows.Forms.Padding(4)
         Me.chkIncludeInactiveIndexes_BlitzIndex.Name = "chkIncludeInactiveIndexes_BlitzIndex"
-        Me.chkIncludeInactiveIndexes_BlitzIndex.Size = New System.Drawing.Size(165, 20)
+        Me.chkIncludeInactiveIndexes_BlitzIndex.Size = New System.Drawing.Size(171, 21)
         Me.chkIncludeInactiveIndexes_BlitzIndex.TabIndex = 55
         Me.chkIncludeInactiveIndexes_BlitzIndex.Tag = "IncludeInactiveIndexes;0"
         Me.chkIncludeInactiveIndexes_BlitzIndex.Text = "IncludeInactiveIndexes"
@@ -1700,7 +1700,7 @@ Partial Class BlitzDesktop
         Me.lblIgnoreDatabases_BlitzIndex.Location = New System.Drawing.Point(463, 110)
         Me.lblIgnoreDatabases_BlitzIndex.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblIgnoreDatabases_BlitzIndex.Name = "lblIgnoreDatabases_BlitzIndex"
-        Me.lblIgnoreDatabases_BlitzIndex.Size = New System.Drawing.Size(115, 16)
+        Me.lblIgnoreDatabases_BlitzIndex.Size = New System.Drawing.Size(120, 17)
         Me.lblIgnoreDatabases_BlitzIndex.TabIndex = 53
         Me.lblIgnoreDatabases_BlitzIndex.Text = "IgnoreDatabases:"
         '
@@ -1710,7 +1710,7 @@ Partial Class BlitzDesktop
         Me.chkBringThePain_BlitzIndex.Location = New System.Drawing.Point(141, 110)
         Me.chkBringThePain_BlitzIndex.Margin = New System.Windows.Forms.Padding(4)
         Me.chkBringThePain_BlitzIndex.Name = "chkBringThePain_BlitzIndex"
-        Me.chkBringThePain_BlitzIndex.Size = New System.Drawing.Size(111, 20)
+        Me.chkBringThePain_BlitzIndex.Size = New System.Drawing.Size(116, 21)
         Me.chkBringThePain_BlitzIndex.TabIndex = 52
         Me.chkBringThePain_BlitzIndex.Tag = "BringThePain;0"
         Me.chkBringThePain_BlitzIndex.Text = "BringThePain"
@@ -1722,7 +1722,7 @@ Partial Class BlitzDesktop
         Me.chkGetAllDatabases_BlitzIndex.Location = New System.Drawing.Point(141, 138)
         Me.chkGetAllDatabases_BlitzIndex.Margin = New System.Windows.Forms.Padding(4)
         Me.chkGetAllDatabases_BlitzIndex.Name = "chkGetAllDatabases_BlitzIndex"
-        Me.chkGetAllDatabases_BlitzIndex.Size = New System.Drawing.Size(132, 20)
+        Me.chkGetAllDatabases_BlitzIndex.Size = New System.Drawing.Size(136, 21)
         Me.chkGetAllDatabases_BlitzIndex.TabIndex = 51
         Me.chkGetAllDatabases_BlitzIndex.Tag = "GetAllDatabases;0"
         Me.chkGetAllDatabases_BlitzIndex.Text = "GetAllDatabases"
@@ -1744,7 +1744,7 @@ Partial Class BlitzDesktop
         Me.lblTableName_BlitzIndex.Location = New System.Drawing.Point(23, 81)
         Me.lblTableName_BlitzIndex.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblTableName_BlitzIndex.Name = "lblTableName_BlitzIndex"
-        Me.lblTableName_BlitzIndex.Size = New System.Drawing.Size(83, 16)
+        Me.lblTableName_BlitzIndex.Size = New System.Drawing.Size(85, 17)
         Me.lblTableName_BlitzIndex.TabIndex = 49
         Me.lblTableName_BlitzIndex.Text = "TableName:"
         '
@@ -1764,7 +1764,7 @@ Partial Class BlitzDesktop
         Me.lblSchemaName_BlitzIndex.Location = New System.Drawing.Point(23, 47)
         Me.lblSchemaName_BlitzIndex.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblSchemaName_BlitzIndex.Name = "lblSchemaName_BlitzIndex"
-        Me.lblSchemaName_BlitzIndex.Size = New System.Drawing.Size(97, 16)
+        Me.lblSchemaName_BlitzIndex.Size = New System.Drawing.Size(100, 17)
         Me.lblSchemaName_BlitzIndex.TabIndex = 47
         Me.lblSchemaName_BlitzIndex.Text = "SchemaName:"
         '
@@ -1784,7 +1784,7 @@ Partial Class BlitzDesktop
         Me.lblDatabaseName_BlitzIndex.Location = New System.Drawing.Point(23, 14)
         Me.lblDatabaseName_BlitzIndex.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblDatabaseName_BlitzIndex.Name = "lblDatabaseName_BlitzIndex"
-        Me.lblDatabaseName_BlitzIndex.Size = New System.Drawing.Size(107, 16)
+        Me.lblDatabaseName_BlitzIndex.Size = New System.Drawing.Size(110, 17)
         Me.lblDatabaseName_BlitzIndex.TabIndex = 45
         Me.lblDatabaseName_BlitzIndex.Text = "DatabaseName:"
         '
@@ -1848,7 +1848,7 @@ Partial Class BlitzDesktop
         Me.chkUseBelowDate_Internal_BlitzLock.Location = New System.Drawing.Point(749, 10)
         Me.chkUseBelowDate_Internal_BlitzLock.Margin = New System.Windows.Forms.Padding(4)
         Me.chkUseBelowDate_Internal_BlitzLock.Name = "chkUseBelowDate_Internal_BlitzLock"
-        Me.chkUseBelowDate_Internal_BlitzLock.Size = New System.Drawing.Size(212, 20)
+        Me.chkUseBelowDate_Internal_BlitzLock.Size = New System.Drawing.Size(223, 21)
         Me.chkUseBelowDate_Internal_BlitzLock.TabIndex = 65
         Me.chkUseBelowDate_Internal_BlitzLock.Tag = "UseBelowDate;0"
         Me.chkUseBelowDate_Internal_BlitzLock.Text = "Use the below dates and times"
@@ -1861,7 +1861,7 @@ Partial Class BlitzDesktop
         Me.chkExportToExcel_BlitzLock.Location = New System.Drawing.Point(496, 134)
         Me.chkExportToExcel_BlitzLock.Margin = New System.Windows.Forms.Padding(4)
         Me.chkExportToExcel_BlitzLock.Name = "chkExportToExcel_BlitzLock"
-        Me.chkExportToExcel_BlitzLock.Size = New System.Drawing.Size(117, 20)
+        Me.chkExportToExcel_BlitzLock.Size = New System.Drawing.Size(120, 21)
         Me.chkExportToExcel_BlitzLock.TabIndex = 64
         Me.chkExportToExcel_BlitzLock.Tag = "ExportToExcel;0"
         Me.chkExportToExcel_BlitzLock.Text = "ExportToExcel"
@@ -1874,7 +1874,7 @@ Partial Class BlitzDesktop
         Me.chkVictimsOnly_BlitzLock.Location = New System.Drawing.Point(496, 111)
         Me.chkVictimsOnly_BlitzLock.Margin = New System.Windows.Forms.Padding(4)
         Me.chkVictimsOnly_BlitzLock.Name = "chkVictimsOnly_BlitzLock"
-        Me.chkVictimsOnly_BlitzLock.Size = New System.Drawing.Size(99, 20)
+        Me.chkVictimsOnly_BlitzLock.Size = New System.Drawing.Size(103, 21)
         Me.chkVictimsOnly_BlitzLock.TabIndex = 63
         Me.chkVictimsOnly_BlitzLock.Tag = "VictimsOnly;0"
         Me.chkVictimsOnly_BlitzLock.Text = "VictimsOnly"
@@ -1895,7 +1895,7 @@ Partial Class BlitzDesktop
         Me.lblLoginName_BlitzLock.Location = New System.Drawing.Point(411, 76)
         Me.lblLoginName_BlitzLock.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblLoginName_BlitzLock.Name = "lblLoginName_BlitzLock"
-        Me.lblLoginName_BlitzLock.Size = New System.Drawing.Size(80, 16)
+        Me.lblLoginName_BlitzLock.Size = New System.Drawing.Size(84, 17)
         Me.lblLoginName_BlitzLock.TabIndex = 61
         Me.lblLoginName_BlitzLock.Text = "LoginName:"
         '
@@ -1914,7 +1914,7 @@ Partial Class BlitzDesktop
         Me.lblHostName_BlitzLock.Location = New System.Drawing.Point(411, 43)
         Me.lblHostName_BlitzLock.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblHostName_BlitzLock.Name = "lblHostName_BlitzLock"
-        Me.lblHostName_BlitzLock.Size = New System.Drawing.Size(75, 16)
+        Me.lblHostName_BlitzLock.Size = New System.Drawing.Size(78, 17)
         Me.lblHostName_BlitzLock.TabIndex = 59
         Me.lblHostName_BlitzLock.Text = "HostName:"
         '
@@ -1933,7 +1933,7 @@ Partial Class BlitzDesktop
         Me.lblAppName_BlitzLock.Location = New System.Drawing.Point(411, 11)
         Me.lblAppName_BlitzLock.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblAppName_BlitzLock.Name = "lblAppName_BlitzLock"
-        Me.lblAppName_BlitzLock.Size = New System.Drawing.Size(72, 16)
+        Me.lblAppName_BlitzLock.Size = New System.Drawing.Size(74, 17)
         Me.lblAppName_BlitzLock.TabIndex = 57
         Me.lblAppName_BlitzLock.Text = "AppName:"
         '
@@ -1953,7 +1953,7 @@ Partial Class BlitzDesktop
         Me.lblTableName_BlitzLock.Location = New System.Drawing.Point(14, 79)
         Me.lblTableName_BlitzLock.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblTableName_BlitzLock.Name = "lblTableName_BlitzLock"
-        Me.lblTableName_BlitzLock.Size = New System.Drawing.Size(83, 16)
+        Me.lblTableName_BlitzLock.Size = New System.Drawing.Size(85, 17)
         Me.lblTableName_BlitzLock.TabIndex = 55
         Me.lblTableName_BlitzLock.Text = "TableName:"
         '
@@ -1973,7 +1973,7 @@ Partial Class BlitzDesktop
         Me.lblSchemaName_BlitzLock.Location = New System.Drawing.Point(14, 48)
         Me.lblSchemaName_BlitzLock.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblSchemaName_BlitzLock.Name = "lblSchemaName_BlitzLock"
-        Me.lblSchemaName_BlitzLock.Size = New System.Drawing.Size(97, 16)
+        Me.lblSchemaName_BlitzLock.Size = New System.Drawing.Size(100, 17)
         Me.lblSchemaName_BlitzLock.TabIndex = 53
         Me.lblSchemaName_BlitzLock.Tag = "SchemaName"
         Me.lblSchemaName_BlitzLock.Text = "SchemaName:"
@@ -1994,7 +1994,7 @@ Partial Class BlitzDesktop
         Me.lblEndDate_BlitzLock.Location = New System.Drawing.Point(672, 74)
         Me.lblEndDate_BlitzLock.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblEndDate_BlitzLock.Name = "lblEndDate_BlitzLock"
-        Me.lblEndDate_BlitzLock.Size = New System.Drawing.Size(63, 16)
+        Me.lblEndDate_BlitzLock.Size = New System.Drawing.Size(67, 17)
         Me.lblEndDate_BlitzLock.TabIndex = 51
         Me.lblEndDate_BlitzLock.Text = "EndDate:"
         '
@@ -2014,7 +2014,7 @@ Partial Class BlitzDesktop
         Me.lblStartDate_BlitzLock.Location = New System.Drawing.Point(672, 44)
         Me.lblStartDate_BlitzLock.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblStartDate_BlitzLock.Name = "lblStartDate_BlitzLock"
-        Me.lblStartDate_BlitzLock.Size = New System.Drawing.Size(66, 16)
+        Me.lblStartDate_BlitzLock.Size = New System.Drawing.Size(72, 17)
         Me.lblStartDate_BlitzLock.TabIndex = 49
         Me.lblStartDate_BlitzLock.Text = "StartDate:"
         '
@@ -2035,7 +2035,7 @@ Partial Class BlitzDesktop
         Me.lblStoredProcName_BlitzLock.Location = New System.Drawing.Point(14, 112)
         Me.lblStoredProcName_BlitzLock.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblStoredProcName_BlitzLock.Name = "lblStoredProcName_BlitzLock"
-        Me.lblStoredProcName_BlitzLock.Size = New System.Drawing.Size(115, 16)
+        Me.lblStoredProcName_BlitzLock.Size = New System.Drawing.Size(120, 17)
         Me.lblStoredProcName_BlitzLock.TabIndex = 47
         Me.lblStoredProcName_BlitzLock.Text = "StoredProcName:"
         '
@@ -2055,7 +2055,7 @@ Partial Class BlitzDesktop
         Me.lblDatabaseName_BlitzLock.Location = New System.Drawing.Point(14, 12)
         Me.lblDatabaseName_BlitzLock.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblDatabaseName_BlitzLock.Name = "lblDatabaseName_BlitzLock"
-        Me.lblDatabaseName_BlitzLock.Size = New System.Drawing.Size(107, 16)
+        Me.lblDatabaseName_BlitzLock.Size = New System.Drawing.Size(110, 17)
         Me.lblDatabaseName_BlitzLock.TabIndex = 45
         Me.lblDatabaseName_BlitzLock.Text = "DatabaseName:"
         '
@@ -2115,7 +2115,7 @@ Partial Class BlitzDesktop
         Me.chkExpertMode_BlitzQueryStore.Location = New System.Drawing.Point(543, 17)
         Me.chkExpertMode_BlitzQueryStore.Margin = New System.Windows.Forms.Padding(4)
         Me.chkExpertMode_BlitzQueryStore.Name = "chkExpertMode_BlitzQueryStore"
-        Me.chkExpertMode_BlitzQueryStore.Size = New System.Drawing.Size(102, 20)
+        Me.chkExpertMode_BlitzQueryStore.Size = New System.Drawing.Size(105, 21)
         Me.chkExpertMode_BlitzQueryStore.TabIndex = 71
         Me.chkExpertMode_BlitzQueryStore.Tag = "ExpertMode;0"
         Me.chkExpertMode_BlitzQueryStore.Text = "ExpertMode"
@@ -2127,7 +2127,7 @@ Partial Class BlitzDesktop
         Me.chkSkipXML_BlitzQueryStore.Location = New System.Drawing.Point(543, 87)
         Me.chkSkipXML_BlitzQueryStore.Margin = New System.Windows.Forms.Padding(4)
         Me.chkSkipXML_BlitzQueryStore.Name = "chkSkipXML_BlitzQueryStore"
-        Me.chkSkipXML_BlitzQueryStore.Size = New System.Drawing.Size(78, 20)
+        Me.chkSkipXML_BlitzQueryStore.Size = New System.Drawing.Size(80, 21)
         Me.chkSkipXML_BlitzQueryStore.TabIndex = 70
         Me.chkSkipXML_BlitzQueryStore.Tag = "SkipXml;0"
         Me.chkSkipXML_BlitzQueryStore.Text = "SkipXml"
@@ -2139,7 +2139,7 @@ Partial Class BlitzDesktop
         Me.chkFailed_BlitzQueryStore.Location = New System.Drawing.Point(543, 52)
         Me.chkFailed_BlitzQueryStore.Margin = New System.Windows.Forms.Padding(4)
         Me.chkFailed_BlitzQueryStore.Name = "chkFailed_BlitzQueryStore"
-        Me.chkFailed_BlitzQueryStore.Size = New System.Drawing.Size(67, 20)
+        Me.chkFailed_BlitzQueryStore.Size = New System.Drawing.Size(68, 21)
         Me.chkFailed_BlitzQueryStore.TabIndex = 69
         Me.chkFailed_BlitzQueryStore.Tag = "Failed;0"
         Me.chkFailed_BlitzQueryStore.Text = "Failed"
@@ -2160,7 +2160,7 @@ Partial Class BlitzDesktop
         Me.lblDurationFilter_BlitzQueryStore.Location = New System.Drawing.Point(745, 49)
         Me.lblDurationFilter_BlitzQueryStore.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblDurationFilter_BlitzQueryStore.Name = "lblDurationFilter_BlitzQueryStore"
-        Me.lblDurationFilter_BlitzQueryStore.Size = New System.Drawing.Size(89, 16)
+        Me.lblDurationFilter_BlitzQueryStore.Size = New System.Drawing.Size(97, 17)
         Me.lblDurationFilter_BlitzQueryStore.TabIndex = 67
         Me.lblDurationFilter_BlitzQueryStore.Text = "DurationFilter:"
         '
@@ -2179,7 +2179,7 @@ Partial Class BlitzDesktop
         Me.lblMinimumExecutionCount_BlitzQueryStore.Location = New System.Drawing.Point(673, 18)
         Me.lblMinimumExecutionCount_BlitzQueryStore.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblMinimumExecutionCount_BlitzQueryStore.Name = "lblMinimumExecutionCount_BlitzQueryStore"
-        Me.lblMinimumExecutionCount_BlitzQueryStore.Size = New System.Drawing.Size(155, 16)
+        Me.lblMinimumExecutionCount_BlitzQueryStore.Size = New System.Drawing.Size(165, 17)
         Me.lblMinimumExecutionCount_BlitzQueryStore.TabIndex = 65
         Me.lblMinimumExecutionCount_BlitzQueryStore.Text = "MinimumExecutionCount:"
         '
@@ -2189,7 +2189,7 @@ Partial Class BlitzDesktop
         Me.chkExportToExcel_BlitzQueryStore.Location = New System.Drawing.Point(543, 122)
         Me.chkExportToExcel_BlitzQueryStore.Margin = New System.Windows.Forms.Padding(4)
         Me.chkExportToExcel_BlitzQueryStore.Name = "chkExportToExcel_BlitzQueryStore"
-        Me.chkExportToExcel_BlitzQueryStore.Size = New System.Drawing.Size(117, 20)
+        Me.chkExportToExcel_BlitzQueryStore.Size = New System.Drawing.Size(120, 21)
         Me.chkExportToExcel_BlitzQueryStore.TabIndex = 64
         Me.chkExportToExcel_BlitzQueryStore.Tag = "ExportToExcel;0"
         Me.chkExportToExcel_BlitzQueryStore.Text = "ExportToExcel"
@@ -2211,7 +2211,7 @@ Partial Class BlitzDesktop
         Me.lblEndDate_BlitzQueryStore.Location = New System.Drawing.Point(772, 119)
         Me.lblEndDate_BlitzQueryStore.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblEndDate_BlitzQueryStore.Name = "lblEndDate_BlitzQueryStore"
-        Me.lblEndDate_BlitzQueryStore.Size = New System.Drawing.Size(63, 16)
+        Me.lblEndDate_BlitzQueryStore.Size = New System.Drawing.Size(67, 17)
         Me.lblEndDate_BlitzQueryStore.TabIndex = 51
         Me.lblEndDate_BlitzQueryStore.Text = "EndDate:"
         '
@@ -2231,7 +2231,7 @@ Partial Class BlitzDesktop
         Me.lblStartDate_BlitzQueryStore.Location = New System.Drawing.Point(768, 87)
         Me.lblStartDate_BlitzQueryStore.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblStartDate_BlitzQueryStore.Name = "lblStartDate_BlitzQueryStore"
-        Me.lblStartDate_BlitzQueryStore.Size = New System.Drawing.Size(66, 16)
+        Me.lblStartDate_BlitzQueryStore.Size = New System.Drawing.Size(72, 17)
         Me.lblStartDate_BlitzQueryStore.TabIndex = 49
         Me.lblStartDate_BlitzQueryStore.Text = "StartDate:"
         '
@@ -2251,7 +2251,7 @@ Partial Class BlitzDesktop
         Me.lblStoredProcName_BlitzQueryStore.Location = New System.Drawing.Point(15, 84)
         Me.lblStoredProcName_BlitzQueryStore.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblStoredProcName_BlitzQueryStore.Name = "lblStoredProcName_BlitzQueryStore"
-        Me.lblStoredProcName_BlitzQueryStore.Size = New System.Drawing.Size(115, 16)
+        Me.lblStoredProcName_BlitzQueryStore.Size = New System.Drawing.Size(120, 17)
         Me.lblStoredProcName_BlitzQueryStore.TabIndex = 47
         Me.lblStoredProcName_BlitzQueryStore.Text = "StoredProcName:"
         '
@@ -2271,7 +2271,7 @@ Partial Class BlitzDesktop
         Me.lblDatabaseName_BlitzQueryStore.Location = New System.Drawing.Point(15, 50)
         Me.lblDatabaseName_BlitzQueryStore.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblDatabaseName_BlitzQueryStore.Name = "lblDatabaseName_BlitzQueryStore"
-        Me.lblDatabaseName_BlitzQueryStore.Size = New System.Drawing.Size(107, 16)
+        Me.lblDatabaseName_BlitzQueryStore.Size = New System.Drawing.Size(110, 17)
         Me.lblDatabaseName_BlitzQueryStore.TabIndex = 45
         Me.lblDatabaseName_BlitzQueryStore.Text = "DatabaseName:"
         '
@@ -2281,7 +2281,7 @@ Partial Class BlitzDesktop
         Me.lblTop_BlitzQueryStore.Location = New System.Drawing.Point(15, 18)
         Me.lblTop_BlitzQueryStore.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblTop_BlitzQueryStore.Name = "lblTop_BlitzQueryStore"
-        Me.lblTop_BlitzQueryStore.Size = New System.Drawing.Size(35, 16)
+        Me.lblTop_BlitzQueryStore.Size = New System.Drawing.Size(37, 17)
         Me.lblTop_BlitzQueryStore.TabIndex = 1
         Me.lblTop_BlitzQueryStore.Text = "Top:"
         '
@@ -2333,7 +2333,7 @@ Partial Class BlitzDesktop
         Me.chkGetLiveQueryPlan_BlitzWho.Location = New System.Drawing.Point(23, 134)
         Me.chkGetLiveQueryPlan_BlitzWho.Margin = New System.Windows.Forms.Padding(4)
         Me.chkGetLiveQueryPlan_BlitzWho.Name = "chkGetLiveQueryPlan_BlitzWho"
-        Me.chkGetLiveQueryPlan_BlitzWho.Size = New System.Drawing.Size(138, 20)
+        Me.chkGetLiveQueryPlan_BlitzWho.Size = New System.Drawing.Size(146, 21)
         Me.chkGetLiveQueryPlan_BlitzWho.TabIndex = 22
         Me.chkGetLiveQueryPlan_BlitzWho.Tag = "GetLiveQueryPlan;0"
         Me.chkGetLiveQueryPlan_BlitzWho.Text = "GetLiveQueryPlan"
@@ -2345,7 +2345,7 @@ Partial Class BlitzDesktop
         Me.chkGetOuterCommand_BlitzWho.Location = New System.Drawing.Point(23, 106)
         Me.chkGetOuterCommand_BlitzWho.Margin = New System.Windows.Forms.Padding(4)
         Me.chkGetOuterCommand_BlitzWho.Name = "chkGetOuterCommand_BlitzWho"
-        Me.chkGetOuterCommand_BlitzWho.Size = New System.Drawing.Size(144, 20)
+        Me.chkGetOuterCommand_BlitzWho.Size = New System.Drawing.Size(152, 21)
         Me.chkGetOuterCommand_BlitzWho.TabIndex = 21
         Me.chkGetOuterCommand_BlitzWho.Tag = "GetOuterCommand;0"
         Me.chkGetOuterCommand_BlitzWho.Text = "GetOuterCommand"
@@ -2368,7 +2368,7 @@ Partial Class BlitzDesktop
         Me.lblSortOrder_BlitzWho.Location = New System.Drawing.Point(19, 22)
         Me.lblSortOrder_BlitzWho.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblSortOrder_BlitzWho.Name = "lblSortOrder_BlitzWho"
-        Me.lblSortOrder_BlitzWho.Size = New System.Drawing.Size(68, 16)
+        Me.lblSortOrder_BlitzWho.Size = New System.Drawing.Size(75, 17)
         Me.lblSortOrder_BlitzWho.TabIndex = 18
         Me.lblSortOrder_BlitzWho.Text = "SortOrder:"
         '
@@ -2388,7 +2388,7 @@ Partial Class BlitzDesktop
         Me.lblMinBlockingSeconds_BlitzWho.Location = New System.Drawing.Point(364, 20)
         Me.lblMinBlockingSeconds_BlitzWho.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblMinBlockingSeconds_BlitzWho.Name = "lblMinBlockingSeconds_BlitzWho"
-        Me.lblMinBlockingSeconds_BlitzWho.Size = New System.Drawing.Size(137, 16)
+        Me.lblMinBlockingSeconds_BlitzWho.Size = New System.Drawing.Size(142, 17)
         Me.lblMinBlockingSeconds_BlitzWho.TabIndex = 16
         Me.lblMinBlockingSeconds_BlitzWho.Text = "MinBlockingSeconds:"
         '
@@ -2408,7 +2408,7 @@ Partial Class BlitzDesktop
         Me.lblMinRequestedMemoryKB_BlitzWho.Location = New System.Drawing.Point(688, 52)
         Me.lblMinRequestedMemoryKB_BlitzWho.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblMinRequestedMemoryKB_BlitzWho.Name = "lblMinRequestedMemoryKB_BlitzWho"
-        Me.lblMinRequestedMemoryKB_BlitzWho.Size = New System.Drawing.Size(164, 16)
+        Me.lblMinRequestedMemoryKB_BlitzWho.Size = New System.Drawing.Size(171, 17)
         Me.lblMinRequestedMemoryKB_BlitzWho.TabIndex = 14
         Me.lblMinRequestedMemoryKB_BlitzWho.Text = "MinRequestedMemoryKB:"
         '
@@ -2428,7 +2428,7 @@ Partial Class BlitzDesktop
         Me.lblMinTempdbMB_BlitzWho.Location = New System.Drawing.Point(688, 84)
         Me.lblMinTempdbMB_BlitzWho.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblMinTempdbMB_BlitzWho.Name = "lblMinTempdbMB_BlitzWho"
-        Me.lblMinTempdbMB_BlitzWho.Size = New System.Drawing.Size(103, 16)
+        Me.lblMinTempdbMB_BlitzWho.Size = New System.Drawing.Size(106, 17)
         Me.lblMinTempdbMB_BlitzWho.TabIndex = 12
         Me.lblMinTempdbMB_BlitzWho.Text = "MinTempdbMB:"
         '
@@ -2448,7 +2448,7 @@ Partial Class BlitzDesktop
         Me.lblMinWrites_BlitzWho.Location = New System.Drawing.Point(688, 116)
         Me.lblMinWrites_BlitzWho.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblMinWrites_BlitzWho.Name = "lblMinWrites_BlitzWho"
-        Me.lblMinWrites_BlitzWho.Size = New System.Drawing.Size(69, 16)
+        Me.lblMinWrites_BlitzWho.Size = New System.Drawing.Size(74, 17)
         Me.lblMinWrites_BlitzWho.TabIndex = 10
         Me.lblMinWrites_BlitzWho.Text = "MinWrites:"
         '
@@ -2468,7 +2468,7 @@ Partial Class BlitzDesktop
         Me.lblMinPhysicalReads_BlitzWho.Location = New System.Drawing.Point(688, 20)
         Me.lblMinPhysicalReads_BlitzWho.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblMinPhysicalReads_BlitzWho.Name = "lblMinPhysicalReads_BlitzWho"
-        Me.lblMinPhysicalReads_BlitzWho.Size = New System.Drawing.Size(123, 16)
+        Me.lblMinPhysicalReads_BlitzWho.Size = New System.Drawing.Size(127, 17)
         Me.lblMinPhysicalReads_BlitzWho.TabIndex = 8
         Me.lblMinPhysicalReads_BlitzWho.Text = "MinPhysicalReads:"
         '
@@ -2488,7 +2488,7 @@ Partial Class BlitzDesktop
         Me.lblMinLogicalReads_BlitzWho.Location = New System.Drawing.Point(364, 116)
         Me.lblMinLogicalReads_BlitzWho.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblMinLogicalReads_BlitzWho.Name = "lblMinLogicalReads_BlitzWho"
-        Me.lblMinLogicalReads_BlitzWho.Size = New System.Drawing.Size(116, 16)
+        Me.lblMinLogicalReads_BlitzWho.Size = New System.Drawing.Size(120, 17)
         Me.lblMinLogicalReads_BlitzWho.TabIndex = 6
         Me.lblMinLogicalReads_BlitzWho.Text = "MinLogicalReads:"
         '
@@ -2508,7 +2508,7 @@ Partial Class BlitzDesktop
         Me.lblMinCPUTime_BlitzWho.Location = New System.Drawing.Point(364, 52)
         Me.lblMinCPUTime_BlitzWho.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblMinCPUTime_BlitzWho.Name = "lblMinCPUTime_BlitzWho"
-        Me.lblMinCPUTime_BlitzWho.Size = New System.Drawing.Size(90, 16)
+        Me.lblMinCPUTime_BlitzWho.Size = New System.Drawing.Size(93, 17)
         Me.lblMinCPUTime_BlitzWho.TabIndex = 4
         Me.lblMinCPUTime_BlitzWho.Text = "MinCPUTime:"
         '
@@ -2528,7 +2528,7 @@ Partial Class BlitzDesktop
         Me.lblMinElapsedSeconds_BlitzWho.Location = New System.Drawing.Point(364, 84)
         Me.lblMinElapsedSeconds_BlitzWho.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblMinElapsedSeconds_BlitzWho.Name = "lblMinElapsedSeconds_BlitzWho"
-        Me.lblMinElapsedSeconds_BlitzWho.Size = New System.Drawing.Size(136, 16)
+        Me.lblMinElapsedSeconds_BlitzWho.Size = New System.Drawing.Size(140, 17)
         Me.lblMinElapsedSeconds_BlitzWho.TabIndex = 2
         Me.lblMinElapsedSeconds_BlitzWho.Text = "MinElapsedSeconds:"
         '
@@ -2538,7 +2538,7 @@ Partial Class BlitzDesktop
         Me.chkExpertMode_BlitzWho.Location = New System.Drawing.Point(23, 78)
         Me.chkExpertMode_BlitzWho.Margin = New System.Windows.Forms.Padding(4)
         Me.chkExpertMode_BlitzWho.Name = "chkExpertMode_BlitzWho"
-        Me.chkExpertMode_BlitzWho.Size = New System.Drawing.Size(102, 20)
+        Me.chkExpertMode_BlitzWho.Size = New System.Drawing.Size(105, 21)
         Me.chkExpertMode_BlitzWho.TabIndex = 1
         Me.chkExpertMode_BlitzWho.Tag = "ExpertMode;0"
         Me.chkExpertMode_BlitzWho.Text = "ExpertMode"
@@ -2550,7 +2550,7 @@ Partial Class BlitzDesktop
         Me.chkShowSleepingSPIDs_BlitzWho.Location = New System.Drawing.Point(23, 52)
         Me.chkShowSleepingSPIDs_BlitzWho.Margin = New System.Windows.Forms.Padding(4)
         Me.chkShowSleepingSPIDs_BlitzWho.Name = "chkShowSleepingSPIDs_BlitzWho"
-        Me.chkShowSleepingSPIDs_BlitzWho.Size = New System.Drawing.Size(154, 20)
+        Me.chkShowSleepingSPIDs_BlitzWho.Size = New System.Drawing.Size(157, 21)
         Me.chkShowSleepingSPIDs_BlitzWho.TabIndex = 0
         Me.chkShowSleepingSPIDs_BlitzWho.Tag = "ShowSleepingSPIDs;0"
         Me.chkShowSleepingSPIDs_BlitzWho.Text = "ShowSleepingSPIDs"
@@ -2616,7 +2616,7 @@ Partial Class BlitzDesktop
         Me.lblLatestExecutedScript.Location = New System.Drawing.Point(5, 342)
         Me.lblLatestExecutedScript.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblLatestExecutedScript.Name = "lblLatestExecutedScript"
-        Me.lblLatestExecutedScript.Size = New System.Drawing.Size(204, 16)
+        Me.lblLatestExecutedScript.Size = New System.Drawing.Size(221, 17)
         Me.lblLatestExecutedScript.TabIndex = 21
         Me.lblLatestExecutedScript.Text = "SQL script that was last executed:"
         '
@@ -2626,7 +2626,7 @@ Partial Class BlitzDesktop
         Me.lblSelectDatabase.Location = New System.Drawing.Point(435, 11)
         Me.lblSelectDatabase.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblSelectDatabase.Name = "lblSelectDatabase"
-        Me.lblSelectDatabase.Size = New System.Drawing.Size(200, 16)
+        Me.lblSelectDatabase.Size = New System.Drawing.Size(212, 17)
         Me.lblSelectDatabase.TabIndex = 29
         Me.lblSelectDatabase.Text = "Select main database (optional):"
         '
@@ -2645,7 +2645,7 @@ Partial Class BlitzDesktop
         Me.lblDatabasesNotSelectable.Location = New System.Drawing.Point(435, 34)
         Me.lblDatabasesNotSelectable.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblDatabasesNotSelectable.Name = "lblDatabasesNotSelectable"
-        Me.lblDatabasesNotSelectable.Size = New System.Drawing.Size(352, 16)
+        Me.lblDatabasesNotSelectable.Size = New System.Drawing.Size(375, 17)
         Me.lblDatabasesNotSelectable.TabIndex = 31
         Me.lblDatabasesNotSelectable.Text = "Not available since sprocs are not in the master database."
         '
@@ -2674,7 +2674,6 @@ Partial Class BlitzDesktop
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "BlitzDesktop"
-        Me.Text = "BlitzDesktop - Ver. 22.12.2"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.dgvResults, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tcFilters.ResumeLayout(False)

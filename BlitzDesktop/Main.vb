@@ -27,6 +27,8 @@ Public Class BlitzDesktop
 
         Try
 
+            Me.Text = "BlitzDesktop - Ver. " & My.Application.Info.Version.ToString
+
             LoadRadioButtonsTimeout(New List(Of String)({"30", "120", "600"}))
 
             SetToolTips()
