@@ -65,5 +65,7 @@ Example on logic that do exist:
 If you for sp_BlitzFirst select [OutputType] = TOP10 the flag [SinceStartup] will automatically be set in the stored procedure. This will also happen in the application. 
 And should you uncheck [SinceStartup] it will automatically be set when you click on [Execute].
 
+Not all arguments available in the stored procedures may be available in BlitzDesktop.
+
 ![](Images/Logic.jpg)
  
