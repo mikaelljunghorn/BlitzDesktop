@@ -92,6 +92,7 @@ Partial Class BlitzDesktop
         Me.intHoursBack_BlitzBackups = New System.Windows.Forms.TextBox()
         Me.lblHoursBack_BlitzBackups = New System.Windows.Forms.Label()
         Me.sp_BlitzCache = New System.Windows.Forms.TabPage()
+        Me.chkBringThePain_BlitzCache = New System.Windows.Forms.CheckBox()
         Me.chkSkipAanlysis_BlitzCache = New System.Windows.Forms.CheckBox()
         Me.strSlowlySearchPlansFor_BlitzCache = New System.Windows.Forms.TextBox()
         Me.intMinutesBack_BlitzCache = New System.Windows.Forms.TextBox()
@@ -231,7 +232,14 @@ Partial Class BlitzDesktop
         Me.lblSelectDatabase = New System.Windows.Forms.Label()
         Me.ddlDatabases = New System.Windows.Forms.ComboBox()
         Me.lblDatabasesNotSelectable = New System.Windows.Forms.Label()
-        Me.chkBringThePain_BlitzCache = New System.Windows.Forms.CheckBox()
+        Me.lblOutputResultSets_BlitzFirst = New System.Windows.Forms.Label()
+        Me.chkBlitzWhoStart_BlitzFirst = New System.Windows.Forms.CheckBox()
+        Me.chkFindings_BlitzFirst = New System.Windows.Forms.CheckBox()
+        Me.chkFileStats_BlitzFirst = New System.Windows.Forms.CheckBox()
+        Me.chkPerfmonStats_BlitzFirst = New System.Windows.Forms.CheckBox()
+        Me.chkWaitStats_BlitzFirst = New System.Windows.Forms.CheckBox()
+        Me.chkBlitzCache_BlitzFirst = New System.Windows.Forms.CheckBox()
+        Me.chkBlitzWhoEnd_BlitzFirst = New System.Windows.Forms.CheckBox()
         CType(Me.dgvResults, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tcFilters.SuspendLayout()
         Me.sp_Blitz.SuspendLayout()
@@ -1069,6 +1077,18 @@ Partial Class BlitzDesktop
         Me.sp_BlitzCache.Text = "Parameters BlitzCache"
         Me.sp_BlitzCache.UseVisualStyleBackColor = True
         '
+        'chkBringThePain_BlitzCache
+        '
+        Me.chkBringThePain_BlitzCache.AutoSize = True
+        Me.chkBringThePain_BlitzCache.Location = New System.Drawing.Point(23, 104)
+        Me.chkBringThePain_BlitzCache.Margin = New System.Windows.Forms.Padding(4)
+        Me.chkBringThePain_BlitzCache.Name = "chkBringThePain_BlitzCache"
+        Me.chkBringThePain_BlitzCache.Size = New System.Drawing.Size(111, 20)
+        Me.chkBringThePain_BlitzCache.TabIndex = 55
+        Me.chkBringThePain_BlitzCache.Tag = "BringThePain;0"
+        Me.chkBringThePain_BlitzCache.Text = "BringThePain"
+        Me.chkBringThePain_BlitzCache.UseVisualStyleBackColor = True
+        '
         'chkSkipAanlysis_BlitzCache
         '
         Me.chkSkipAanlysis_BlitzCache.AutoSize = True
@@ -1315,6 +1335,14 @@ Partial Class BlitzDesktop
         '
         'sp_BlitzFirst
         '
+        Me.sp_BlitzFirst.Controls.Add(Me.chkBlitzWhoEnd_BlitzFirst)
+        Me.sp_BlitzFirst.Controls.Add(Me.chkBlitzCache_BlitzFirst)
+        Me.sp_BlitzFirst.Controls.Add(Me.chkWaitStats_BlitzFirst)
+        Me.sp_BlitzFirst.Controls.Add(Me.chkPerfmonStats_BlitzFirst)
+        Me.sp_BlitzFirst.Controls.Add(Me.chkFileStats_BlitzFirst)
+        Me.sp_BlitzFirst.Controls.Add(Me.chkFindings_BlitzFirst)
+        Me.sp_BlitzFirst.Controls.Add(Me.chkBlitzWhoStart_BlitzFirst)
+        Me.sp_BlitzFirst.Controls.Add(Me.lblOutputResultSets_BlitzFirst)
         Me.sp_BlitzFirst.Controls.Add(Me.ddlOutputType_BlitzFirst)
         Me.sp_BlitzFirst.Controls.Add(Me.lblOutputType_BlitzFirst)
         Me.sp_BlitzFirst.Controls.Add(Me.chkSinceStartup_BlitzFirst)
@@ -1343,7 +1371,7 @@ Partial Class BlitzDesktop
         '
         Me.ddlOutputType_BlitzFirst.FormattingEnabled = True
         Me.ddlOutputType_BlitzFirst.Items.AddRange(New Object() {"TABLE (Default)", "Opserver1", "TOP10"})
-        Me.ddlOutputType_BlitzFirst.Location = New System.Drawing.Point(472, 7)
+        Me.ddlOutputType_BlitzFirst.Location = New System.Drawing.Point(472, 12)
         Me.ddlOutputType_BlitzFirst.Margin = New System.Windows.Forms.Padding(4)
         Me.ddlOutputType_BlitzFirst.Name = "ddlOutputType_BlitzFirst"
         Me.ddlOutputType_BlitzFirst.Size = New System.Drawing.Size(212, 24)
@@ -2637,17 +2665,105 @@ Partial Class BlitzDesktop
         Me.lblDatabasesNotSelectable.TabIndex = 31
         Me.lblDatabasesNotSelectable.Text = "Not available since sprocs are not in the master database."
         '
-        'chkBringThePain_BlitzCache
+        'lblOutputResultSets_BlitzFirst
         '
-        Me.chkBringThePain_BlitzCache.AutoSize = True
-        Me.chkBringThePain_BlitzCache.Location = New System.Drawing.Point(23, 104)
-        Me.chkBringThePain_BlitzCache.Margin = New System.Windows.Forms.Padding(4)
-        Me.chkBringThePain_BlitzCache.Name = "chkBringThePain_BlitzCache"
-        Me.chkBringThePain_BlitzCache.Size = New System.Drawing.Size(111, 20)
-        Me.chkBringThePain_BlitzCache.TabIndex = 55
-        Me.chkBringThePain_BlitzCache.Tag = "BringThePain;0"
-        Me.chkBringThePain_BlitzCache.Text = "BringThePain"
-        Me.chkBringThePain_BlitzCache.UseVisualStyleBackColor = True
+        Me.lblOutputResultSets_BlitzFirst.AutoSize = True
+        Me.lblOutputResultSets_BlitzFirst.Location = New System.Drawing.Point(768, 16)
+        Me.lblOutputResultSets_BlitzFirst.Name = "lblOutputResultSets_BlitzFirst"
+        Me.lblOutputResultSets_BlitzFirst.Size = New System.Drawing.Size(113, 16)
+        Me.lblOutputResultSets_BlitzFirst.TabIndex = 57
+        Me.lblOutputResultSets_BlitzFirst.Text = "OutputResultSets:"
+        '
+        'chkBlitzWhoStart_BlitzFirst
+        '
+        Me.chkBlitzWhoStart_BlitzFirst.AutoSize = True
+        Me.chkBlitzWhoStart_BlitzFirst.Checked = True
+        Me.chkBlitzWhoStart_BlitzFirst.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chkBlitzWhoStart_BlitzFirst.Location = New System.Drawing.Point(771, 38)
+        Me.chkBlitzWhoStart_BlitzFirst.Name = "chkBlitzWhoStart_BlitzFirst"
+        Me.chkBlitzWhoStart_BlitzFirst.Size = New System.Drawing.Size(115, 20)
+        Me.chkBlitzWhoStart_BlitzFirst.TabIndex = 58
+        Me.chkBlitzWhoStart_BlitzFirst.Tag = "OutputResultSets;-1"
+        Me.chkBlitzWhoStart_BlitzFirst.Text = "BlitzWho_Start"
+        Me.chkBlitzWhoStart_BlitzFirst.UseVisualStyleBackColor = True
+        '
+        'chkFindings_BlitzFirst
+        '
+        Me.chkFindings_BlitzFirst.AutoSize = True
+        Me.chkFindings_BlitzFirst.Checked = True
+        Me.chkFindings_BlitzFirst.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chkFindings_BlitzFirst.Location = New System.Drawing.Point(784, 58)
+        Me.chkFindings_BlitzFirst.Name = "chkFindings_BlitzFirst"
+        Me.chkFindings_BlitzFirst.Size = New System.Drawing.Size(80, 20)
+        Me.chkFindings_BlitzFirst.TabIndex = 59
+        Me.chkFindings_BlitzFirst.Tag = "OutputResultSets;-1"
+        Me.chkFindings_BlitzFirst.Text = "Findings"
+        Me.chkFindings_BlitzFirst.UseVisualStyleBackColor = True
+        '
+        'chkFileStats_BlitzFirst
+        '
+        Me.chkFileStats_BlitzFirst.AutoSize = True
+        Me.chkFileStats_BlitzFirst.Checked = True
+        Me.chkFileStats_BlitzFirst.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chkFileStats_BlitzFirst.Location = New System.Drawing.Point(784, 76)
+        Me.chkFileStats_BlitzFirst.Name = "chkFileStats_BlitzFirst"
+        Me.chkFileStats_BlitzFirst.Size = New System.Drawing.Size(81, 20)
+        Me.chkFileStats_BlitzFirst.TabIndex = 60
+        Me.chkFileStats_BlitzFirst.Tag = "OutputResultSets;-1"
+        Me.chkFileStats_BlitzFirst.Text = "FileStats"
+        Me.chkFileStats_BlitzFirst.UseVisualStyleBackColor = True
+        '
+        'chkPerfmonStats_BlitzFirst
+        '
+        Me.chkPerfmonStats_BlitzFirst.AutoSize = True
+        Me.chkPerfmonStats_BlitzFirst.Checked = True
+        Me.chkPerfmonStats_BlitzFirst.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chkPerfmonStats_BlitzFirst.Location = New System.Drawing.Point(784, 94)
+        Me.chkPerfmonStats_BlitzFirst.Name = "chkPerfmonStats_BlitzFirst"
+        Me.chkPerfmonStats_BlitzFirst.Size = New System.Drawing.Size(109, 20)
+        Me.chkPerfmonStats_BlitzFirst.TabIndex = 61
+        Me.chkPerfmonStats_BlitzFirst.Tag = "OutputResultSets;-1"
+        Me.chkPerfmonStats_BlitzFirst.Text = "PerfmonStats"
+        Me.chkPerfmonStats_BlitzFirst.UseVisualStyleBackColor = True
+        '
+        'chkWaitStats_BlitzFirst
+        '
+        Me.chkWaitStats_BlitzFirst.AutoSize = True
+        Me.chkWaitStats_BlitzFirst.Checked = True
+        Me.chkWaitStats_BlitzFirst.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chkWaitStats_BlitzFirst.Location = New System.Drawing.Point(784, 112)
+        Me.chkWaitStats_BlitzFirst.Name = "chkWaitStats_BlitzFirst"
+        Me.chkWaitStats_BlitzFirst.Size = New System.Drawing.Size(86, 20)
+        Me.chkWaitStats_BlitzFirst.TabIndex = 62
+        Me.chkWaitStats_BlitzFirst.Tag = "OutputResultSets;-1"
+        Me.chkWaitStats_BlitzFirst.Text = "WaitStats"
+        Me.chkWaitStats_BlitzFirst.UseVisualStyleBackColor = True
+        '
+        'chkBlitzCache_BlitzFirst
+        '
+        Me.chkBlitzCache_BlitzFirst.AutoSize = True
+        Me.chkBlitzCache_BlitzFirst.Checked = True
+        Me.chkBlitzCache_BlitzFirst.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chkBlitzCache_BlitzFirst.Location = New System.Drawing.Point(784, 130)
+        Me.chkBlitzCache_BlitzFirst.Name = "chkBlitzCache_BlitzFirst"
+        Me.chkBlitzCache_BlitzFirst.Size = New System.Drawing.Size(92, 20)
+        Me.chkBlitzCache_BlitzFirst.TabIndex = 63
+        Me.chkBlitzCache_BlitzFirst.Tag = "OutputResultSets;-1"
+        Me.chkBlitzCache_BlitzFirst.Text = "BlitzCache"
+        Me.chkBlitzCache_BlitzFirst.UseVisualStyleBackColor = True
+        '
+        'chkBlitzWhoEnd_BlitzFirst
+        '
+        Me.chkBlitzWhoEnd_BlitzFirst.AutoSize = True
+        Me.chkBlitzWhoEnd_BlitzFirst.Checked = True
+        Me.chkBlitzWhoEnd_BlitzFirst.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chkBlitzWhoEnd_BlitzFirst.Location = New System.Drawing.Point(771, 150)
+        Me.chkBlitzWhoEnd_BlitzFirst.Name = "chkBlitzWhoEnd_BlitzFirst"
+        Me.chkBlitzWhoEnd_BlitzFirst.Size = New System.Drawing.Size(112, 20)
+        Me.chkBlitzWhoEnd_BlitzFirst.TabIndex = 64
+        Me.chkBlitzWhoEnd_BlitzFirst.Tag = "OutputResultSets;-1"
+        Me.chkBlitzWhoEnd_BlitzFirst.Text = "BlitzWho_End"
+        Me.chkBlitzWhoEnd_BlitzFirst.UseVisualStyleBackColor = True
         '
         'BlitzDesktop
         '
@@ -2909,4 +3025,12 @@ Partial Class BlitzDesktop
     Friend WithEvents ddlDatabases As ComboBox
     Friend WithEvents lblDatabasesNotSelectable As Label
     Friend WithEvents chkBringThePain_BlitzCache As CheckBox
+    Friend WithEvents chkBlitzWhoEnd_BlitzFirst As CheckBox
+    Friend WithEvents chkBlitzCache_BlitzFirst As CheckBox
+    Friend WithEvents chkWaitStats_BlitzFirst As CheckBox
+    Friend WithEvents chkPerfmonStats_BlitzFirst As CheckBox
+    Friend WithEvents chkFileStats_BlitzFirst As CheckBox
+    Friend WithEvents chkFindings_BlitzFirst As CheckBox
+    Friend WithEvents chkBlitzWhoStart_BlitzFirst As CheckBox
+    Friend WithEvents lblOutputResultSets_BlitzFirst As Label
 End Class

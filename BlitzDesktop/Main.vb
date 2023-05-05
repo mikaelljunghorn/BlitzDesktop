@@ -307,7 +307,7 @@ Public Class BlitzDesktop
                         With lbl
                             .Location = New Point(chk.Location.X + 15, chk.Location.Y)
                             .Size = New Size(chk.Size.Width, 20)
-                            .Text = "***" & chk.Text
+                            .Text = "*** " & chk.Text
                             .BringToFront()
                         End With
                         With chk
@@ -776,6 +776,19 @@ Public Class BlitzDesktop
                                 returnString &= "@" & paramName & " = '" & selectedItem & "', "
                         End Select
 
+                    'Case "sp_BlitzFirst"
+
+                    '    Dim chkList As New List(Of String)
+                    '    If chkBlitzWhoStart_BlitzFirst.Checked = True Then chkList.Add("BlitzWho_Start")
+                    '    If chkFindings_BlitzFirst.Checked = True Then chkList.Add("Findings")
+                    '    If chkFileStats_BlitzFirst.Checked = True Then chkList.Add("FileStats")
+                    '    If chkPerfmonStats_BlitzFirst.Checked = True Then chkList.Add("PerfmonStats")
+                    '    If chkWaitStats_BlitzFirst.Checked = True Then chkList.Add("WaitStats")
+                    '    If chkBlitzCache_BlitzFirst.Checked = True Then chkList.Add("BlitzCache")
+                    '    If chkBlitzWhoEnd_BlitzFirst.Checked = True Then chkList.Add("BlitzWho_End")
+
+                    '    returnString &= String.Join("|", chkList.ToList)
+
                     Case "sp_BlitzIndex"
 
                         Select Case ddl.Name
@@ -918,6 +931,21 @@ Public Class BlitzDesktop
                                               dtpEndDate_BlitzQueryStore.Value.ToString("yyyy-MM-dd"),
                                               dtpEndTime_BlitzQueryStore.Value.ToString("HH:mm:ss"))
 
+            Case "sp_BlitzFirst"
+                Dim chkList As New List(Of String)
+                If chkBlitzWhoStart_BlitzFirst.Checked = True Then chkList.Add("BlitzWho_Start")
+                If chkFindings_BlitzFirst.Checked = True Then chkList.Add("Findings")
+                If chkFileStats_BlitzFirst.Checked = True Then chkList.Add("FileStats")
+                If chkPerfmonStats_BlitzFirst.Checked = True Then chkList.Add("PerfmonStats")
+                If chkWaitStats_BlitzFirst.Checked = True Then chkList.Add("WaitStats")
+                If chkBlitzCache_BlitzFirst.Checked = True Then chkList.Add("BlitzCache")
+                If chkBlitzWhoEnd_BlitzFirst.Checked = True Then chkList.Add("BlitzWho_End")
+
+                Dim list As String = String.Join("|", chkList.ToList)
+                If list <> "BlitzWho_Start|Findings|FileStats|PerfmonStats|WaitStats|BlitzCache|BlitzWho_End" Then
+                    returnString &= "@OutputResultSets = '" & list & "'"
+                End If
+
         End Select
 
         If Not String.IsNullOrEmpty(returnString) Then
@@ -926,7 +954,7 @@ Public Class BlitzDesktop
             End If
         End If
 
-        Return returnString & " " & returnStringAddition
+        Return returnString.Trim() & " " & returnStringAddition.Trim()
 
     End Function
 
@@ -1673,4 +1701,7 @@ Public Class BlitzDesktop
 
     End Sub
 
+    Private Sub sp_BlitzFirst_Click(sender As Object, e As EventArgs) Handles sp_BlitzFirst.Click
+
+    End Sub
 End Class
