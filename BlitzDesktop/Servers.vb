@@ -110,10 +110,10 @@ Public Class Servers
 
         ' List sp_Blitz..... sprocs.
         Dim sql As New StringBuilder()
-        sql.AppendLine(String.Format("USE [{0}]", databaseName))
-        sql.AppendLine("SELECT [Name] FROM sys.procedures")
-        sql.AppendLine("WHERE [Name] LIKE 'sp_Blitz%'")
-        sql.AppendLine("ORDER BY [Name]")
+        sql.AppendLine(String.Format("USE [{0}] ", databaseName))
+        sql.AppendLine("SELECT [Name] FROM sys.procedures ")
+        sql.AppendLine("WHERE [Name] LIKE 'sp_Blitz%' ")
+        sql.AppendLine("ORDER BY [Name] ")
 
         Dim sprocsList As DataTable =
             Data.AsDataTable(txtServer.Text, sql.ToString(), CommandType.Text, connString)
