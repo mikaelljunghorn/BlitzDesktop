@@ -1,3 +1,6 @@
+23.04.1
+Added support for @OutputResultSets in sp_BlitzFirst.
+Fixed handling of database and stored procedure for sp_BlitzQueryStore. 
 
 23.02.1
 Just version number update.

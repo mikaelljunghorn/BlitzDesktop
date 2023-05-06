@@ -163,14 +163,15 @@ Public Class BlitzDesktop
     Private Sub List_Databases()
 
         databasesList =
-            Data.AsDataTable(ddlServers.SelectedItem, "sp_databases", CommandType.StoredProcedure)
+            Data.AsDataTable(ddlServers.SelectedItem, "select [name], [is_query_store_on] from sys.databases order by 1", CommandType.Text)
 
         ' If sprocs are NOT stored in the master database we must be able to select which database to work within.
         If database.ToLower = "master" Then
 
             With ddlDatabases
+
                 .Items.Clear()
-                '.Items.Add("< Select current database (optional) >")
+                .Text = String.Empty
 
                 For item As Integer = 0 To (databasesList.Rows.Count - 1)
                     Dim dataRow As DataRow = databasesList.Rows(item)
@@ -178,7 +179,11 @@ Public Class BlitzDesktop
                         .Items.Add(dataRow.ItemArray(0))
                     End If
                 Next
-                .SelectedIndex = 0
+
+                If .Items.Count > 0 Then
+                    .SelectedIndex = 0
+                End If
+
             End With
 
             ddlDatabases.Enabled = True
@@ -372,29 +377,40 @@ Public Class BlitzDesktop
 
                     If TypeOf (ctrl) Is ComboBox Then
                         Dim ddl As ComboBox = ctrl
-                        If ddl.Name.Contains("Database") Then
+                        If ddl.Name.Contains("Database") Then ' Also .Tag = DatabaseName
 
                             With ddl
+
                                 .Items.Clear()
+                                .Text = String.Empty
 
                                 For item As Integer = 0 To (databasesList.Rows.Count - 1)
                                     Dim dataRow As DataRow = databasesList.Rows(item)
                                     If Not "master|model|msdb|tempdb".Contains(dataRow.Item(0)) Then
-                                        .Items.Add(dataRow.ItemArray(0))
+                                        Select Case ddl.Name
+                                            Case "ddlDatabaseName_BlitzQueryStore"
+                                                If dataRow.Item(1) = True Then ' is_query_store_on
+                                                    .Items.Add(dataRow.Item(0))
+                                                End If
+                                            Case Else
+                                                .Items.Add(dataRow.Item(0))
+                                        End Select
                                     End If
                                 Next
 
                                 Select Case ddl.Name
-                                    Case "ddlOutputDatabaseName_BlitzAnalysis"
-                                        If .Items.Count = 1 Then
-                                        Else
+                                    Case "ddlOutputDatabaseName_BlitzAnalysis", "ddlDatabaseName_BlitzQueryStore"
+                                        If .Items.Count > 1 Then
                                             .Items.Insert(0, "< Select >")
                                         End If
                                     Case Else
                                         .Items.Insert(0, "< All >")
                                 End Select
 
-                                .SelectedIndex = 0
+                                If .Items.Count > 0 Then
+                                    .SelectedIndex = 0
+                                End If
+
                             End With
 
                         End If
@@ -776,19 +792,6 @@ Public Class BlitzDesktop
                                 returnString &= "@" & paramName & " = '" & selectedItem & "', "
                         End Select
 
-                    'Case "sp_BlitzFirst"
-
-                    '    Dim chkList As New List(Of String)
-                    '    If chkBlitzWhoStart_BlitzFirst.Checked = True Then chkList.Add("BlitzWho_Start")
-                    '    If chkFindings_BlitzFirst.Checked = True Then chkList.Add("Findings")
-                    '    If chkFileStats_BlitzFirst.Checked = True Then chkList.Add("FileStats")
-                    '    If chkPerfmonStats_BlitzFirst.Checked = True Then chkList.Add("PerfmonStats")
-                    '    If chkWaitStats_BlitzFirst.Checked = True Then chkList.Add("WaitStats")
-                    '    If chkBlitzCache_BlitzFirst.Checked = True Then chkList.Add("BlitzCache")
-                    '    If chkBlitzWhoEnd_BlitzFirst.Checked = True Then chkList.Add("BlitzWho_End")
-
-                    '    returnString &= String.Join("|", chkList.ToList)
-
                     Case "sp_BlitzIndex"
 
                         Select Case ddl.Name
@@ -868,6 +871,23 @@ Public Class BlitzDesktop
                                                               ddlStoredProcName_BlitzLock.SelectedItem)
                             End If
                         End If
+
+                    Case "sp_BlitzQueryStore"
+
+                        If ddl.Name = "ddlDatabaseName_BlitzQueryStore" Then
+                            If Not selectedItem = "< Select >" Then
+                                returnString &= String.Format("@DatabaseName = '{0}', ",
+                                                              ddlDatabaseName_BlitzQueryStore.SelectedItem)
+                                If ddlStoredProcName_BlitzQueryStore.SelectedItem <> "< All >" Then
+                                    returnString &= String.Format("@StoredProcName = '{0}', ",
+                                                                  ddlStoredProcName_BlitzQueryStore.SelectedItem)
+                                End If
+                            Else
+                                warningMessage = "You must select a database!"
+                                Exit Function
+                            End If
+                        End If
+
 
                     Case Else
 
@@ -1038,9 +1058,9 @@ Public Class BlitzDesktop
                 End If
 
             Case "sp_BlitzQueryStore"
-                If ddlDatabaseName_BlitzQueryStore.SelectedItem <> "< All >" Then
+                If ddlDatabaseName_BlitzQueryStore.SelectedItem <> "< Select >" Then
                     fileName &= String.Format("_{0}", ddlDatabaseName_BlitzCache.SelectedItem)
-                    If ddlStoredProcName_BlitzQueryStore.SelectedItem <> "< Select >" Then
+                    If ddlStoredProcName_BlitzQueryStore.SelectedItem <> "< Any >" Then
                         fileName &= String.Format("_{0}", ddlStoredProcName_BlitzQueryStore.SelectedItem)
                     End If
                 End If
@@ -1338,10 +1358,12 @@ Public Class BlitzDesktop
                     .Items.Add(dataRow.ItemArray(0))
                 Next
 
-                If sprocsList.Rows.Count > 0 Then
-                    .SelectedIndex = 0
-                End If
+                .SelectedIndex = 0
                 .Enabled = True
+
+                If sprocsList.Rows.Count = 0 Then
+                    .Enabled = False
+                End If
 
             End With
 
@@ -1615,7 +1637,7 @@ Public Class BlitzDesktop
 
         ' Load Stored Procedures
 
-        If ddlDatabaseName_BlitzQueryStore.SelectedItem <> "< All >" Then
+        If ddlDatabaseName_BlitzQueryStore.SelectedItem <> "< Select >" Then
 
             Dim sprocsList As DataTable =
                 Data.Sprocs(ddlServers.SelectedItem, ddlDatabaseName_BlitzQueryStore.SelectedItem, String.Empty)
@@ -1624,7 +1646,7 @@ Public Class BlitzDesktop
 
                 .Items.Clear()
 
-                .Items.Add("< Select >")
+                .Items.Add("< All >")
 
                 For item As Integer = 0 To (sprocsList.Rows.Count - 1)
                     Dim dataRow As DataRow = sprocsList.Rows(item)
@@ -1701,7 +1723,4 @@ Public Class BlitzDesktop
 
     End Sub
 
-    Private Sub sp_BlitzFirst_Click(sender As Object, e As EventArgs) Handles sp_BlitzFirst.Click
-
-    End Sub
 End Class
