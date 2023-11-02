@@ -180,6 +180,9 @@ Public Class BlitzDesktop
                     End If
                 Next
 
+                ' Added 2023-11-02.
+                .Items.Insert(0, "< Select >")
+
                 If .Items.Count > 0 Then
                     .SelectedIndex = 0
                 End If
