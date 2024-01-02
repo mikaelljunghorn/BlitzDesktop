@@ -1269,7 +1269,7 @@ Partial Class BlitzDesktop
         'ddlSortOrder_BlitzCache
         '
         Me.ddlSortOrder_BlitzCache.FormattingEnabled = True
-        Me.ddlSortOrder_BlitzCache.Items.AddRange(New Object() {"CPU (Default)", "Avg Cpu", "Reads", "Avg Reads", "Writes", "Avg Writes", "Duration", "Avg Duration", "Executions", "Executions per minute", "Recent Compilations", "Memory Grant", "Unused Grant", "Spills", "Query Hash", "All", "All Avg"})
+        Me.ddlSortOrder_BlitzCache.Items.AddRange(New Object() {"CPU (Default)", "Avg Cpu", "Reads", "Avg Reads", "Writes", "Avg Writes", "Duration", "Avg Duration", "Executions", "Executions per minute", "Recent Compilations", "Memory Grant", "Unused Grant", "Spills", "Query Hash", "Duplicate", "All", "All Avg"})
         Me.ddlSortOrder_BlitzCache.Location = New System.Drawing.Point(324, 116)
         Me.ddlSortOrder_BlitzCache.Margin = New System.Windows.Forms.Padding(4)
         Me.ddlSortOrder_BlitzCache.Name = "ddlSortOrder_BlitzCache"
