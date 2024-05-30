@@ -1,3 +1,7 @@
+24.05.1
+Added a "2" for ExpertMode.
+sp_BlitzQueryStore is marked as Deprecated although it is still available.
+
 24.02.1
 Just version number update as any changes made to the FirstResponderKit didn't affect BlitzDesktop.
 
