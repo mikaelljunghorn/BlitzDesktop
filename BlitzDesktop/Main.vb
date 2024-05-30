@@ -106,6 +106,7 @@ Public Class BlitzDesktop
 
             ' BlitzFirst
             ddlOutputType_BlitzFirst.SelectedIndex = 0
+            ddlExpertMode_BlitzFirst.SelectedIndex = 0
 
             ' BlitzIndex
             ddlSortDirection_BlitzIndex.SelectedIndex = 0
@@ -224,7 +225,11 @@ Public Class BlitzDesktop
                     ' Only list sp_Blitz sprocs.
                     If "sp_Blitz|sp_BlitzAnalysis|sp_BlitzBackups|sp_BlitzCache|sp_BlitzFirst|sp_BlitzIndex|sp_BlitzLock|sp_BlitzQueryStore|sp_BlitzWho".Contains(dataRow.Item(0)) Then
                         counter += 1
-                        .Items.Add(dataRow.ItemArray(0))
+                        If dataRow.ItemArray(0) = "sp_BlitzQueryStore" Then
+                            .Items.Add(dataRow.ItemArray(0) & " (Deprecated)")
+                        Else
+                            .Items.Add(dataRow.ItemArray(0))
+                        End If
                         If dataRow.Item(0) = selectedSproc Then
                             selected = counter
                         End If
@@ -281,7 +286,7 @@ Public Class BlitzDesktop
                 tcFilters.TabPages.Insert(0, sp_BlitzIndex)
             Case "sp_BlitzLock"
                 tcFilters.TabPages.Insert(0, sp_BlitzLock)
-            Case "sp_BlitzQueryStore"
+            Case "sp_BlitzQueryStore (Deprecated)"
                 tcFilters.TabPages.Insert(0, sp_BlitzQueryStore)
             Case "sp_BlitzWho"
                 tcFilters.TabPages.Insert(0, sp_BlitzWho)
@@ -294,7 +299,7 @@ Public Class BlitzDesktop
         ' ==================================================================================================================
         ' Get a list of parameters for the selected stored procedure
         Dim sprocParametersList As DataTable =
-            Data.SprocParameters(ddlServers.SelectedItem, database, ddlSprocs.SelectedItem)
+            Data.SprocParameters(ddlServers.SelectedItem, database, ddlSprocs.SelectedItem.replace(" (Deprecated)", ""))
 
         ' Iterate all controls on the selected tab and check that the control has a match to a parameter in the stored procedure.
         For Each ctrl In tcFilters.TabPages.Item(0).Controls
@@ -1393,6 +1398,12 @@ Public Class BlitzDesktop
             chkSinceStartup_BlitzFirst.Checked = True
         Else
             chkSinceStartup_BlitzFirst.Checked = False
+        End If
+    End Sub
+
+    Private Sub chkSinceStartup_BlitzFirst_CheckedChanged(sender As Object, e As EventArgs) Handles chkSinceStartup_BlitzFirst.CheckedChanged
+        If ddlExpertMode_BlitzFirst.SelectedItem = "0" Then
+            ddlExpertMode_BlitzFirst.SelectedItem = "1"
         End If
     End Sub
 
