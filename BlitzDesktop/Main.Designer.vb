@@ -241,6 +241,8 @@ Partial Class BlitzDesktop
         Me.lblSelectDatabase = New System.Windows.Forms.Label()
         Me.ddlDatabases = New System.Windows.Forms.ComboBox()
         Me.lblDatabasesNotSelectable = New System.Windows.Forms.Label()
+        Me.ddlDeadlockType_BlitzLock = New System.Windows.Forms.ComboBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         CType(Me.dgvResults, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tcFilters.SuspendLayout()
         Me.sp_Blitz.SuspendLayout()
@@ -369,7 +371,7 @@ Partial Class BlitzDesktop
         Me.sp_Blitz.Location = New System.Drawing.Point(4, 22)
         Me.sp_Blitz.Name = "sp_Blitz"
         Me.sp_Blitz.Padding = New System.Windows.Forms.Padding(3)
-        Me.sp_Blitz.Size = New System.Drawing.Size(1175, 172)
+        Me.sp_Blitz.Size = New System.Drawing.Size(1355, 172)
         Me.sp_Blitz.TabIndex = 0
         Me.sp_Blitz.Text = "Parameters Blitz"
         Me.sp_Blitz.UseVisualStyleBackColor = True
@@ -587,7 +589,7 @@ Partial Class BlitzDesktop
         Me.sp_BlitzAnalysis.Location = New System.Drawing.Point(4, 22)
         Me.sp_BlitzAnalysis.Name = "sp_BlitzAnalysis"
         Me.sp_BlitzAnalysis.Padding = New System.Windows.Forms.Padding(3)
-        Me.sp_BlitzAnalysis.Size = New System.Drawing.Size(1175, 172)
+        Me.sp_BlitzAnalysis.Size = New System.Drawing.Size(1355, 172)
         Me.sp_BlitzAnalysis.TabIndex = 8
         Me.sp_BlitzAnalysis.Text = "Parameters BlitzAnalysis"
         Me.sp_BlitzAnalysis.UseVisualStyleBackColor = True
@@ -952,7 +954,7 @@ Partial Class BlitzDesktop
         Me.sp_BlitzBackups.Controls.Add(Me.lblHoursBack_BlitzBackups)
         Me.sp_BlitzBackups.Location = New System.Drawing.Point(4, 22)
         Me.sp_BlitzBackups.Name = "sp_BlitzBackups"
-        Me.sp_BlitzBackups.Size = New System.Drawing.Size(1175, 172)
+        Me.sp_BlitzBackups.Size = New System.Drawing.Size(1355, 172)
         Me.sp_BlitzBackups.TabIndex = 9
         Me.sp_BlitzBackups.Text = "Parameters BlitzBackups"
         Me.sp_BlitzBackups.UseVisualStyleBackColor = True
@@ -1004,7 +1006,7 @@ Partial Class BlitzDesktop
         Me.sp_BlitzCache.Location = New System.Drawing.Point(4, 22)
         Me.sp_BlitzCache.Name = "sp_BlitzCache"
         Me.sp_BlitzCache.Padding = New System.Windows.Forms.Padding(3)
-        Me.sp_BlitzCache.Size = New System.Drawing.Size(1175, 172)
+        Me.sp_BlitzCache.Size = New System.Drawing.Size(1355, 172)
         Me.sp_BlitzCache.TabIndex = 1
         Me.sp_BlitzCache.Text = "Parameters BlitzCache"
         Me.sp_BlitzCache.UseVisualStyleBackColor = True
@@ -1580,7 +1582,7 @@ Partial Class BlitzDesktop
         Me.sp_BlitzIndex.Location = New System.Drawing.Point(4, 22)
         Me.sp_BlitzIndex.Name = "sp_BlitzIndex"
         Me.sp_BlitzIndex.Padding = New System.Windows.Forms.Padding(3)
-        Me.sp_BlitzIndex.Size = New System.Drawing.Size(1175, 172)
+        Me.sp_BlitzIndex.Size = New System.Drawing.Size(1355, 172)
         Me.sp_BlitzIndex.TabIndex = 2
         Me.sp_BlitzIndex.Text = "Parameters BlitzIndex"
         Me.sp_BlitzIndex.UseVisualStyleBackColor = True
@@ -1792,6 +1794,8 @@ Partial Class BlitzDesktop
         '
         'sp_BlitzLock
         '
+        Me.sp_BlitzLock.Controls.Add(Me.ddlDeadlockType_BlitzLock)
+        Me.sp_BlitzLock.Controls.Add(Me.Label2)
         Me.sp_BlitzLock.Controls.Add(Me.dtpEndTime_BlitzLock)
         Me.sp_BlitzLock.Controls.Add(Me.dtpStartTime_BlitzLock)
         Me.sp_BlitzLock.Controls.Add(Me.chkUseBelowDate_Internal_BlitzLock)
@@ -1818,7 +1822,7 @@ Partial Class BlitzDesktop
         Me.sp_BlitzLock.Location = New System.Drawing.Point(4, 22)
         Me.sp_BlitzLock.Name = "sp_BlitzLock"
         Me.sp_BlitzLock.Padding = New System.Windows.Forms.Padding(3)
-        Me.sp_BlitzLock.Size = New System.Drawing.Size(1175, 172)
+        Me.sp_BlitzLock.Size = New System.Drawing.Size(1355, 172)
         Me.sp_BlitzLock.TabIndex = 3
         Me.sp_BlitzLock.Text = "Parameters BlitzLock"
         Me.sp_BlitzLock.UseVisualStyleBackColor = True
@@ -1826,7 +1830,7 @@ Partial Class BlitzDesktop
         'dtpEndTime_BlitzLock
         '
         Me.dtpEndTime_BlitzLock.Format = System.Windows.Forms.DateTimePickerFormat.Time
-        Me.dtpEndTime_BlitzLock.Location = New System.Drawing.Point(668, 56)
+        Me.dtpEndTime_BlitzLock.Location = New System.Drawing.Point(892, 56)
         Me.dtpEndTime_BlitzLock.Name = "dtpEndTime_BlitzLock"
         Me.dtpEndTime_BlitzLock.ShowUpDown = True
         Me.dtpEndTime_BlitzLock.Size = New System.Drawing.Size(80, 20)
@@ -1835,7 +1839,7 @@ Partial Class BlitzDesktop
         'dtpStartTime_BlitzLock
         '
         Me.dtpStartTime_BlitzLock.Format = System.Windows.Forms.DateTimePickerFormat.Time
-        Me.dtpStartTime_BlitzLock.Location = New System.Drawing.Point(668, 29)
+        Me.dtpStartTime_BlitzLock.Location = New System.Drawing.Point(892, 29)
         Me.dtpStartTime_BlitzLock.Name = "dtpStartTime_BlitzLock"
         Me.dtpStartTime_BlitzLock.ShowUpDown = True
         Me.dtpStartTime_BlitzLock.Size = New System.Drawing.Size(80, 20)
@@ -1844,7 +1848,7 @@ Partial Class BlitzDesktop
         'chkUseBelowDate_Internal_BlitzLock
         '
         Me.chkUseBelowDate_Internal_BlitzLock.AutoSize = True
-        Me.chkUseBelowDate_Internal_BlitzLock.Location = New System.Drawing.Point(562, 8)
+        Me.chkUseBelowDate_Internal_BlitzLock.Location = New System.Drawing.Point(786, 8)
         Me.chkUseBelowDate_Internal_BlitzLock.Name = "chkUseBelowDate_Internal_BlitzLock"
         Me.chkUseBelowDate_Internal_BlitzLock.Size = New System.Drawing.Size(171, 17)
         Me.chkUseBelowDate_Internal_BlitzLock.TabIndex = 65
@@ -1967,7 +1971,7 @@ Partial Class BlitzDesktop
         'dtpEndDate_BlitzLock
         '
         Me.dtpEndDate_BlitzLock.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpEndDate_BlitzLock.Location = New System.Drawing.Point(562, 56)
+        Me.dtpEndDate_BlitzLock.Location = New System.Drawing.Point(786, 56)
         Me.dtpEndDate_BlitzLock.Name = "dtpEndDate_BlitzLock"
         Me.dtpEndDate_BlitzLock.Size = New System.Drawing.Size(100, 20)
         Me.dtpEndDate_BlitzLock.TabIndex = 52
@@ -1976,7 +1980,7 @@ Partial Class BlitzDesktop
         'lblEndDate_BlitzLock
         '
         Me.lblEndDate_BlitzLock.AutoSize = True
-        Me.lblEndDate_BlitzLock.Location = New System.Drawing.Point(504, 60)
+        Me.lblEndDate_BlitzLock.Location = New System.Drawing.Point(728, 60)
         Me.lblEndDate_BlitzLock.Name = "lblEndDate_BlitzLock"
         Me.lblEndDate_BlitzLock.Size = New System.Drawing.Size(52, 13)
         Me.lblEndDate_BlitzLock.TabIndex = 51
@@ -1985,7 +1989,7 @@ Partial Class BlitzDesktop
         'dtpStartDate_BlitzLock
         '
         Me.dtpStartDate_BlitzLock.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpStartDate_BlitzLock.Location = New System.Drawing.Point(562, 30)
+        Me.dtpStartDate_BlitzLock.Location = New System.Drawing.Point(786, 30)
         Me.dtpStartDate_BlitzLock.Name = "dtpStartDate_BlitzLock"
         Me.dtpStartDate_BlitzLock.Size = New System.Drawing.Size(100, 20)
         Me.dtpStartDate_BlitzLock.TabIndex = 50
@@ -1994,7 +1998,7 @@ Partial Class BlitzDesktop
         'lblStartDate_BlitzLock
         '
         Me.lblStartDate_BlitzLock.AutoSize = True
-        Me.lblStartDate_BlitzLock.Location = New System.Drawing.Point(504, 36)
+        Me.lblStartDate_BlitzLock.Location = New System.Drawing.Point(728, 36)
         Me.lblStartDate_BlitzLock.Name = "lblStartDate_BlitzLock"
         Me.lblStartDate_BlitzLock.Size = New System.Drawing.Size(55, 13)
         Me.lblStartDate_BlitzLock.TabIndex = 49
@@ -2061,7 +2065,7 @@ Partial Class BlitzDesktop
         Me.sp_BlitzQueryStore.Controls.Add(Me.intTop_BlitzQueryStore)
         Me.sp_BlitzQueryStore.Location = New System.Drawing.Point(4, 22)
         Me.sp_BlitzQueryStore.Name = "sp_BlitzQueryStore"
-        Me.sp_BlitzQueryStore.Size = New System.Drawing.Size(1175, 172)
+        Me.sp_BlitzQueryStore.Size = New System.Drawing.Size(1355, 172)
         Me.sp_BlitzQueryStore.TabIndex = 5
         Me.sp_BlitzQueryStore.Text = "Parameters BlitzQueryStore"
         Me.sp_BlitzQueryStore.UseVisualStyleBackColor = True
@@ -2278,7 +2282,7 @@ Partial Class BlitzDesktop
         Me.sp_BlitzWho.Controls.Add(Me.chkShowSleepingSPIDs_BlitzWho)
         Me.sp_BlitzWho.Location = New System.Drawing.Point(4, 22)
         Me.sp_BlitzWho.Name = "sp_BlitzWho"
-        Me.sp_BlitzWho.Size = New System.Drawing.Size(1175, 172)
+        Me.sp_BlitzWho.Size = New System.Drawing.Size(1355, 172)
         Me.sp_BlitzWho.TabIndex = 6
         Me.sp_BlitzWho.Text = "Parameters BlitzWho"
         Me.sp_BlitzWho.UseVisualStyleBackColor = True
@@ -2573,6 +2577,25 @@ Partial Class BlitzDesktop
         Me.lblDatabasesNotSelectable.TabIndex = 31
         Me.lblDatabasesNotSelectable.Text = "Not available since sprocs are not in the master database."
         '
+        'ddlDeadlockType_BlitzLock
+        '
+        Me.ddlDeadlockType_BlitzLock.FormattingEnabled = True
+        Me.ddlDeadlockType_BlitzLock.Items.AddRange(New Object() {"All (Default)", "Regular", "Parallel"})
+        Me.ddlDeadlockType_BlitzLock.Location = New System.Drawing.Point(580, 6)
+        Me.ddlDeadlockType_BlitzLock.Name = "ddlDeadlockType_BlitzLock"
+        Me.ddlDeadlockType_BlitzLock.Size = New System.Drawing.Size(127, 21)
+        Me.ddlDeadlockType_BlitzLock.TabIndex = 69
+        Me.ddlDeadlockType_BlitzLock.Tag = "DeadlockType;All"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(494, 9)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(80, 13)
+        Me.Label2.TabIndex = 68
+        Me.Label2.Text = "DeadlockType:"
+        '
         'BlitzDesktop
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2840,4 +2863,6 @@ Partial Class BlitzDesktop
     Friend WithEvents lblOutputResultSets_BlitzFirst As Label
     Friend WithEvents ddlExpertMode_BlitzFirst As ComboBox
     Friend WithEvents lblExportMode_BlitzFirst As Label
+    Friend WithEvents ddlDeadlockType_BlitzLock As ComboBox
+    Friend WithEvents Label2 As Label
 End Class

@@ -29,7 +29,7 @@ Public Class BlitzDesktop
 
             Me.Text = "BlitzDesktop - Ver. " & My.Application.Info.Version.ToString
 
-            LoadRadioButtonsTimeout(New List(Of String)({"30", "120", "600"}))
+            LoadRadioButtonsTimeout(New List(Of String)({"30", "120", "600", "1800"}))
 
             SetToolTips()
 
@@ -111,6 +111,9 @@ Public Class BlitzDesktop
             ' BlitzIndex
             ddlSortDirection_BlitzIndex.SelectedIndex = 0
             ddlMode_BlitzIndex.SelectedIndex = 0
+
+            ' BlitzLock
+            ddlDeadlockType_BlitzLock.SelectedIndex = 0
 
             ' BlitzQueryStore
             dtpStartDate_BlitzQueryStore.Value = DateAdd(DateInterval.Day, -7, New Date(Date.Today.Year, Date.Today.Month, Date.Today.Day, 0, 0, 0))
@@ -545,9 +548,13 @@ Public Class BlitzDesktop
         End If
 
         Dim sql As New StringBuilder()
-        If database = "master" Then
-            sql.AppendLine(String.Format("USE [{0}]", ddlDatabases.SelectedItem))
+        If ddlDatabases.SelectedItem <> "< Select >" Then
+            database = ddlDatabases.SelectedItem
+        Else
+            database = "master"
         End If
+
+        sql.AppendLine(String.Format("USE [{0}]", database))
         sql.AppendLine(String.Format("EXEC {0} {1}", ddlSprocs.SelectedItem, parameters))
 
         dataSet =
@@ -877,6 +884,13 @@ Public Class BlitzDesktop
                                                               ddlDatabaseName_BlitzLock.SelectedItem,
                                                               ddlSchemaName_Internal_BlitzLock.SelectedItem,
                                                               ddlStoredProcName_BlitzLock.SelectedItem)
+                            End If
+                        End If
+
+                        If ddl.Name = "ddlDeadlockType_BlitzLock" Then
+                            If Not selectedItem = "< Select >" Then
+                                returnString &= String.Format("@DeadlockType = '{0}', ",
+                                                              ddlDeadlockType_BlitzLock.SelectedItem)
                             End If
                         End If
 
@@ -1697,7 +1711,7 @@ Public Class BlitzDesktop
 
         Dim xPos As Integer = 10
         Dim yPos As Integer = 12
-        Dim width As Integer = 35
+        Dim width As Integer = 45
         Dim checkedState As Boolean = True
 
         For Each s As String In rbList

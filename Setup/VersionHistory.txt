@@ -1,3 +1,10 @@
+24.07.1
+New parameter "DeadlockType" for sp_BlitzLock.
+Added timeout "1800" as an option.
+Fixed an issue when selecting the Main database.
+Bumped Microsoft.IO.RecyclableMemoryStream to verson 3.0.1.
+Bumped Newtonsoft.Json to verson 13.0.3.
+
 24.05.1
 Added a "2" for ExpertMode.
 sp_BlitzQueryStore is marked as Deprecated although it is still available.
