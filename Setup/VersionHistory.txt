@@ -1,3 +1,6 @@
+24.10.1
+Just version number update as any changes made to the FirstResponderKit didn't affect BlitzDesktop.
+
 24.07.1
 New parameter "DeadlockType" for sp_BlitzLock.
 Added timeout "1800" as an option.
