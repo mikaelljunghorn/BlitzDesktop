@@ -165,6 +165,8 @@ Partial Class BlitzDesktop
         Me.ddlDatabaseName_BlitzIndex = New System.Windows.Forms.ComboBox()
         Me.lblDatabaseName_BlitzIndex = New System.Windows.Forms.Label()
         Me.sp_BlitzLock = New System.Windows.Forms.TabPage()
+        Me.ddlDeadlockType_BlitzLock = New System.Windows.Forms.ComboBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.dtpEndTime_BlitzLock = New System.Windows.Forms.DateTimePicker()
         Me.dtpStartTime_BlitzLock = New System.Windows.Forms.DateTimePicker()
         Me.chkUseBelowDate_Internal_BlitzLock = New System.Windows.Forms.CheckBox()
@@ -241,8 +243,7 @@ Partial Class BlitzDesktop
         Me.lblSelectDatabase = New System.Windows.Forms.Label()
         Me.ddlDatabases = New System.Windows.Forms.ComboBox()
         Me.lblDatabasesNotSelectable = New System.Windows.Forms.Label()
-        Me.ddlDeadlockType_BlitzLock = New System.Windows.Forms.ComboBox()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.chkKeepCRLF_BlitzCache = New System.Windows.Forms.CheckBox()
         CType(Me.dgvResults, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tcFilters.SuspendLayout()
         Me.sp_Blitz.SuspendLayout()
@@ -979,6 +980,7 @@ Partial Class BlitzDesktop
         '
         'sp_BlitzCache
         '
+        Me.sp_BlitzCache.Controls.Add(Me.chkKeepCRLF_BlitzCache)
         Me.sp_BlitzCache.Controls.Add(Me.chkBringThePain_BlitzCache)
         Me.sp_BlitzCache.Controls.Add(Me.chkSkipAanlysis_BlitzCache)
         Me.sp_BlitzCache.Controls.Add(Me.strSlowlySearchPlansFor_BlitzCache)
@@ -1827,6 +1829,25 @@ Partial Class BlitzDesktop
         Me.sp_BlitzLock.Text = "Parameters BlitzLock"
         Me.sp_BlitzLock.UseVisualStyleBackColor = True
         '
+        'ddlDeadlockType_BlitzLock
+        '
+        Me.ddlDeadlockType_BlitzLock.FormattingEnabled = True
+        Me.ddlDeadlockType_BlitzLock.Items.AddRange(New Object() {"All (Default)", "Regular", "Parallel"})
+        Me.ddlDeadlockType_BlitzLock.Location = New System.Drawing.Point(580, 6)
+        Me.ddlDeadlockType_BlitzLock.Name = "ddlDeadlockType_BlitzLock"
+        Me.ddlDeadlockType_BlitzLock.Size = New System.Drawing.Size(127, 21)
+        Me.ddlDeadlockType_BlitzLock.TabIndex = 69
+        Me.ddlDeadlockType_BlitzLock.Tag = "DeadlockType;All"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(494, 9)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(80, 13)
+        Me.Label2.TabIndex = 68
+        Me.Label2.Text = "DeadlockType:"
+        '
         'dtpEndTime_BlitzLock
         '
         Me.dtpEndTime_BlitzLock.Format = System.Windows.Forms.DateTimePickerFormat.Time
@@ -2577,24 +2598,17 @@ Partial Class BlitzDesktop
         Me.lblDatabasesNotSelectable.TabIndex = 31
         Me.lblDatabasesNotSelectable.Text = "Not available since sprocs are not in the master database."
         '
-        'ddlDeadlockType_BlitzLock
+        'chkKeepCRLF_BlitzCache
         '
-        Me.ddlDeadlockType_BlitzLock.FormattingEnabled = True
-        Me.ddlDeadlockType_BlitzLock.Items.AddRange(New Object() {"All (Default)", "Regular", "Parallel"})
-        Me.ddlDeadlockType_BlitzLock.Location = New System.Drawing.Point(580, 6)
-        Me.ddlDeadlockType_BlitzLock.Name = "ddlDeadlockType_BlitzLock"
-        Me.ddlDeadlockType_BlitzLock.Size = New System.Drawing.Size(127, 21)
-        Me.ddlDeadlockType_BlitzLock.TabIndex = 69
-        Me.ddlDeadlockType_BlitzLock.Tag = "DeadlockType;All"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(494, 9)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(80, 13)
-        Me.Label2.TabIndex = 68
-        Me.Label2.Text = "DeadlockType:"
+        Me.chkKeepCRLF_BlitzCache.AutoSize = True
+        Me.chkKeepCRLF_BlitzCache.Cursor = System.Windows.Forms.Cursors.Default
+        Me.chkKeepCRLF_BlitzCache.Location = New System.Drawing.Point(17, 152)
+        Me.chkKeepCRLF_BlitzCache.Name = "chkKeepCRLF_BlitzCache"
+        Me.chkKeepCRLF_BlitzCache.Size = New System.Drawing.Size(78, 17)
+        Me.chkKeepCRLF_BlitzCache.TabIndex = 56
+        Me.chkKeepCRLF_BlitzCache.Tag = "KeepCRLF;0"
+        Me.chkKeepCRLF_BlitzCache.Text = "KeepCRLF"
+        Me.chkKeepCRLF_BlitzCache.UseVisualStyleBackColor = True
         '
         'BlitzDesktop
         '
@@ -2865,4 +2879,5 @@ Partial Class BlitzDesktop
     Friend WithEvents lblExportMode_BlitzFirst As Label
     Friend WithEvents ddlDeadlockType_BlitzLock As ComboBox
     Friend WithEvents Label2 As Label
+    Friend WithEvents chkKeepCRLF_BlitzCache As CheckBox
 End Class
