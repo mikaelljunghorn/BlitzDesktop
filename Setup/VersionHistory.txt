@@ -1,3 +1,6 @@
+25.07.1
+New parameter "IgnoreReadableReplicaDBs" for sp_BlitzCache.
+
 25.04.1
 New parameter "KeepCRLF" for sp_BlitzCache.
 

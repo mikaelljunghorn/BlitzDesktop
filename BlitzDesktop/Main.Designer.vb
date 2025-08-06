@@ -92,6 +92,7 @@ Partial Class BlitzDesktop
         Me.intHoursBack_BlitzBackups = New System.Windows.Forms.TextBox()
         Me.lblHoursBack_BlitzBackups = New System.Windows.Forms.Label()
         Me.sp_BlitzCache = New System.Windows.Forms.TabPage()
+        Me.chkKeepCRLF_BlitzCache = New System.Windows.Forms.CheckBox()
         Me.chkBringThePain_BlitzCache = New System.Windows.Forms.CheckBox()
         Me.chkSkipAanlysis_BlitzCache = New System.Windows.Forms.CheckBox()
         Me.strSlowlySearchPlansFor_BlitzCache = New System.Windows.Forms.TextBox()
@@ -243,7 +244,7 @@ Partial Class BlitzDesktop
         Me.lblSelectDatabase = New System.Windows.Forms.Label()
         Me.ddlDatabases = New System.Windows.Forms.ComboBox()
         Me.lblDatabasesNotSelectable = New System.Windows.Forms.Label()
-        Me.chkKeepCRLF_BlitzCache = New System.Windows.Forms.CheckBox()
+        Me.chkIgnoreReadableReplicaDBs_BlitzCache = New System.Windows.Forms.CheckBox()
         CType(Me.dgvResults, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tcFilters.SuspendLayout()
         Me.sp_Blitz.SuspendLayout()
@@ -980,6 +981,7 @@ Partial Class BlitzDesktop
         '
         'sp_BlitzCache
         '
+        Me.sp_BlitzCache.Controls.Add(Me.chkIgnoreReadableReplicaDBs_BlitzCache)
         Me.sp_BlitzCache.Controls.Add(Me.chkKeepCRLF_BlitzCache)
         Me.sp_BlitzCache.Controls.Add(Me.chkBringThePain_BlitzCache)
         Me.sp_BlitzCache.Controls.Add(Me.chkSkipAanlysis_BlitzCache)
@@ -1013,10 +1015,22 @@ Partial Class BlitzDesktop
         Me.sp_BlitzCache.Text = "Parameters BlitzCache"
         Me.sp_BlitzCache.UseVisualStyleBackColor = True
         '
+        'chkKeepCRLF_BlitzCache
+        '
+        Me.chkKeepCRLF_BlitzCache.AutoSize = True
+        Me.chkKeepCRLF_BlitzCache.Cursor = System.Windows.Forms.Cursors.Default
+        Me.chkKeepCRLF_BlitzCache.Location = New System.Drawing.Point(17, 148)
+        Me.chkKeepCRLF_BlitzCache.Name = "chkKeepCRLF_BlitzCache"
+        Me.chkKeepCRLF_BlitzCache.Size = New System.Drawing.Size(78, 17)
+        Me.chkKeepCRLF_BlitzCache.TabIndex = 56
+        Me.chkKeepCRLF_BlitzCache.Tag = "KeepCRLF;0"
+        Me.chkKeepCRLF_BlitzCache.Text = "KeepCRLF"
+        Me.chkKeepCRLF_BlitzCache.UseVisualStyleBackColor = True
+        '
         'chkBringThePain_BlitzCache
         '
         Me.chkBringThePain_BlitzCache.AutoSize = True
-        Me.chkBringThePain_BlitzCache.Location = New System.Drawing.Point(17, 84)
+        Me.chkBringThePain_BlitzCache.Location = New System.Drawing.Point(17, 91)
         Me.chkBringThePain_BlitzCache.Name = "chkBringThePain_BlitzCache"
         Me.chkBringThePain_BlitzCache.Size = New System.Drawing.Size(90, 17)
         Me.chkBringThePain_BlitzCache.TabIndex = 55
@@ -1027,7 +1041,7 @@ Partial Class BlitzDesktop
         'chkSkipAanlysis_BlitzCache
         '
         Me.chkSkipAanlysis_BlitzCache.AutoSize = True
-        Me.chkSkipAanlysis_BlitzCache.Location = New System.Drawing.Point(17, 107)
+        Me.chkSkipAanlysis_BlitzCache.Location = New System.Drawing.Point(17, 110)
         Me.chkSkipAanlysis_BlitzCache.Name = "chkSkipAanlysis_BlitzCache"
         Me.chkSkipAanlysis_BlitzCache.Size = New System.Drawing.Size(88, 17)
         Me.chkSkipAanlysis_BlitzCache.TabIndex = 54
@@ -1039,7 +1053,7 @@ Partial Class BlitzDesktop
         '
         Me.strSlowlySearchPlansFor_BlitzCache.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.strSlowlySearchPlansFor_BlitzCache.Location = New System.Drawing.Point(698, 118)
+        Me.strSlowlySearchPlansFor_BlitzCache.Location = New System.Drawing.Point(747, 116)
         Me.strSlowlySearchPlansFor_BlitzCache.Name = "strSlowlySearchPlansFor_BlitzCache"
         Me.strSlowlySearchPlansFor_BlitzCache.Size = New System.Drawing.Size(471, 20)
         Me.strSlowlySearchPlansFor_BlitzCache.TabIndex = 51
@@ -1047,7 +1061,7 @@ Partial Class BlitzDesktop
         '
         'intMinutesBack_BlitzCache
         '
-        Me.intMinutesBack_BlitzCache.Location = New System.Drawing.Point(698, 92)
+        Me.intMinutesBack_BlitzCache.Location = New System.Drawing.Point(747, 90)
         Me.intMinutesBack_BlitzCache.Name = "intMinutesBack_BlitzCache"
         Me.intMinutesBack_BlitzCache.Size = New System.Drawing.Size(39, 20)
         Me.intMinutesBack_BlitzCache.TabIndex = 50
@@ -1056,7 +1070,7 @@ Partial Class BlitzDesktop
         'lblMinutesBack_BlitzCache
         '
         Me.lblMinutesBack_BlitzCache.AutoSize = True
-        Me.lblMinutesBack_BlitzCache.Location = New System.Drawing.Point(566, 94)
+        Me.lblMinutesBack_BlitzCache.Location = New System.Drawing.Point(615, 92)
         Me.lblMinutesBack_BlitzCache.Name = "lblMinutesBack_BlitzCache"
         Me.lblMinutesBack_BlitzCache.Size = New System.Drawing.Size(72, 13)
         Me.lblMinutesBack_BlitzCache.TabIndex = 49
@@ -1064,7 +1078,7 @@ Partial Class BlitzDesktop
         '
         'MinimumExecutionCount_BlitzCache
         '
-        Me.MinimumExecutionCount_BlitzCache.Location = New System.Drawing.Point(698, 64)
+        Me.MinimumExecutionCount_BlitzCache.Location = New System.Drawing.Point(747, 62)
         Me.MinimumExecutionCount_BlitzCache.Name = "MinimumExecutionCount_BlitzCache"
         Me.MinimumExecutionCount_BlitzCache.Size = New System.Drawing.Size(39, 20)
         Me.MinimumExecutionCount_BlitzCache.TabIndex = 48
@@ -1073,7 +1087,7 @@ Partial Class BlitzDesktop
         'lblMinimumExecutionCount_BlitzCache
         '
         Me.lblMinimumExecutionCount_BlitzCache.AutoSize = True
-        Me.lblMinimumExecutionCount_BlitzCache.Location = New System.Drawing.Point(566, 67)
+        Me.lblMinimumExecutionCount_BlitzCache.Location = New System.Drawing.Point(615, 65)
         Me.lblMinimumExecutionCount_BlitzCache.Name = "lblMinimumExecutionCount_BlitzCache"
         Me.lblMinimumExecutionCount_BlitzCache.Size = New System.Drawing.Size(126, 13)
         Me.lblMinimumExecutionCount_BlitzCache.TabIndex = 47
@@ -1082,7 +1096,7 @@ Partial Class BlitzDesktop
         'lblSlowlySearchPlansFor_BlitzCache
         '
         Me.lblSlowlySearchPlansFor_BlitzCache.AutoSize = True
-        Me.lblSlowlySearchPlansFor_BlitzCache.Location = New System.Drawing.Point(566, 121)
+        Me.lblSlowlySearchPlansFor_BlitzCache.Location = New System.Drawing.Point(615, 119)
         Me.lblSlowlySearchPlansFor_BlitzCache.Name = "lblSlowlySearchPlansFor_BlitzCache"
         Me.lblSlowlySearchPlansFor_BlitzCache.Size = New System.Drawing.Size(115, 13)
         Me.lblSlowlySearchPlansFor_BlitzCache.TabIndex = 45
@@ -1092,7 +1106,7 @@ Partial Class BlitzDesktop
         '
         Me.ddlStoredProcName_BlitzCache.Enabled = False
         Me.ddlStoredProcName_BlitzCache.FormattingEnabled = True
-        Me.ddlStoredProcName_BlitzCache.Location = New System.Drawing.Point(244, 39)
+        Me.ddlStoredProcName_BlitzCache.Location = New System.Drawing.Point(293, 37)
         Me.ddlStoredProcName_BlitzCache.Name = "ddlStoredProcName_BlitzCache"
         Me.ddlStoredProcName_BlitzCache.Size = New System.Drawing.Size(298, 21)
         Me.ddlStoredProcName_BlitzCache.TabIndex = 44
@@ -1101,7 +1115,7 @@ Partial Class BlitzDesktop
         'lblStoredProcName_BlitzCache
         '
         Me.lblStoredProcName_BlitzCache.AutoSize = True
-        Me.lblStoredProcName_BlitzCache.Location = New System.Drawing.Point(147, 43)
+        Me.lblStoredProcName_BlitzCache.Location = New System.Drawing.Point(196, 41)
         Me.lblStoredProcName_BlitzCache.Name = "lblStoredProcName_BlitzCache"
         Me.lblStoredProcName_BlitzCache.Size = New System.Drawing.Size(91, 13)
         Me.lblStoredProcName_BlitzCache.TabIndex = 43
@@ -1110,7 +1124,7 @@ Partial Class BlitzDesktop
         'ddlDatabaseName_BlitzCache
         '
         Me.ddlDatabaseName_BlitzCache.FormattingEnabled = True
-        Me.ddlDatabaseName_BlitzCache.Location = New System.Drawing.Point(243, 13)
+        Me.ddlDatabaseName_BlitzCache.Location = New System.Drawing.Point(292, 11)
         Me.ddlDatabaseName_BlitzCache.Name = "ddlDatabaseName_BlitzCache"
         Me.ddlDatabaseName_BlitzCache.Size = New System.Drawing.Size(299, 21)
         Me.ddlDatabaseName_BlitzCache.TabIndex = 42
@@ -1119,7 +1133,7 @@ Partial Class BlitzDesktop
         'lblDatabaseName_BlitzCache
         '
         Me.lblDatabaseName_BlitzCache.AutoSize = True
-        Me.lblDatabaseName_BlitzCache.Location = New System.Drawing.Point(147, 16)
+        Me.lblDatabaseName_BlitzCache.Location = New System.Drawing.Point(196, 14)
         Me.lblDatabaseName_BlitzCache.Name = "lblDatabaseName_BlitzCache"
         Me.lblDatabaseName_BlitzCache.Size = New System.Drawing.Size(84, 13)
         Me.lblDatabaseName_BlitzCache.TabIndex = 41
@@ -1129,7 +1143,7 @@ Partial Class BlitzDesktop
         '
         Me.ddlQueryFilter_BlitzCache.FormattingEnabled = True
         Me.ddlQueryFilter_BlitzCache.Items.AddRange(New Object() {"< All >", "Procedures", "Statements", "Functions"})
-        Me.ddlQueryFilter_BlitzCache.Location = New System.Drawing.Point(243, 66)
+        Me.ddlQueryFilter_BlitzCache.Location = New System.Drawing.Point(292, 64)
         Me.ddlQueryFilter_BlitzCache.Name = "ddlQueryFilter_BlitzCache"
         Me.ddlQueryFilter_BlitzCache.Size = New System.Drawing.Size(299, 21)
         Me.ddlQueryFilter_BlitzCache.TabIndex = 40
@@ -1139,7 +1153,7 @@ Partial Class BlitzDesktop
         'lblQueryFilter_BlitzCache
         '
         Me.lblQueryFilter_BlitzCache.AutoSize = True
-        Me.lblQueryFilter_BlitzCache.Location = New System.Drawing.Point(147, 69)
+        Me.lblQueryFilter_BlitzCache.Location = New System.Drawing.Point(196, 67)
         Me.lblQueryFilter_BlitzCache.Name = "lblQueryFilter_BlitzCache"
         Me.lblQueryFilter_BlitzCache.Size = New System.Drawing.Size(60, 13)
         Me.lblQueryFilter_BlitzCache.TabIndex = 39
@@ -1148,18 +1162,20 @@ Partial Class BlitzDesktop
         'chkIgnoreSystemDVs_BlitzCache
         '
         Me.chkIgnoreSystemDVs_BlitzCache.AutoSize = True
-        Me.chkIgnoreSystemDVs_BlitzCache.Location = New System.Drawing.Point(17, 61)
+        Me.chkIgnoreSystemDVs_BlitzCache.Checked = True
+        Me.chkIgnoreSystemDVs_BlitzCache.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chkIgnoreSystemDVs_BlitzCache.Location = New System.Drawing.Point(17, 53)
         Me.chkIgnoreSystemDVs_BlitzCache.Name = "chkIgnoreSystemDVs_BlitzCache"
         Me.chkIgnoreSystemDVs_BlitzCache.Size = New System.Drawing.Size(110, 17)
         Me.chkIgnoreSystemDVs_BlitzCache.TabIndex = 38
-        Me.chkIgnoreSystemDVs_BlitzCache.Tag = "IgnoreSystemDBs;0"
+        Me.chkIgnoreSystemDVs_BlitzCache.Tag = "IgnoreSystemDBs;1"
         Me.chkIgnoreSystemDVs_BlitzCache.Text = "IgnoreSystemDBs"
         Me.chkIgnoreSystemDVs_BlitzCache.UseVisualStyleBackColor = True
         '
         'chkHideSummary_BlitzCache
         '
         Me.chkHideSummary_BlitzCache.AutoSize = True
-        Me.chkHideSummary_BlitzCache.Location = New System.Drawing.Point(17, 38)
+        Me.chkHideSummary_BlitzCache.Location = New System.Drawing.Point(17, 34)
         Me.chkHideSummary_BlitzCache.Name = "chkHideSummary_BlitzCache"
         Me.chkHideSummary_BlitzCache.Size = New System.Drawing.Size(91, 17)
         Me.chkHideSummary_BlitzCache.TabIndex = 37
@@ -1169,7 +1185,7 @@ Partial Class BlitzDesktop
         '
         'intDurationFilter_BlitzCache
         '
-        Me.intDurationFilter_BlitzCache.Location = New System.Drawing.Point(698, 37)
+        Me.intDurationFilter_BlitzCache.Location = New System.Drawing.Point(747, 35)
         Me.intDurationFilter_BlitzCache.Name = "intDurationFilter_BlitzCache"
         Me.intDurationFilter_BlitzCache.Size = New System.Drawing.Size(39, 20)
         Me.intDurationFilter_BlitzCache.TabIndex = 36
@@ -1178,7 +1194,7 @@ Partial Class BlitzDesktop
         'lblDurationFilter_BlitzCache
         '
         Me.lblDurationFilter_BlitzCache.AutoSize = True
-        Me.lblDurationFilter_BlitzCache.Location = New System.Drawing.Point(566, 41)
+        Me.lblDurationFilter_BlitzCache.Location = New System.Drawing.Point(615, 39)
         Me.lblDurationFilter_BlitzCache.Name = "lblDurationFilter_BlitzCache"
         Me.lblDurationFilter_BlitzCache.Size = New System.Drawing.Size(121, 13)
         Me.lblDurationFilter_BlitzCache.TabIndex = 35
@@ -1188,7 +1204,7 @@ Partial Class BlitzDesktop
         '
         Me.ddlSortOrder_BlitzCache.FormattingEnabled = True
         Me.ddlSortOrder_BlitzCache.Items.AddRange(New Object() {"CPU (Default)", "Avg Cpu", "Reads", "Avg Reads", "Writes", "Avg Writes", "Duration", "Avg Duration", "Executions", "Executions per minute", "Recent Compilations", "Memory Grant", "Unused Grant", "Spills", "Query Hash", "Duplicate", "All", "All Avg"})
-        Me.ddlSortOrder_BlitzCache.Location = New System.Drawing.Point(243, 94)
+        Me.ddlSortOrder_BlitzCache.Location = New System.Drawing.Point(292, 92)
         Me.ddlSortOrder_BlitzCache.Name = "ddlSortOrder_BlitzCache"
         Me.ddlSortOrder_BlitzCache.Size = New System.Drawing.Size(299, 21)
         Me.ddlSortOrder_BlitzCache.TabIndex = 34
@@ -1198,7 +1214,7 @@ Partial Class BlitzDesktop
         'lblSortOrder_BlitzCache
         '
         Me.lblSortOrder_BlitzCache.AutoSize = True
-        Me.lblSortOrder_BlitzCache.Location = New System.Drawing.Point(147, 96)
+        Me.lblSortOrder_BlitzCache.Location = New System.Drawing.Point(196, 94)
         Me.lblSortOrder_BlitzCache.Name = "lblSortOrder_BlitzCache"
         Me.lblSortOrder_BlitzCache.Size = New System.Drawing.Size(55, 13)
         Me.lblSortOrder_BlitzCache.TabIndex = 33
@@ -1219,7 +1235,7 @@ Partial Class BlitzDesktop
         '
         Me.chkExportToExcel_BlitzCache.AutoSize = True
         Me.chkExportToExcel_BlitzCache.Cursor = System.Windows.Forms.Cursors.Default
-        Me.chkExportToExcel_BlitzCache.Location = New System.Drawing.Point(17, 130)
+        Me.chkExportToExcel_BlitzCache.Location = New System.Drawing.Point(17, 129)
         Me.chkExportToExcel_BlitzCache.Name = "chkExportToExcel_BlitzCache"
         Me.chkExportToExcel_BlitzCache.Size = New System.Drawing.Size(95, 17)
         Me.chkExportToExcel_BlitzCache.TabIndex = 31
@@ -1229,7 +1245,7 @@ Partial Class BlitzDesktop
         '
         'intTop_BlitzCache
         '
-        Me.intTop_BlitzCache.Location = New System.Drawing.Point(698, 12)
+        Me.intTop_BlitzCache.Location = New System.Drawing.Point(747, 10)
         Me.intTop_BlitzCache.Name = "intTop_BlitzCache"
         Me.intTop_BlitzCache.Size = New System.Drawing.Size(39, 20)
         Me.intTop_BlitzCache.TabIndex = 30
@@ -1239,7 +1255,7 @@ Partial Class BlitzDesktop
         'lblTop_BlitzCache
         '
         Me.lblTop_BlitzCache.AutoSize = True
-        Me.lblTop_BlitzCache.Location = New System.Drawing.Point(566, 15)
+        Me.lblTop_BlitzCache.Location = New System.Drawing.Point(615, 13)
         Me.lblTop_BlitzCache.Name = "lblTop_BlitzCache"
         Me.lblTop_BlitzCache.Size = New System.Drawing.Size(29, 13)
         Me.lblTop_BlitzCache.TabIndex = 29
@@ -2598,17 +2614,18 @@ Partial Class BlitzDesktop
         Me.lblDatabasesNotSelectable.TabIndex = 31
         Me.lblDatabasesNotSelectable.Text = "Not available since sprocs are not in the master database."
         '
-        'chkKeepCRLF_BlitzCache
+        'chkIgnoreReadableReplicaDBs_BlitzCache
         '
-        Me.chkKeepCRLF_BlitzCache.AutoSize = True
-        Me.chkKeepCRLF_BlitzCache.Cursor = System.Windows.Forms.Cursors.Default
-        Me.chkKeepCRLF_BlitzCache.Location = New System.Drawing.Point(17, 152)
-        Me.chkKeepCRLF_BlitzCache.Name = "chkKeepCRLF_BlitzCache"
-        Me.chkKeepCRLF_BlitzCache.Size = New System.Drawing.Size(78, 17)
-        Me.chkKeepCRLF_BlitzCache.TabIndex = 56
-        Me.chkKeepCRLF_BlitzCache.Tag = "KeepCRLF;0"
-        Me.chkKeepCRLF_BlitzCache.Text = "KeepCRLF"
-        Me.chkKeepCRLF_BlitzCache.UseVisualStyleBackColor = True
+        Me.chkIgnoreReadableReplicaDBs_BlitzCache.AutoSize = True
+        Me.chkIgnoreReadableReplicaDBs_BlitzCache.Checked = True
+        Me.chkIgnoreReadableReplicaDBs_BlitzCache.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chkIgnoreReadableReplicaDBs_BlitzCache.Location = New System.Drawing.Point(17, 72)
+        Me.chkIgnoreReadableReplicaDBs_BlitzCache.Name = "chkIgnoreReadableReplicaDBs_BlitzCache"
+        Me.chkIgnoreReadableReplicaDBs_BlitzCache.Size = New System.Drawing.Size(158, 17)
+        Me.chkIgnoreReadableReplicaDBs_BlitzCache.TabIndex = 57
+        Me.chkIgnoreReadableReplicaDBs_BlitzCache.Tag = "IgnoreReadableReplicaDBs;1"
+        Me.chkIgnoreReadableReplicaDBs_BlitzCache.Text = "IgnoreReadableReplicaDBs"
+        Me.chkIgnoreReadableReplicaDBs_BlitzCache.UseVisualStyleBackColor = True
         '
         'BlitzDesktop
         '
@@ -2880,4 +2897,5 @@ Partial Class BlitzDesktop
     Friend WithEvents ddlDeadlockType_BlitzLock As ComboBox
     Friend WithEvents Label2 As Label
     Friend WithEvents chkKeepCRLF_BlitzCache As CheckBox
+    Friend WithEvents chkIgnoreReadableReplicaDBs_BlitzCache As CheckBox
 End Class
