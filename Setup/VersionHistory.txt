@@ -1,3 +1,8 @@
+25.10.01
+New parameter "UsualOwnerOfJobs" for sp_Blitz.
+Also added parameter "UsualDBOwner" for sp_Blitz as it was missing since before.
+Added timeout period 60 seconds.
+
 25.07.1
 New parameter "IgnoreReadableReplicaDBs" for sp_BlitzCache.
 

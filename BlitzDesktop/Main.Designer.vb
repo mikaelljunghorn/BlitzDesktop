@@ -92,6 +92,7 @@ Partial Class BlitzDesktop
         Me.intHoursBack_BlitzBackups = New System.Windows.Forms.TextBox()
         Me.lblHoursBack_BlitzBackups = New System.Windows.Forms.Label()
         Me.sp_BlitzCache = New System.Windows.Forms.TabPage()
+        Me.chkIgnoreReadableReplicaDBs_BlitzCache = New System.Windows.Forms.CheckBox()
         Me.chkKeepCRLF_BlitzCache = New System.Windows.Forms.CheckBox()
         Me.chkBringThePain_BlitzCache = New System.Windows.Forms.CheckBox()
         Me.chkSkipAanlysis_BlitzCache = New System.Windows.Forms.CheckBox()
@@ -244,7 +245,10 @@ Partial Class BlitzDesktop
         Me.lblSelectDatabase = New System.Windows.Forms.Label()
         Me.ddlDatabases = New System.Windows.Forms.ComboBox()
         Me.lblDatabasesNotSelectable = New System.Windows.Forms.Label()
-        Me.chkIgnoreReadableReplicaDBs_BlitzCache = New System.Windows.Forms.CheckBox()
+        Me.strUsualDBOwner_Blitz = New System.Windows.Forms.TextBox()
+        Me.lblUsualDBOwner_Blitz = New System.Windows.Forms.Label()
+        Me.strUsualOwnerOfJobs_Blitz = New System.Windows.Forms.TextBox()
+        Me.lblUsualOwnerOfJobs_Blitz = New System.Windows.Forms.Label()
         CType(Me.dgvResults, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tcFilters.SuspendLayout()
         Me.sp_Blitz.SuspendLayout()
@@ -354,6 +358,10 @@ Partial Class BlitzDesktop
         '
         'sp_Blitz
         '
+        Me.sp_Blitz.Controls.Add(Me.strUsualOwnerOfJobs_Blitz)
+        Me.sp_Blitz.Controls.Add(Me.lblUsualOwnerOfJobs_Blitz)
+        Me.sp_Blitz.Controls.Add(Me.strUsualDBOwner_Blitz)
+        Me.sp_Blitz.Controls.Add(Me.lblUsualDBOwner_Blitz)
         Me.sp_Blitz.Controls.Add(Me.Label4)
         Me.sp_Blitz.Controls.Add(Me.ddlCheckProcedureCacheFilter_Blitz)
         Me.sp_Blitz.Controls.Add(Me.lblCheckProcedureCacheFilter_Blitz)
@@ -1014,6 +1022,19 @@ Partial Class BlitzDesktop
         Me.sp_BlitzCache.TabIndex = 1
         Me.sp_BlitzCache.Text = "Parameters BlitzCache"
         Me.sp_BlitzCache.UseVisualStyleBackColor = True
+        '
+        'chkIgnoreReadableReplicaDBs_BlitzCache
+        '
+        Me.chkIgnoreReadableReplicaDBs_BlitzCache.AutoSize = True
+        Me.chkIgnoreReadableReplicaDBs_BlitzCache.Checked = True
+        Me.chkIgnoreReadableReplicaDBs_BlitzCache.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chkIgnoreReadableReplicaDBs_BlitzCache.Location = New System.Drawing.Point(17, 72)
+        Me.chkIgnoreReadableReplicaDBs_BlitzCache.Name = "chkIgnoreReadableReplicaDBs_BlitzCache"
+        Me.chkIgnoreReadableReplicaDBs_BlitzCache.Size = New System.Drawing.Size(158, 17)
+        Me.chkIgnoreReadableReplicaDBs_BlitzCache.TabIndex = 57
+        Me.chkIgnoreReadableReplicaDBs_BlitzCache.Tag = "IgnoreReadableReplicaDBs;1"
+        Me.chkIgnoreReadableReplicaDBs_BlitzCache.Text = "IgnoreReadableReplicaDBs"
+        Me.chkIgnoreReadableReplicaDBs_BlitzCache.UseVisualStyleBackColor = True
         '
         'chkKeepCRLF_BlitzCache
         '
@@ -2614,18 +2635,41 @@ Partial Class BlitzDesktop
         Me.lblDatabasesNotSelectable.TabIndex = 31
         Me.lblDatabasesNotSelectable.Text = "Not available since sprocs are not in the master database."
         '
-        'chkIgnoreReadableReplicaDBs_BlitzCache
+        'strUsualDBOwner_Blitz
         '
-        Me.chkIgnoreReadableReplicaDBs_BlitzCache.AutoSize = True
-        Me.chkIgnoreReadableReplicaDBs_BlitzCache.Checked = True
-        Me.chkIgnoreReadableReplicaDBs_BlitzCache.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.chkIgnoreReadableReplicaDBs_BlitzCache.Location = New System.Drawing.Point(17, 72)
-        Me.chkIgnoreReadableReplicaDBs_BlitzCache.Name = "chkIgnoreReadableReplicaDBs_BlitzCache"
-        Me.chkIgnoreReadableReplicaDBs_BlitzCache.Size = New System.Drawing.Size(158, 17)
-        Me.chkIgnoreReadableReplicaDBs_BlitzCache.TabIndex = 57
-        Me.chkIgnoreReadableReplicaDBs_BlitzCache.Tag = "IgnoreReadableReplicaDBs;1"
-        Me.chkIgnoreReadableReplicaDBs_BlitzCache.Text = "IgnoreReadableReplicaDBs"
-        Me.chkIgnoreReadableReplicaDBs_BlitzCache.UseVisualStyleBackColor = True
+        Me.strUsualDBOwner_Blitz.Location = New System.Drawing.Point(497, 65)
+        Me.strUsualDBOwner_Blitz.Name = "strUsualDBOwner_Blitz"
+        Me.strUsualDBOwner_Blitz.Size = New System.Drawing.Size(206, 20)
+        Me.strUsualDBOwner_Blitz.TabIndex = 28
+        Me.strUsualDBOwner_Blitz.Tag = "UsualDBOwner;"
+        '
+        'lblUsualDBOwner_Blitz
+        '
+        Me.lblUsualDBOwner_Blitz.AutoSize = True
+        Me.lblUsualDBOwner_Blitz.Location = New System.Drawing.Point(390, 68)
+        Me.lblUsualDBOwner_Blitz.Name = "lblUsualDBOwner_Blitz"
+        Me.lblUsualDBOwner_Blitz.Size = New System.Drawing.Size(83, 13)
+        Me.lblUsualDBOwner_Blitz.TabIndex = 27
+        Me.lblUsualDBOwner_Blitz.Tag = "UsualDBOwner"
+        Me.lblUsualDBOwner_Blitz.Text = "UsualDBOwner:"
+        '
+        'strUsualOwnerOfJobs_Blitz
+        '
+        Me.strUsualOwnerOfJobs_Blitz.Location = New System.Drawing.Point(497, 91)
+        Me.strUsualOwnerOfJobs_Blitz.Name = "strUsualOwnerOfJobs_Blitz"
+        Me.strUsualOwnerOfJobs_Blitz.Size = New System.Drawing.Size(206, 20)
+        Me.strUsualOwnerOfJobs_Blitz.TabIndex = 30
+        Me.strUsualOwnerOfJobs_Blitz.Tag = "UsualOwnerOfJobs;"
+        '
+        'lblUsualOwnerOfJobs_Blitz
+        '
+        Me.lblUsualOwnerOfJobs_Blitz.AutoSize = True
+        Me.lblUsualOwnerOfJobs_Blitz.Location = New System.Drawing.Point(390, 94)
+        Me.lblUsualOwnerOfJobs_Blitz.Name = "lblUsualOwnerOfJobs_Blitz"
+        Me.lblUsualOwnerOfJobs_Blitz.Size = New System.Drawing.Size(101, 13)
+        Me.lblUsualOwnerOfJobs_Blitz.TabIndex = 29
+        Me.lblUsualOwnerOfJobs_Blitz.Tag = "UsualOwnerOfJobs"
+        Me.lblUsualOwnerOfJobs_Blitz.Text = "UsualOwnerOfJobs:"
         '
         'BlitzDesktop
         '
@@ -2898,4 +2942,8 @@ Partial Class BlitzDesktop
     Friend WithEvents Label2 As Label
     Friend WithEvents chkKeepCRLF_BlitzCache As CheckBox
     Friend WithEvents chkIgnoreReadableReplicaDBs_BlitzCache As CheckBox
+    Friend WithEvents strUsualOwnerOfJobs_Blitz As TextBox
+    Friend WithEvents lblUsualOwnerOfJobs_Blitz As Label
+    Friend WithEvents strUsualDBOwner_Blitz As TextBox
+    Friend WithEvents lblUsualDBOwner_Blitz As Label
 End Class
