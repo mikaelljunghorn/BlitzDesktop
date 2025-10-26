@@ -99,6 +99,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_9D1AC44D08462C146D411F9B2CE41694"
+        "OwnerKey" = "8:_98BE4029D867364FD2231379C1E50991"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_A4600AFE5CC5F626B586507221B97BE3"
         "OwnerKey" = "8:_9D1AC44D08462C146D411F9B2CE41694"
         "MsmSig" = "8:_UNDEFINED"
@@ -891,15 +897,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:BlitzDesktop"
-        "ProductCode" = "8:{1C41B831-18EC-4ACC-BB3E-8AA7F827BE72}"
-        "PackageCode" = "8:{BDBD1B75-AF36-412D-87A7-9AB00585A461}"
+        "ProductCode" = "8:{FD544E2A-19A1-4319-837F-30F5FE16BF3D}"
+        "PackageCode" = "8:{89F8CF78-F79E-4F8B-8002-B93FF408D953}"
         "UpgradeCode" = "8:{0C752D49-A828-401A-8196-75484D134DFF}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:25.10.1"
+        "ProductVersion" = "8:25.10.3"
         "Manufacturer" = "8:Mikael Ljunghorn"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"

@@ -29,7 +29,7 @@ Public Class BlitzDesktop
 
             Me.Text = "BlitzDesktop - Ver. " & My.Application.Info.Version.ToString
 
-            LoadRadioButtonsTimeout(New List(Of String)({"30", "120", "600", "1800"}))
+            LoadRadioButtonsTimeout(New List(Of String)({"30", "60", "120", "600", "1800"}))
 
             SetToolTips()
 
@@ -760,6 +760,10 @@ Public Class BlitzDesktop
                 End If
 
                 If ddl.SelectedItem.ToString.Contains("Default") Then
+                    Continue For
+                End If
+
+                If ddl.SelectedItem.ToString.Contains("Null") Then
                     Continue For
                 End If
 
@@ -1717,7 +1721,7 @@ Public Class BlitzDesktop
         For Each s As String In rbList
             Dim rb As New System.Windows.Forms.RadioButton
             With rb
-                .Width = width + (s.Length * 3)
+                .Width = width + (s.Length * 2.5)
                 .Height = 25
                 .Left = xPos
                 .Top = yPos
