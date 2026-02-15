@@ -1403,6 +1403,22 @@ Public Class BlitzDesktop
         End If
 
     End Sub
+
+    Private Sub ddlAI_BlitzCache_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ddlAI_BlitzCache.SelectedIndexChanged
+
+        If ddlAI_BlitzCache.SelectedItem = "2 (Build prompt)" Then
+
+            chkExpertMode_BlitzCache.Checked = True
+            chkKeepCRLF_BlitzCache.Checked = True
+
+        Else
+
+            chkExpertMode_BlitzCache.Checked = False
+            chkKeepCRLF_BlitzCache.Checked = False
+
+        End If
+
+    End Sub
 #End Region
 
 #Region "BlitzFirst"
