@@ -1,3 +1,7 @@
+26.2.1
+New parameter "AI" for sp_BlitzCache.
+I have intentionally excluded parameter value = 1 for now.
+
 25.10.01
 New parameter "UsualOwnerOfJobs" for sp_Blitz.
 Also added parameter "UsualDBOwner" for sp_Blitz as it was missing since before.

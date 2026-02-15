@@ -32,6 +32,10 @@ Partial Class BlitzDesktop
         Me.pnlButtons = New System.Windows.Forms.Panel()
         Me.tcFilters = New System.Windows.Forms.TabControl()
         Me.sp_Blitz = New System.Windows.Forms.TabPage()
+        Me.strUsualOwnerOfJobs_Blitz = New System.Windows.Forms.TextBox()
+        Me.lblUsualOwnerOfJobs_Blitz = New System.Windows.Forms.Label()
+        Me.strUsualDBOwner_Blitz = New System.Windows.Forms.TextBox()
+        Me.lblUsualDBOwner_Blitz = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.ddlCheckProcedureCacheFilter_Blitz = New System.Windows.Forms.ComboBox()
         Me.lblCheckProcedureCacheFilter_Blitz = New System.Windows.Forms.Label()
@@ -245,10 +249,8 @@ Partial Class BlitzDesktop
         Me.lblSelectDatabase = New System.Windows.Forms.Label()
         Me.ddlDatabases = New System.Windows.Forms.ComboBox()
         Me.lblDatabasesNotSelectable = New System.Windows.Forms.Label()
-        Me.strUsualDBOwner_Blitz = New System.Windows.Forms.TextBox()
-        Me.lblUsualDBOwner_Blitz = New System.Windows.Forms.Label()
-        Me.strUsualOwnerOfJobs_Blitz = New System.Windows.Forms.TextBox()
-        Me.lblUsualOwnerOfJobs_Blitz = New System.Windows.Forms.Label()
+        Me.ddlAI_BlitzCache = New System.Windows.Forms.ComboBox()
+        Me.lblAI_BlitzCache = New System.Windows.Forms.Label()
         CType(Me.dgvResults, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tcFilters.SuspendLayout()
         Me.sp_Blitz.SuspendLayout()
@@ -385,6 +387,42 @@ Partial Class BlitzDesktop
         Me.sp_Blitz.TabIndex = 0
         Me.sp_Blitz.Text = "Parameters Blitz"
         Me.sp_Blitz.UseVisualStyleBackColor = True
+        '
+        'strUsualOwnerOfJobs_Blitz
+        '
+        Me.strUsualOwnerOfJobs_Blitz.Location = New System.Drawing.Point(497, 91)
+        Me.strUsualOwnerOfJobs_Blitz.Name = "strUsualOwnerOfJobs_Blitz"
+        Me.strUsualOwnerOfJobs_Blitz.Size = New System.Drawing.Size(206, 20)
+        Me.strUsualOwnerOfJobs_Blitz.TabIndex = 30
+        Me.strUsualOwnerOfJobs_Blitz.Tag = "UsualOwnerOfJobs;"
+        '
+        'lblUsualOwnerOfJobs_Blitz
+        '
+        Me.lblUsualOwnerOfJobs_Blitz.AutoSize = True
+        Me.lblUsualOwnerOfJobs_Blitz.Location = New System.Drawing.Point(390, 94)
+        Me.lblUsualOwnerOfJobs_Blitz.Name = "lblUsualOwnerOfJobs_Blitz"
+        Me.lblUsualOwnerOfJobs_Blitz.Size = New System.Drawing.Size(101, 13)
+        Me.lblUsualOwnerOfJobs_Blitz.TabIndex = 29
+        Me.lblUsualOwnerOfJobs_Blitz.Tag = "UsualOwnerOfJobs"
+        Me.lblUsualOwnerOfJobs_Blitz.Text = "UsualOwnerOfJobs:"
+        '
+        'strUsualDBOwner_Blitz
+        '
+        Me.strUsualDBOwner_Blitz.Location = New System.Drawing.Point(497, 65)
+        Me.strUsualDBOwner_Blitz.Name = "strUsualDBOwner_Blitz"
+        Me.strUsualDBOwner_Blitz.Size = New System.Drawing.Size(206, 20)
+        Me.strUsualDBOwner_Blitz.TabIndex = 28
+        Me.strUsualDBOwner_Blitz.Tag = "UsualDBOwner;"
+        '
+        'lblUsualDBOwner_Blitz
+        '
+        Me.lblUsualDBOwner_Blitz.AutoSize = True
+        Me.lblUsualDBOwner_Blitz.Location = New System.Drawing.Point(390, 68)
+        Me.lblUsualDBOwner_Blitz.Name = "lblUsualDBOwner_Blitz"
+        Me.lblUsualDBOwner_Blitz.Size = New System.Drawing.Size(83, 13)
+        Me.lblUsualDBOwner_Blitz.TabIndex = 27
+        Me.lblUsualDBOwner_Blitz.Tag = "UsualDBOwner"
+        Me.lblUsualDBOwner_Blitz.Text = "UsualDBOwner:"
         '
         'Label4
         '
@@ -989,6 +1027,8 @@ Partial Class BlitzDesktop
         '
         'sp_BlitzCache
         '
+        Me.sp_BlitzCache.Controls.Add(Me.ddlAI_BlitzCache)
+        Me.sp_BlitzCache.Controls.Add(Me.lblAI_BlitzCache)
         Me.sp_BlitzCache.Controls.Add(Me.chkIgnoreReadableReplicaDBs_BlitzCache)
         Me.sp_BlitzCache.Controls.Add(Me.chkKeepCRLF_BlitzCache)
         Me.sp_BlitzCache.Controls.Add(Me.chkBringThePain_BlitzCache)
@@ -2635,41 +2675,25 @@ Partial Class BlitzDesktop
         Me.lblDatabasesNotSelectable.TabIndex = 31
         Me.lblDatabasesNotSelectable.Text = "Not available since sprocs are not in the master database."
         '
-        'strUsualDBOwner_Blitz
+        'ddlAI_BlitzCache
         '
-        Me.strUsualDBOwner_Blitz.Location = New System.Drawing.Point(497, 65)
-        Me.strUsualDBOwner_Blitz.Name = "strUsualDBOwner_Blitz"
-        Me.strUsualDBOwner_Blitz.Size = New System.Drawing.Size(206, 20)
-        Me.strUsualDBOwner_Blitz.TabIndex = 28
-        Me.strUsualDBOwner_Blitz.Tag = "UsualDBOwner;"
+        Me.ddlAI_BlitzCache.FormattingEnabled = True
+        Me.ddlAI_BlitzCache.Items.AddRange(New Object() {"0 (Default)", "2 (Build prompt)"})
+        Me.ddlAI_BlitzCache.Location = New System.Drawing.Point(292, 127)
+        Me.ddlAI_BlitzCache.Name = "ddlAI_BlitzCache"
+        Me.ddlAI_BlitzCache.Size = New System.Drawing.Size(299, 21)
+        Me.ddlAI_BlitzCache.TabIndex = 59
+        Me.ddlAI_BlitzCache.Tag = "AI;Default"
+        Me.ddlAI_BlitzCache.Text = "0 (Default)"
         '
-        'lblUsualDBOwner_Blitz
+        'lblAI_BlitzCache
         '
-        Me.lblUsualDBOwner_Blitz.AutoSize = True
-        Me.lblUsualDBOwner_Blitz.Location = New System.Drawing.Point(390, 68)
-        Me.lblUsualDBOwner_Blitz.Name = "lblUsualDBOwner_Blitz"
-        Me.lblUsualDBOwner_Blitz.Size = New System.Drawing.Size(83, 13)
-        Me.lblUsualDBOwner_Blitz.TabIndex = 27
-        Me.lblUsualDBOwner_Blitz.Tag = "UsualDBOwner"
-        Me.lblUsualDBOwner_Blitz.Text = "UsualDBOwner:"
-        '
-        'strUsualOwnerOfJobs_Blitz
-        '
-        Me.strUsualOwnerOfJobs_Blitz.Location = New System.Drawing.Point(497, 91)
-        Me.strUsualOwnerOfJobs_Blitz.Name = "strUsualOwnerOfJobs_Blitz"
-        Me.strUsualOwnerOfJobs_Blitz.Size = New System.Drawing.Size(206, 20)
-        Me.strUsualOwnerOfJobs_Blitz.TabIndex = 30
-        Me.strUsualOwnerOfJobs_Blitz.Tag = "UsualOwnerOfJobs;"
-        '
-        'lblUsualOwnerOfJobs_Blitz
-        '
-        Me.lblUsualOwnerOfJobs_Blitz.AutoSize = True
-        Me.lblUsualOwnerOfJobs_Blitz.Location = New System.Drawing.Point(390, 94)
-        Me.lblUsualOwnerOfJobs_Blitz.Name = "lblUsualOwnerOfJobs_Blitz"
-        Me.lblUsualOwnerOfJobs_Blitz.Size = New System.Drawing.Size(101, 13)
-        Me.lblUsualOwnerOfJobs_Blitz.TabIndex = 29
-        Me.lblUsualOwnerOfJobs_Blitz.Tag = "UsualOwnerOfJobs"
-        Me.lblUsualOwnerOfJobs_Blitz.Text = "UsualOwnerOfJobs:"
+        Me.lblAI_BlitzCache.AutoSize = True
+        Me.lblAI_BlitzCache.Location = New System.Drawing.Point(196, 129)
+        Me.lblAI_BlitzCache.Name = "lblAI_BlitzCache"
+        Me.lblAI_BlitzCache.Size = New System.Drawing.Size(20, 13)
+        Me.lblAI_BlitzCache.TabIndex = 58
+        Me.lblAI_BlitzCache.Text = "AI:"
         '
         'BlitzDesktop
         '
@@ -2946,4 +2970,6 @@ Partial Class BlitzDesktop
     Friend WithEvents lblUsualOwnerOfJobs_Blitz As Label
     Friend WithEvents strUsualDBOwner_Blitz As TextBox
     Friend WithEvents lblUsualDBOwner_Blitz As Label
+    Friend WithEvents ddlAI_BlitzCache As ComboBox
+    Friend WithEvents lblAI_BlitzCache As Label
 End Class
