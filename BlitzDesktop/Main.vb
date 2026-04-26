@@ -59,6 +59,7 @@ Public Class BlitzDesktop
                 .Remove(sp_BlitzLock)
                 .Remove(sp_BlitzQueryStore)
                 .Remove(sp_BlitzWho)
+                .Remove(sp_Kill)
             End With
 
             tcFilters.Visible = True
@@ -159,7 +160,6 @@ Public Class BlitzDesktop
         database = Data.GetDatabaseName(ddlServers.SelectedItem)
 
         List_Databases()
-
         List_Procedures()
 
     End Sub
@@ -225,8 +225,9 @@ Public Class BlitzDesktop
 
                 For item As Integer = 0 To (sprocsList.Rows.Count - 1)
                     Dim dataRow As DataRow = sprocsList.Rows(item)
+                    Dim itemText As String = dataRow.Item(0)
                     ' Only list sp_Blitz sprocs.
-                    If "sp_Blitz|sp_BlitzAnalysis|sp_BlitzBackups|sp_BlitzCache|sp_BlitzFirst|sp_BlitzIndex|sp_BlitzLock|sp_BlitzQueryStore|sp_BlitzWho".Contains(dataRow.Item(0)) Then
+                    If "sp_Blitz|sp_BlitzAnalysis|sp_BlitzBackups|sp_BlitzCache|sp_BlitzFirst|sp_BlitzIndex|sp_BlitzLock|sp_BlitzQueryStore|sp_BlitzWho|sp_Kill".ToLower().Contains(itemText.ToLower()) Then
                         counter += 1
                         If dataRow.ItemArray(0) = "sp_BlitzQueryStore" Then
                             .Items.Add(dataRow.ItemArray(0) & " (Deprecated)")
@@ -263,6 +264,7 @@ Public Class BlitzDesktop
             .Remove(sp_BlitzLock)
             .Remove(sp_BlitzQueryStore)
             .Remove(sp_BlitzWho)
+            .Remove(sp_Kill)
         End With
 
         If ddlSprocs.SelectedIndex = 0 Then
@@ -293,6 +295,8 @@ Public Class BlitzDesktop
                 tcFilters.TabPages.Insert(0, sp_BlitzQueryStore)
             Case "sp_BlitzWho"
                 tcFilters.TabPages.Insert(0, sp_BlitzWho)
+            Case "sp_kill"
+                tcFilters.TabPages.Insert(0, sp_Kill)
         End Select
 
         cmdExecute.Visible = True
@@ -694,7 +698,41 @@ Public Class BlitzDesktop
                 End If
         End Select
 
+        Dim frmControls As New List(Of ctrlInfo)
+
         For Each ctrl In tcFilters.TabPages.Item(0).Controls
+
+            Dim chk As CheckBox = Nothing
+            Dim ddl As ComboBox = Nothing
+            Dim txt As TextBox = Nothing
+
+            Dim ctrlInfo As New CtrlInfo
+            ctrlInfo.ctrl = ctrl
+
+            If TypeOf (ctrl) Is CheckBox Then
+                chk = ctrl
+                ctrlInfo.sortOrder = chk.TabIndex
+            End If
+
+            If TypeOf (ctrl) Is ComboBox Then
+                ddl = ctrl
+                ctrlInfo.sortOrder = ddl.TabIndex
+            End If
+
+            If TypeOf (ctrl) Is TextBox Then
+                txt = ctrl
+                ctrlInfo.sortOrder = txt.TabIndex
+            End If
+
+            frmControls.Add(ctrlInfo)
+
+        Next
+
+        frmControls = frmControls.OrderBy(Function(o) o.sortOrder).ToList()
+
+        For Each obj In frmControls
+
+            Dim ctrl As Object = obj.ctrl
 
             Dim chk As CheckBox = Nothing
             Dim ddl As ComboBox = Nothing
@@ -715,6 +753,8 @@ Public Class BlitzDesktop
                 If txt.Enabled = False Then Continue For
             End If
 
+            Debug.WriteLine(ctrl.Name)
+
             If TypeOf (ctrl) Is CheckBox Then
 
                 paramName = chk.Tag.ToString().Split(";").First()
@@ -730,6 +770,14 @@ Public Class BlitzDesktop
                                                                dtpEndDate_BlitzLock.Value.ToString("yyyy-MM-dd"),
                                                                dtpEndTime_BlitzLock.Value.ToString("HH:mm:ss"))
                             End If
+                        End If
+
+                    Case "sp_kill"
+                        If chk.Checked = True Then
+                            Select Case chk.Name
+                                Case "chkExecuteKills_Kill", "chkLeadBlockers_Kill", "chkReadOnly_Kill", "chkHasOpenTran_Kill"
+                                    returnString &= "@" & paramName & " = 'Y', "
+                            End Select
                         End If
 
                     Case Else
@@ -755,7 +803,7 @@ Public Class BlitzDesktop
                 paramName = ddl.Tag.ToString().Split(";").First()
                 defaultValue = ddl.Tag.ToString().Split(";").Last()
 
-                If ddl.SelectedItem = "< All >" Then
+                If ddl.SelectedItem = "<All>" Then
                     Continue For
                 End If
 
@@ -789,7 +837,7 @@ Public Class BlitzDesktop
                     Case "sp_BlitzAnalysis"
 
                         If (ddl.Name.StartsWith("ddlOutputTableName")) Then
-                            If (ddl.SelectedItem <> "< Select >") Then
+                            If (ddl.SelectedItem <> "<Select>") Then
                                 returnString &= "@" & paramName & " = '" & selectedItem & "', "
                             End If
                         Else
@@ -804,7 +852,7 @@ Public Class BlitzDesktop
 
                         Select Case ddl.Name
                             Case "ddlStoredProcName_BlitzCache"
-                                If ddlStoredProcName_BlitzCache.SelectedItem <> "< Select >" Then
+                                If ddlStoredProcName_BlitzCache.SelectedItem <> "<Select>" Then
                                     returnString &= "@" & paramName & " = '" & selectedItem & "', "
                                 End If
                             Case Else
@@ -817,7 +865,7 @@ Public Class BlitzDesktop
 
                             Case "ddlTableName_BlitzIndex"
                                 If chkGetAllDatabases_BlitzIndex.Checked = False Then
-                                    If Not selectedItem = "< Select >" Then
+                                    If Not selectedItem = "<Select>" Then
                                         returnString &= "@DatabaseName = '" & ddlDatabaseName_BlitzIndex.SelectedItem & "', "
                                         returnString &= "@SchemaName = '" & ddlSchemaName_BlitzIndex.SelectedItem & "', "
                                         returnString &= "@" & paramName & " = '" & selectedItem & "', "
@@ -830,8 +878,6 @@ Public Class BlitzDesktop
                                 ' 0=Diagnose, 1=Summarize, 2=Index Usage Detail, 3=Missing Index Detail, 4=Diagnose Details
                                 ' Note: @Mode doesn't matter if you're specifying schema_name and @TableName.
                                 Select Case selectedItem 'ddl.SelectedItem
-                                    'Case "Diagnose"
-                                    '    paramValue = "0"
                                     Case "Summarize"
                                         paramValue = "1"
                                     Case "Index Usage Detail"
@@ -874,7 +920,7 @@ Public Class BlitzDesktop
                     Case "sp_BlitzLock"
 
                         If ddl.Name = "ddlTableName_Internal_BlitzLock" Then
-                            If Not selectedItem = "< Select >" Then
+                            If Not selectedItem = "<Select>" Then
                                 returnString &= String.Format("@ObjectName = '{0}.{1}.{2}', ",
                                                               ddlDatabaseName_BlitzLock.SelectedItem,
                                                               ddlSchemaName_Internal_BlitzLock.SelectedItem,
@@ -883,7 +929,7 @@ Public Class BlitzDesktop
                         End If
 
                         If ddl.Name = "ddlStoredProcName_BlitzLock" Then
-                            If Not selectedItem = "< Select >" Then
+                            If Not selectedItem = "<Select>" Then
                                 returnString &= String.Format("@StoredProcName = '{0}.{1}.{2}', ",
                                                               ddlDatabaseName_BlitzLock.SelectedItem,
                                                               ddlSchemaName_Internal_BlitzLock.SelectedItem,
@@ -892,7 +938,7 @@ Public Class BlitzDesktop
                         End If
 
                         If ddl.Name = "ddlDeadlockType_BlitzLock" Then
-                            If Not selectedItem = "< Select >" Then
+                            If Not selectedItem = "<Select>" Then
                                 returnString &= String.Format("@DeadlockType = '{0}', ",
                                                               ddlDeadlockType_BlitzLock.SelectedItem)
                             End If
@@ -901,10 +947,10 @@ Public Class BlitzDesktop
                     Case "sp_BlitzQueryStore"
 
                         If ddl.Name = "ddlDatabaseName_BlitzQueryStore" Then
-                            If Not selectedItem = "< Select >" Then
+                            If Not selectedItem = "<Select>" Then
                                 returnString &= String.Format("@DatabaseName = '{0}', ",
                                                               ddlDatabaseName_BlitzQueryStore.SelectedItem)
-                                If ddlStoredProcName_BlitzQueryStore.SelectedItem <> "< All >" Then
+                                If ddlStoredProcName_BlitzQueryStore.SelectedItem <> "<All>" Then
                                     returnString &= String.Format("@StoredProcName = '{0}', ",
                                                                   ddlStoredProcName_BlitzQueryStore.SelectedItem)
                                 End If
@@ -914,6 +960,16 @@ Public Class BlitzDesktop
                             End If
                         End If
 
+                    Case "sp_kill"
+
+                        If ddl.Name = "ddlSPIDState_Kill" Then
+                            selectedItem = selectedItem.Replace(" = only sleeping sessions", "").Replace(" = only running sessions", "")
+                            returnString &= String.Format("@SPIDState = '{0}', ", selectedItem)
+                        Else
+                            If selectedItem <> defaultValue Then
+                                returnString &= "@" & paramName & " = '" & selectedItem & "', "
+                            End If
+                        End If
 
                     Case Else
 
@@ -940,6 +996,11 @@ Public Class BlitzDesktop
                 End If
                 paramValue = txt.Text
                 If Not String.IsNullOrEmpty(paramValue) Then
+                    If txt.Name.StartsWith("int") Then
+                        If Not IsNumeric(paramValue) Then
+                            MessageBox.Show(tags(0) & ": Must be an integer value!")
+                        End If
+                    End If
                     If Not String.IsNullOrEmpty(defaultValue) Then
                         If paramValue <> defaultValue Then
                             If txt.Name.StartsWith("str") Then
@@ -1771,4 +1832,9 @@ Public Class BlitzDesktop
 
     End Sub
 
+End Class
+
+Public Class CtrlInfo
+    Public Property ctrl As Object
+    Public Property sortOrder As Integer
 End Class

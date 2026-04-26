@@ -83,10 +83,13 @@ Public Class Data
         Dim sql As New StringBuilder()
         sql.AppendLine(String.Format("USE [{0}]", databaseName))
         sql.AppendLine("SELECT [Name] FROM sys.procedures")
+        sql.AppendLine("WHERE 1 = 1")
         If Not String.IsNullOrEmpty(whereClause) Then
-            sql.AppendLine("WHERE [Name] LIKE '%" & whereClause & "%'")
+            sql.AppendLine("AND ([Name] LIKE '%" & whereClause & "%' OR [Name] = 'sp_Kill')")
         End If
         sql.AppendLine("ORDER BY [Name]")
+
+        Debug.WriteLine(sql.ToString())
 
         Dim sprocsList As DataTable =
             Data.AsDataTable(serverName, sql.ToString(), CommandType.Text)

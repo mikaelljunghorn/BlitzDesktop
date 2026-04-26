@@ -96,6 +96,8 @@ Partial Class BlitzDesktop
         Me.intHoursBack_BlitzBackups = New System.Windows.Forms.TextBox()
         Me.lblHoursBack_BlitzBackups = New System.Windows.Forms.Label()
         Me.sp_BlitzCache = New System.Windows.Forms.TabPage()
+        Me.ddlAI_BlitzCache = New System.Windows.Forms.ComboBox()
+        Me.lblAI_BlitzCache = New System.Windows.Forms.Label()
         Me.chkIgnoreReadableReplicaDBs_BlitzCache = New System.Windows.Forms.CheckBox()
         Me.chkKeepCRLF_BlitzCache = New System.Windows.Forms.CheckBox()
         Me.chkBringThePain_BlitzCache = New System.Windows.Forms.CheckBox()
@@ -240,6 +242,39 @@ Partial Class BlitzDesktop
         Me.lblMinElapsedSeconds_BlitzWho = New System.Windows.Forms.Label()
         Me.chkExpertMode_BlitzWho = New System.Windows.Forms.CheckBox()
         Me.chkShowSleepingSPIDs_BlitzWho = New System.Windows.Forms.CheckBox()
+        Me.sp_Kill = New System.Windows.Forms.TabPage()
+        Me.strOutputDatabaseName_Kill = New System.Windows.Forms.TextBox()
+        Me.strOutputSchemaName_Kill = New System.Windows.Forms.TextBox()
+        Me.strOutputTableName_Kill = New System.Windows.Forms.TextBox()
+        Me.intRequestsOlderThanSeconds_Kill = New System.Windows.Forms.TextBox()
+        Me.chkHasOpenTran_Kill = New System.Windows.Forms.CheckBox()
+        Me.strOmitLogin_Kill = New System.Windows.Forms.TextBox()
+        Me.ddlSPIDState_Kill = New System.Windows.Forms.ComboBox()
+        Me.ddlOrderBy_Kill = New System.Windows.Forms.ComboBox()
+        Me.chkReadOnly_Kill = New System.Windows.Forms.CheckBox()
+        Me.chkLeadBlockers_Kill = New System.Windows.Forms.CheckBox()
+        Me.strHostName_Kill = New System.Windows.Forms.TextBox()
+        Me.chkExecuteKills_Kill = New System.Windows.Forms.CheckBox()
+        Me.strDatabaseName_Kill = New System.Windows.Forms.TextBox()
+        Me.strAppName_Kill = New System.Windows.Forms.TextBox()
+        Me.strLoginName_Kill = New System.Windows.Forms.TextBox()
+        Me.intSPID_Kill = New System.Windows.Forms.TextBox()
+        Me.lblRequestsOlderThanSeconds_Kill = New System.Windows.Forms.Label()
+        Me.lblHasopenTran_Kill = New System.Windows.Forms.Label()
+        Me.lblOmitLogin_Kill = New System.Windows.Forms.Label()
+        Me.lblSPIDState_Kill = New System.Windows.Forms.Label()
+        Me.lblOrderBy_Kill = New System.Windows.Forms.Label()
+        Me.lblReadOnly_Kill = New System.Windows.Forms.Label()
+        Me.lblLeadBlockers_Kill = New System.Windows.Forms.Label()
+        Me.lblHostName_Kill = New System.Windows.Forms.Label()
+        Me.lblDatabaseName_Kill = New System.Windows.Forms.Label()
+        Me.lblAppName_Kill = New System.Windows.Forms.Label()
+        Me.lblLoginName_Kill = New System.Windows.Forms.Label()
+        Me.lblSPID_Kill = New System.Windows.Forms.Label()
+        Me.lblExecuteKills_Kill = New System.Windows.Forms.Label()
+        Me.lblOutputTableName_Kill = New System.Windows.Forms.Label()
+        Me.lblOutputSchemaName_Kill = New System.Windows.Forms.Label()
+        Me.lblOutputDatabaseName_Kill = New System.Windows.Forms.Label()
         Me.cmdExportToExcel = New System.Windows.Forms.Button()
         Me.txtSQL = New System.Windows.Forms.TextBox()
         Me.cmdManageServers = New System.Windows.Forms.Button()
@@ -249,8 +284,6 @@ Partial Class BlitzDesktop
         Me.lblSelectDatabase = New System.Windows.Forms.Label()
         Me.ddlDatabases = New System.Windows.Forms.ComboBox()
         Me.lblDatabasesNotSelectable = New System.Windows.Forms.Label()
-        Me.ddlAI_BlitzCache = New System.Windows.Forms.ComboBox()
-        Me.lblAI_BlitzCache = New System.Windows.Forms.Label()
         CType(Me.dgvResults, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tcFilters.SuspendLayout()
         Me.sp_Blitz.SuspendLayout()
@@ -262,6 +295,7 @@ Partial Class BlitzDesktop
         Me.sp_BlitzLock.SuspendLayout()
         Me.sp_BlitzQueryStore.SuspendLayout()
         Me.sp_BlitzWho.SuspendLayout()
+        Me.sp_Kill.SuspendLayout()
         Me.SuspendLayout()
         '
         'lblServers
@@ -351,6 +385,7 @@ Partial Class BlitzDesktop
         Me.tcFilters.Controls.Add(Me.sp_BlitzLock)
         Me.tcFilters.Controls.Add(Me.sp_BlitzQueryStore)
         Me.tcFilters.Controls.Add(Me.sp_BlitzWho)
+        Me.tcFilters.Controls.Add(Me.sp_Kill)
         Me.tcFilters.Location = New System.Drawing.Point(7, 57)
         Me.tcFilters.Name = "tcFilters"
         Me.tcFilters.SelectedIndex = 0
@@ -438,7 +473,7 @@ Partial Class BlitzDesktop
         '
         Me.ddlCheckProcedureCacheFilter_Blitz.FormattingEnabled = True
         Me.ddlCheckProcedureCacheFilter_Blitz.Items.AddRange(New Object() {"Skip (Null)", "CPU", "Reads", "Duration", "ExecCount"})
-        Me.ddlCheckProcedureCacheFilter_Blitz.Location = New System.Drawing.Point(496, 16)
+        Me.ddlCheckProcedureCacheFilter_Blitz.Location = New System.Drawing.Point(533, 16)
         Me.ddlCheckProcedureCacheFilter_Blitz.Name = "ddlCheckProcedureCacheFilter_Blitz"
         Me.ddlCheckProcedureCacheFilter_Blitz.Size = New System.Drawing.Size(121, 21)
         Me.ddlCheckProcedureCacheFilter_Blitz.TabIndex = 25
@@ -447,7 +482,7 @@ Partial Class BlitzDesktop
         'lblCheckProcedureCacheFilter_Blitz
         '
         Me.lblCheckProcedureCacheFilter_Blitz.AutoSize = True
-        Me.lblCheckProcedureCacheFilter_Blitz.Location = New System.Drawing.Point(355, 19)
+        Me.lblCheckProcedureCacheFilter_Blitz.Location = New System.Drawing.Point(392, 19)
         Me.lblCheckProcedureCacheFilter_Blitz.Name = "lblCheckProcedureCacheFilter_Blitz"
         Me.lblCheckProcedureCacheFilter_Blitz.Size = New System.Drawing.Size(143, 13)
         Me.lblCheckProcedureCacheFilter_Blitz.TabIndex = 24
@@ -1062,6 +1097,26 @@ Partial Class BlitzDesktop
         Me.sp_BlitzCache.TabIndex = 1
         Me.sp_BlitzCache.Text = "Parameters BlitzCache"
         Me.sp_BlitzCache.UseVisualStyleBackColor = True
+        '
+        'ddlAI_BlitzCache
+        '
+        Me.ddlAI_BlitzCache.FormattingEnabled = True
+        Me.ddlAI_BlitzCache.Items.AddRange(New Object() {"0 (Default)", "2 (Build prompt)"})
+        Me.ddlAI_BlitzCache.Location = New System.Drawing.Point(292, 127)
+        Me.ddlAI_BlitzCache.Name = "ddlAI_BlitzCache"
+        Me.ddlAI_BlitzCache.Size = New System.Drawing.Size(299, 21)
+        Me.ddlAI_BlitzCache.TabIndex = 59
+        Me.ddlAI_BlitzCache.Tag = "AI;0"
+        Me.ddlAI_BlitzCache.Text = "0 (Default)"
+        '
+        'lblAI_BlitzCache
+        '
+        Me.lblAI_BlitzCache.AutoSize = True
+        Me.lblAI_BlitzCache.Location = New System.Drawing.Point(196, 129)
+        Me.lblAI_BlitzCache.Name = "lblAI_BlitzCache"
+        Me.lblAI_BlitzCache.Size = New System.Drawing.Size(20, 13)
+        Me.lblAI_BlitzCache.TabIndex = 58
+        Me.lblAI_BlitzCache.Text = "AI:"
         '
         'chkIgnoreReadableReplicaDBs_BlitzCache
         '
@@ -2410,7 +2465,7 @@ Partial Class BlitzDesktop
         'ddlSortOrder_BlitzWho
         '
         Me.ddlSortOrder_BlitzWho.FormattingEnabled = True
-        Me.ddlSortOrder_BlitzWho.Items.AddRange(New Object() {"elapsed_time (Default)", "session_id", "query_cost", "database_name", "open_transaction_count", "is_implicit_transaction", "login_name", "program_name", "client_interface_name", "request_cpu_time", "request_logical_reads", "request_writes", "request_physical_reads", "session_cpu", "session_logical_reads", "session_physical_reads", "session_writes", "tempdb_allocations_mb", "memory_usage", "deadlock_priority", "transaction_isolation_level" & Global.Microsoft.VisualBasic.ChrW(9), "requested_memory_kb", "grant_memory_kb", "grant", "query_memory_grant_used_memory_kb", "ideal_memory_kb", "workload_group_name", "resource_pool_name"})
+        Me.ddlSortOrder_BlitzWho.Items.AddRange(New Object() {"elapsed_time (Default)", "session_id", "query_cost", "database_name", "open_transaction_count", "is_implicit_transaction", "login_name", "program_name", "client_interface_name", "request_cpu_time", "request_logical_reads", "request_writes", "request_physical_reads", "session_cpu", "session_logical_reads", "session_physical_reads", "session_writes", "tempdb_allocations_mb", "memory_usage", "deadlock_priority", "transaction_isolation_level", "requested_memory_kb", "grant_memory_kb", "grant", "query_memory_grant_used_memory_kb", "ideal_memory_kb", "workload_group_name", "resource_pool_name"})
         Me.ddlSortOrder_BlitzWho.Location = New System.Drawing.Point(75, 13)
         Me.ddlSortOrder_BlitzWho.Name = "ddlSortOrder_BlitzWho"
         Me.ddlSortOrder_BlitzWho.Size = New System.Drawing.Size(162, 21)
@@ -2592,6 +2647,335 @@ Partial Class BlitzDesktop
         Me.chkShowSleepingSPIDs_BlitzWho.Text = "ShowSleepingSPIDs"
         Me.chkShowSleepingSPIDs_BlitzWho.UseVisualStyleBackColor = True
         '
+        'sp_Kill
+        '
+        Me.sp_Kill.Controls.Add(Me.strOutputDatabaseName_Kill)
+        Me.sp_Kill.Controls.Add(Me.strOutputSchemaName_Kill)
+        Me.sp_Kill.Controls.Add(Me.strOutputTableName_Kill)
+        Me.sp_Kill.Controls.Add(Me.intRequestsOlderThanSeconds_Kill)
+        Me.sp_Kill.Controls.Add(Me.chkHasOpenTran_Kill)
+        Me.sp_Kill.Controls.Add(Me.strOmitLogin_Kill)
+        Me.sp_Kill.Controls.Add(Me.ddlSPIDState_Kill)
+        Me.sp_Kill.Controls.Add(Me.ddlOrderBy_Kill)
+        Me.sp_Kill.Controls.Add(Me.chkReadOnly_Kill)
+        Me.sp_Kill.Controls.Add(Me.chkLeadBlockers_Kill)
+        Me.sp_Kill.Controls.Add(Me.strHostName_Kill)
+        Me.sp_Kill.Controls.Add(Me.chkExecuteKills_Kill)
+        Me.sp_Kill.Controls.Add(Me.strDatabaseName_Kill)
+        Me.sp_Kill.Controls.Add(Me.strAppName_Kill)
+        Me.sp_Kill.Controls.Add(Me.strLoginName_Kill)
+        Me.sp_Kill.Controls.Add(Me.intSPID_Kill)
+        Me.sp_Kill.Controls.Add(Me.lblRequestsOlderThanSeconds_Kill)
+        Me.sp_Kill.Controls.Add(Me.lblHasopenTran_Kill)
+        Me.sp_Kill.Controls.Add(Me.lblOmitLogin_Kill)
+        Me.sp_Kill.Controls.Add(Me.lblSPIDState_Kill)
+        Me.sp_Kill.Controls.Add(Me.lblOrderBy_Kill)
+        Me.sp_Kill.Controls.Add(Me.lblReadOnly_Kill)
+        Me.sp_Kill.Controls.Add(Me.lblLeadBlockers_Kill)
+        Me.sp_Kill.Controls.Add(Me.lblHostName_Kill)
+        Me.sp_Kill.Controls.Add(Me.lblDatabaseName_Kill)
+        Me.sp_Kill.Controls.Add(Me.lblAppName_Kill)
+        Me.sp_Kill.Controls.Add(Me.lblLoginName_Kill)
+        Me.sp_Kill.Controls.Add(Me.lblSPID_Kill)
+        Me.sp_Kill.Controls.Add(Me.lblExecuteKills_Kill)
+        Me.sp_Kill.Controls.Add(Me.lblOutputTableName_Kill)
+        Me.sp_Kill.Controls.Add(Me.lblOutputSchemaName_Kill)
+        Me.sp_Kill.Controls.Add(Me.lblOutputDatabaseName_Kill)
+        Me.sp_Kill.Location = New System.Drawing.Point(4, 22)
+        Me.sp_Kill.Name = "sp_Kill"
+        Me.sp_Kill.Size = New System.Drawing.Size(1355, 172)
+        Me.sp_Kill.TabIndex = 10
+        Me.sp_Kill.Text = "Parameters Kill"
+        Me.sp_Kill.UseVisualStyleBackColor = True
+        '
+        'strOutputDatabaseName_Kill
+        '
+        Me.strOutputDatabaseName_Kill.Location = New System.Drawing.Point(1089, 9)
+        Me.strOutputDatabaseName_Kill.Name = "strOutputDatabaseName_Kill"
+        Me.strOutputDatabaseName_Kill.Size = New System.Drawing.Size(136, 20)
+        Me.strOutputDatabaseName_Kill.TabIndex = 83
+        Me.strOutputDatabaseName_Kill.Tag = "OutputDatabaseName"
+        '
+        'strOutputSchemaName_Kill
+        '
+        Me.strOutputSchemaName_Kill.Location = New System.Drawing.Point(1089, 36)
+        Me.strOutputSchemaName_Kill.Name = "strOutputSchemaName_Kill"
+        Me.strOutputSchemaName_Kill.Size = New System.Drawing.Size(136, 20)
+        Me.strOutputSchemaName_Kill.TabIndex = 84
+        Me.strOutputSchemaName_Kill.Tag = "OutputSchemaName"
+        '
+        'strOutputTableName_Kill
+        '
+        Me.strOutputTableName_Kill.Location = New System.Drawing.Point(1089, 64)
+        Me.strOutputTableName_Kill.Name = "strOutputTableName_Kill"
+        Me.strOutputTableName_Kill.Size = New System.Drawing.Size(136, 20)
+        Me.strOutputTableName_Kill.TabIndex = 85
+        Me.strOutputTableName_Kill.Tag = "OutputTableName"
+        '
+        'intRequestsOlderThanSeconds_Kill
+        '
+        Me.intRequestsOlderThanSeconds_Kill.Location = New System.Drawing.Point(503, 148)
+        Me.intRequestsOlderThanSeconds_Kill.Name = "intRequestsOlderThanSeconds_Kill"
+        Me.intRequestsOlderThanSeconds_Kill.Size = New System.Drawing.Size(136, 20)
+        Me.intRequestsOlderThanSeconds_Kill.TabIndex = 82
+        Me.intRequestsOlderThanSeconds_Kill.Tag = "RequestsOlderThanSeconds"
+        '
+        'chkHasOpenTran_Kill
+        '
+        Me.chkHasOpenTran_Kill.AutoSize = True
+        Me.chkHasOpenTran_Kill.Location = New System.Drawing.Point(503, 130)
+        Me.chkHasOpenTran_Kill.Name = "chkHasOpenTran_Kill"
+        Me.chkHasOpenTran_Kill.Size = New System.Drawing.Size(232, 17)
+        Me.chkHasOpenTran_Kill.TabIndex = 81
+        Me.chkHasOpenTran_Kill.Tag = "HasopenTran;NULL"
+        Me.chkHasOpenTran_Kill.Text = "Only target sessions with open transactions."
+        Me.chkHasOpenTran_Kill.UseVisualStyleBackColor = True
+        '
+        'strOmitLogin_Kill
+        '
+        Me.strOmitLogin_Kill.Location = New System.Drawing.Point(503, 104)
+        Me.strOmitLogin_Kill.Name = "strOmitLogin_Kill"
+        Me.strOmitLogin_Kill.Size = New System.Drawing.Size(136, 20)
+        Me.strOmitLogin_Kill.TabIndex = 80
+        Me.strOmitLogin_Kill.Tag = "OmitLogin"
+        '
+        'ddlSPIDState_Kill
+        '
+        Me.ddlSPIDState_Kill.FormattingEnabled = True
+        Me.ddlSPIDState_Kill.Items.AddRange(New Object() {"Null (Default)", "S = only sleeping sessions", "R = only running sessions"})
+        Me.ddlSPIDState_Kill.Location = New System.Drawing.Point(503, 80)
+        Me.ddlSPIDState_Kill.Name = "ddlSPIDState_Kill"
+        Me.ddlSPIDState_Kill.Size = New System.Drawing.Size(174, 21)
+        Me.ddlSPIDState_Kill.TabIndex = 79
+        Me.ddlSPIDState_Kill.Tag = "SPIDState;NULL"
+        '
+        'ddlOrderBy_Kill
+        '
+        Me.ddlOrderBy_Kill.FormattingEnabled = True
+        Me.ddlOrderBy_Kill.Items.AddRange(New Object() {"Duration (Default)", "CPU", "Reads", "Writes", "TempDB", "Transactions"})
+        Me.ddlOrderBy_Kill.Location = New System.Drawing.Point(503, 56)
+        Me.ddlOrderBy_Kill.Name = "ddlOrderBy_Kill"
+        Me.ddlOrderBy_Kill.Size = New System.Drawing.Size(174, 21)
+        Me.ddlOrderBy_Kill.TabIndex = 78
+        Me.ddlOrderBy_Kill.Tag = "OrderBy;Duration"
+        '
+        'chkReadOnly_Kill
+        '
+        Me.chkReadOnly_Kill.AutoSize = True
+        Me.chkReadOnly_Kill.Location = New System.Drawing.Point(503, 37)
+        Me.chkReadOnly_Kill.Name = "chkReadOnly_Kill"
+        Me.chkReadOnly_Kill.Size = New System.Drawing.Size(265, 17)
+        Me.chkReadOnly_Kill.TabIndex = 77
+        Me.chkReadOnly_Kill.Tag = "ReadOnly;NULL"
+        Me.chkReadOnly_Kill.Text = "Only kill read-only queries (SELECT with no writes)."
+        Me.chkReadOnly_Kill.UseVisualStyleBackColor = True
+        '
+        'chkLeadBlockers_Kill
+        '
+        Me.chkLeadBlockers_Kill.AutoSize = True
+        Me.chkLeadBlockers_Kill.Location = New System.Drawing.Point(503, 13)
+        Me.chkLeadBlockers_Kill.Name = "chkLeadBlockers_Kill"
+        Me.chkLeadBlockers_Kill.Size = New System.Drawing.Size(387, 17)
+        Me.chkLeadBlockers_Kill.TabIndex = 76
+        Me.chkLeadBlockers_Kill.Tag = "LeadBlockers;NULL"
+        Me.chkLeadBlockers_Kill.Text = "Kill only lead blockers (sessions blocking others but not blocked themselves)."
+        Me.chkLeadBlockers_Kill.UseVisualStyleBackColor = True
+        '
+        'strHostName_Kill
+        '
+        Me.strHostName_Kill.Location = New System.Drawing.Point(100, 131)
+        Me.strHostName_Kill.Name = "strHostName_Kill"
+        Me.strHostName_Kill.Size = New System.Drawing.Size(136, 20)
+        Me.strHostName_Kill.TabIndex = 75
+        Me.strHostName_Kill.Tag = "HostName"
+        '
+        'chkExecuteKills_Kill
+        '
+        Me.chkExecuteKills_Kill.AutoSize = True
+        Me.chkExecuteKills_Kill.Location = New System.Drawing.Point(100, 11)
+        Me.chkExecuteKills_Kill.Name = "chkExecuteKills_Kill"
+        Me.chkExecuteKills_Kill.Size = New System.Drawing.Size(212, 17)
+        Me.chkExecuteKills_Kill.TabIndex = 70
+        Me.chkExecuteKills_Kill.Tag = "ExecuteKills;0"
+        Me.chkExecuteKills_Kill.Text = "Actually kill the recommended sessions."
+        Me.chkExecuteKills_Kill.UseVisualStyleBackColor = True
+        '
+        'strDatabaseName_Kill
+        '
+        Me.strDatabaseName_Kill.Location = New System.Drawing.Point(100, 105)
+        Me.strDatabaseName_Kill.Name = "strDatabaseName_Kill"
+        Me.strDatabaseName_Kill.Size = New System.Drawing.Size(136, 20)
+        Me.strDatabaseName_Kill.TabIndex = 74
+        Me.strDatabaseName_Kill.Tag = "DatabaseName"
+        '
+        'strAppName_Kill
+        '
+        Me.strAppName_Kill.Location = New System.Drawing.Point(100, 81)
+        Me.strAppName_Kill.Name = "strAppName_Kill"
+        Me.strAppName_Kill.Size = New System.Drawing.Size(136, 20)
+        Me.strAppName_Kill.TabIndex = 73
+        Me.strAppName_Kill.Tag = "AppName"
+        '
+        'strLoginName_Kill
+        '
+        Me.strLoginName_Kill.Location = New System.Drawing.Point(100, 57)
+        Me.strLoginName_Kill.Name = "strLoginName_Kill"
+        Me.strLoginName_Kill.Size = New System.Drawing.Size(136, 20)
+        Me.strLoginName_Kill.TabIndex = 72
+        Me.strLoginName_Kill.Tag = "LoginName"
+        '
+        'intSPID_Kill
+        '
+        Me.intSPID_Kill.Location = New System.Drawing.Point(100, 34)
+        Me.intSPID_Kill.Name = "intSPID_Kill"
+        Me.intSPID_Kill.Size = New System.Drawing.Size(136, 20)
+        Me.intSPID_Kill.TabIndex = 71
+        Me.intSPID_Kill.Tag = "SPID"
+        '
+        'lblRequestsOlderThanSeconds_Kill
+        '
+        Me.lblRequestsOlderThanSeconds_Kill.AutoSize = True
+        Me.lblRequestsOlderThanSeconds_Kill.Location = New System.Drawing.Point(354, 149)
+        Me.lblRequestsOlderThanSeconds_Kill.Name = "lblRequestsOlderThanSeconds_Kill"
+        Me.lblRequestsOlderThanSeconds_Kill.Size = New System.Drawing.Size(147, 13)
+        Me.lblRequestsOlderThanSeconds_Kill.TabIndex = 69
+        Me.lblRequestsOlderThanSeconds_Kill.Text = "RequestsOlderThanSeconds:"
+        '
+        'lblHasopenTran_Kill
+        '
+        Me.lblHasopenTran_Kill.AutoSize = True
+        Me.lblHasopenTran_Kill.Location = New System.Drawing.Point(354, 130)
+        Me.lblHasopenTran_Kill.Name = "lblHasopenTran_Kill"
+        Me.lblHasopenTran_Kill.Size = New System.Drawing.Size(77, 13)
+        Me.lblHasopenTran_Kill.TabIndex = 68
+        Me.lblHasopenTran_Kill.Text = "HasOpenTran:"
+        '
+        'lblOmitLogin_Kill
+        '
+        Me.lblOmitLogin_Kill.AutoSize = True
+        Me.lblOmitLogin_Kill.Location = New System.Drawing.Point(354, 105)
+        Me.lblOmitLogin_Kill.Name = "lblOmitLogin_Kill"
+        Me.lblOmitLogin_Kill.Size = New System.Drawing.Size(57, 13)
+        Me.lblOmitLogin_Kill.TabIndex = 67
+        Me.lblOmitLogin_Kill.Text = "OmitLogin:"
+        '
+        'lblSPIDState_Kill
+        '
+        Me.lblSPIDState_Kill.AutoSize = True
+        Me.lblSPIDState_Kill.Location = New System.Drawing.Point(354, 84)
+        Me.lblSPIDState_Kill.Name = "lblSPIDState_Kill"
+        Me.lblSPIDState_Kill.Size = New System.Drawing.Size(60, 13)
+        Me.lblSPIDState_Kill.TabIndex = 66
+        Me.lblSPIDState_Kill.Text = "SPIDState:"
+        '
+        'lblOrderBy_Kill
+        '
+        Me.lblOrderBy_Kill.AutoSize = True
+        Me.lblOrderBy_Kill.Location = New System.Drawing.Point(354, 60)
+        Me.lblOrderBy_Kill.Name = "lblOrderBy_Kill"
+        Me.lblOrderBy_Kill.Size = New System.Drawing.Size(48, 13)
+        Me.lblOrderBy_Kill.TabIndex = 65
+        Me.lblOrderBy_Kill.Text = "OrderBy:"
+        '
+        'lblReadOnly_Kill
+        '
+        Me.lblReadOnly_Kill.AutoSize = True
+        Me.lblReadOnly_Kill.Location = New System.Drawing.Point(354, 36)
+        Me.lblReadOnly_Kill.Name = "lblReadOnly_Kill"
+        Me.lblReadOnly_Kill.Size = New System.Drawing.Size(57, 13)
+        Me.lblReadOnly_Kill.TabIndex = 64
+        Me.lblReadOnly_Kill.Text = "ReadOnly:"
+        '
+        'lblLeadBlockers_Kill
+        '
+        Me.lblLeadBlockers_Kill.AutoSize = True
+        Me.lblLeadBlockers_Kill.Location = New System.Drawing.Point(354, 12)
+        Me.lblLeadBlockers_Kill.Name = "lblLeadBlockers_Kill"
+        Me.lblLeadBlockers_Kill.Size = New System.Drawing.Size(75, 13)
+        Me.lblLeadBlockers_Kill.TabIndex = 63
+        Me.lblLeadBlockers_Kill.Text = "LeadBlockers:"
+        '
+        'lblHostName_Kill
+        '
+        Me.lblHostName_Kill.AutoSize = True
+        Me.lblHostName_Kill.Location = New System.Drawing.Point(10, 134)
+        Me.lblHostName_Kill.Name = "lblHostName_Kill"
+        Me.lblHostName_Kill.Size = New System.Drawing.Size(60, 13)
+        Me.lblHostName_Kill.TabIndex = 62
+        Me.lblHostName_Kill.Text = "HostName:"
+        '
+        'lblDatabaseName_Kill
+        '
+        Me.lblDatabaseName_Kill.AutoSize = True
+        Me.lblDatabaseName_Kill.Location = New System.Drawing.Point(10, 108)
+        Me.lblDatabaseName_Kill.Name = "lblDatabaseName_Kill"
+        Me.lblDatabaseName_Kill.Size = New System.Drawing.Size(84, 13)
+        Me.lblDatabaseName_Kill.TabIndex = 61
+        Me.lblDatabaseName_Kill.Text = "DatabaseName:"
+        '
+        'lblAppName_Kill
+        '
+        Me.lblAppName_Kill.AutoSize = True
+        Me.lblAppName_Kill.Location = New System.Drawing.Point(10, 83)
+        Me.lblAppName_Kill.Name = "lblAppName_Kill"
+        Me.lblAppName_Kill.Size = New System.Drawing.Size(57, 13)
+        Me.lblAppName_Kill.TabIndex = 60
+        Me.lblAppName_Kill.Text = "AppName:"
+        '
+        'lblLoginName_Kill
+        '
+        Me.lblLoginName_Kill.AutoSize = True
+        Me.lblLoginName_Kill.Location = New System.Drawing.Point(10, 59)
+        Me.lblLoginName_Kill.Name = "lblLoginName_Kill"
+        Me.lblLoginName_Kill.Size = New System.Drawing.Size(64, 13)
+        Me.lblLoginName_Kill.TabIndex = 59
+        Me.lblLoginName_Kill.Text = "LoginName:"
+        '
+        'lblSPID_Kill
+        '
+        Me.lblSPID_Kill.AutoSize = True
+        Me.lblSPID_Kill.Location = New System.Drawing.Point(10, 36)
+        Me.lblSPID_Kill.Name = "lblSPID_Kill"
+        Me.lblSPID_Kill.Size = New System.Drawing.Size(35, 13)
+        Me.lblSPID_Kill.TabIndex = 58
+        Me.lblSPID_Kill.Text = "SPID:"
+        '
+        'lblExecuteKills_Kill
+        '
+        Me.lblExecuteKills_Kill.AutoSize = True
+        Me.lblExecuteKills_Kill.Location = New System.Drawing.Point(10, 12)
+        Me.lblExecuteKills_Kill.Name = "lblExecuteKills_Kill"
+        Me.lblExecuteKills_Kill.Size = New System.Drawing.Size(67, 13)
+        Me.lblExecuteKills_Kill.TabIndex = 56
+        Me.lblExecuteKills_Kill.Text = "ExecuteKills:"
+        '
+        'lblOutputTableName_Kill
+        '
+        Me.lblOutputTableName_Kill.AutoSize = True
+        Me.lblOutputTableName_Kill.Location = New System.Drawing.Point(944, 68)
+        Me.lblOutputTableName_Kill.Name = "lblOutputTableName_Kill"
+        Me.lblOutputTableName_Kill.Size = New System.Drawing.Size(97, 13)
+        Me.lblOutputTableName_Kill.TabIndex = 55
+        Me.lblOutputTableName_Kill.Text = "OutputTableName:"
+        '
+        'lblOutputSchemaName_Kill
+        '
+        Me.lblOutputSchemaName_Kill.AutoSize = True
+        Me.lblOutputSchemaName_Kill.Location = New System.Drawing.Point(944, 40)
+        Me.lblOutputSchemaName_Kill.Name = "lblOutputSchemaName_Kill"
+        Me.lblOutputSchemaName_Kill.Size = New System.Drawing.Size(109, 13)
+        Me.lblOutputSchemaName_Kill.TabIndex = 53
+        Me.lblOutputSchemaName_Kill.Text = "OutputSchemaName:"
+        '
+        'lblOutputDatabaseName_Kill
+        '
+        Me.lblOutputDatabaseName_Kill.AutoSize = True
+        Me.lblOutputDatabaseName_Kill.Location = New System.Drawing.Point(944, 13)
+        Me.lblOutputDatabaseName_Kill.Name = "lblOutputDatabaseName_Kill"
+        Me.lblOutputDatabaseName_Kill.Size = New System.Drawing.Size(116, 13)
+        Me.lblOutputDatabaseName_Kill.TabIndex = 51
+        Me.lblOutputDatabaseName_Kill.Text = "OutputDatabaseName:"
+        '
         'cmdExportToExcel
         '
         Me.cmdExportToExcel.Location = New System.Drawing.Point(446, 261)
@@ -2675,26 +3059,6 @@ Partial Class BlitzDesktop
         Me.lblDatabasesNotSelectable.TabIndex = 31
         Me.lblDatabasesNotSelectable.Text = "Not available since sprocs are not in the master database."
         '
-        'ddlAI_BlitzCache
-        '
-        Me.ddlAI_BlitzCache.FormattingEnabled = True
-        Me.ddlAI_BlitzCache.Items.AddRange(New Object() {"0 (Default)", "2 (Build prompt)"})
-        Me.ddlAI_BlitzCache.Location = New System.Drawing.Point(292, 127)
-        Me.ddlAI_BlitzCache.Name = "ddlAI_BlitzCache"
-        Me.ddlAI_BlitzCache.Size = New System.Drawing.Size(299, 21)
-        Me.ddlAI_BlitzCache.TabIndex = 59
-        Me.ddlAI_BlitzCache.Tag = "AI;Default"
-        Me.ddlAI_BlitzCache.Text = "0 (Default)"
-        '
-        'lblAI_BlitzCache
-        '
-        Me.lblAI_BlitzCache.AutoSize = True
-        Me.lblAI_BlitzCache.Location = New System.Drawing.Point(196, 129)
-        Me.lblAI_BlitzCache.Name = "lblAI_BlitzCache"
-        Me.lblAI_BlitzCache.Size = New System.Drawing.Size(20, 13)
-        Me.lblAI_BlitzCache.TabIndex = 58
-        Me.lblAI_BlitzCache.Text = "AI:"
-        '
         'BlitzDesktop
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2739,6 +3103,8 @@ Partial Class BlitzDesktop
         Me.sp_BlitzQueryStore.PerformLayout()
         Me.sp_BlitzWho.ResumeLayout(False)
         Me.sp_BlitzWho.PerformLayout()
+        Me.sp_Kill.ResumeLayout(False)
+        Me.sp_Kill.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -2972,4 +3338,37 @@ Partial Class BlitzDesktop
     Friend WithEvents lblUsualDBOwner_Blitz As Label
     Friend WithEvents ddlAI_BlitzCache As ComboBox
     Friend WithEvents lblAI_BlitzCache As Label
+    Friend WithEvents sp_Kill As TabPage
+    Friend WithEvents lblOutputTableName_Kill As Label
+    Friend WithEvents lblOutputSchemaName_Kill As Label
+    Friend WithEvents lblOutputDatabaseName_Kill As Label
+    Friend WithEvents lblSPID_Kill As Label
+    Friend WithEvents lblExecuteKills_Kill As Label
+    Friend WithEvents lblHostName_Kill As Label
+    Friend WithEvents lblDatabaseName_Kill As Label
+    Friend WithEvents lblAppName_Kill As Label
+    Friend WithEvents lblLoginName_Kill As Label
+    Friend WithEvents lblReadOnly_Kill As Label
+    Friend WithEvents lblLeadBlockers_Kill As Label
+    Friend WithEvents lblOmitLogin_Kill As Label
+    Friend WithEvents lblSPIDState_Kill As Label
+    Friend WithEvents lblOrderBy_Kill As Label
+    Friend WithEvents strDatabaseName_Kill As TextBox
+    Friend WithEvents strAppName_Kill As TextBox
+    Friend WithEvents strLoginName_Kill As TextBox
+    Friend WithEvents intSPID_Kill As TextBox
+    Friend WithEvents lblRequestsOlderThanSeconds_Kill As Label
+    Friend WithEvents lblHasopenTran_Kill As Label
+    Friend WithEvents chkExecuteKills_Kill As CheckBox
+    Friend WithEvents chkReadOnly_Kill As CheckBox
+    Friend WithEvents chkLeadBlockers_Kill As CheckBox
+    Friend WithEvents strHostName_Kill As TextBox
+    Friend WithEvents strOmitLogin_Kill As TextBox
+    Friend WithEvents ddlSPIDState_Kill As ComboBox
+    Friend WithEvents ddlOrderBy_Kill As ComboBox
+    Friend WithEvents chkHasOpenTran_Kill As CheckBox
+    Friend WithEvents strOutputDatabaseName_Kill As TextBox
+    Friend WithEvents strOutputSchemaName_Kill As TextBox
+    Friend WithEvents strOutputTableName_Kill As TextBox
+    Friend WithEvents intRequestsOlderThanSeconds_Kill As TextBox
 End Class
