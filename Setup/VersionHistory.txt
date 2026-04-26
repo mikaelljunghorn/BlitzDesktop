@@ -1,3 +1,6 @@
+26.4.1
+Added support for sp_Kill.
+
 26.2.1
 New parameter "AI" for sp_BlitzCache.
 I have intentionally excluded parameter value = 1 for now.
