@@ -1,3 +1,6 @@
+26.4.2
+Fixed some minor issues.
+
 26.4.1
 Added support for sp_Kill.
 
