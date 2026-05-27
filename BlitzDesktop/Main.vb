@@ -803,7 +803,7 @@ Public Class BlitzDesktop
                 paramName = ddl.Tag.ToString().Split(";").First()
                 defaultValue = ddl.Tag.ToString().Split(";").Last()
 
-                If ddl.SelectedItem = "<All>" Then
+                If (ddl.SelectedItem = "< All >") Or (ddl.SelectedItem = "< Select >") Then
                     Continue For
                 End If
 
@@ -837,7 +837,7 @@ Public Class BlitzDesktop
                     Case "sp_BlitzAnalysis"
 
                         If (ddl.Name.StartsWith("ddlOutputTableName")) Then
-                            If (ddl.SelectedItem <> "<Select>") Then
+                            If (ddl.SelectedItem <> "< Select >") Then
                                 returnString &= "@" & paramName & " = '" & selectedItem & "', "
                             End If
                         Else
@@ -852,7 +852,7 @@ Public Class BlitzDesktop
 
                         Select Case ddl.Name
                             Case "ddlStoredProcName_BlitzCache"
-                                If ddlStoredProcName_BlitzCache.SelectedItem <> "<Select>" Then
+                                If ddlStoredProcName_BlitzCache.SelectedItem <> "< Select >" Then
                                     returnString &= "@" & paramName & " = '" & selectedItem & "', "
                                 End If
                             Case Else
@@ -865,7 +865,7 @@ Public Class BlitzDesktop
 
                             Case "ddlTableName_BlitzIndex"
                                 If chkGetAllDatabases_BlitzIndex.Checked = False Then
-                                    If Not selectedItem = "<Select>" Then
+                                    If Not selectedItem = "< Select >" Then
                                         returnString &= "@DatabaseName = '" & ddlDatabaseName_BlitzIndex.SelectedItem & "', "
                                         returnString &= "@SchemaName = '" & ddlSchemaName_BlitzIndex.SelectedItem & "', "
                                         returnString &= "@" & paramName & " = '" & selectedItem & "', "
@@ -920,7 +920,7 @@ Public Class BlitzDesktop
                     Case "sp_BlitzLock"
 
                         If ddl.Name = "ddlTableName_Internal_BlitzLock" Then
-                            If Not selectedItem = "<Select>" Then
+                            If Not selectedItem = "< Select >" Then
                                 returnString &= String.Format("@ObjectName = '{0}.{1}.{2}', ",
                                                               ddlDatabaseName_BlitzLock.SelectedItem,
                                                               ddlSchemaName_Internal_BlitzLock.SelectedItem,
@@ -929,7 +929,7 @@ Public Class BlitzDesktop
                         End If
 
                         If ddl.Name = "ddlStoredProcName_BlitzLock" Then
-                            If Not selectedItem = "<Select>" Then
+                            If Not selectedItem = "< Select >" Then
                                 returnString &= String.Format("@StoredProcName = '{0}.{1}.{2}', ",
                                                               ddlDatabaseName_BlitzLock.SelectedItem,
                                                               ddlSchemaName_Internal_BlitzLock.SelectedItem,
@@ -938,7 +938,7 @@ Public Class BlitzDesktop
                         End If
 
                         If ddl.Name = "ddlDeadlockType_BlitzLock" Then
-                            If Not selectedItem = "<Select>" Then
+                            If Not selectedItem = "< Select >" Then
                                 returnString &= String.Format("@DeadlockType = '{0}', ",
                                                               ddlDeadlockType_BlitzLock.SelectedItem)
                             End If
@@ -947,10 +947,10 @@ Public Class BlitzDesktop
                     Case "sp_BlitzQueryStore"
 
                         If ddl.Name = "ddlDatabaseName_BlitzQueryStore" Then
-                            If Not selectedItem = "<Select>" Then
+                            If Not selectedItem = "< Select >" Then
                                 returnString &= String.Format("@DatabaseName = '{0}', ",
                                                               ddlDatabaseName_BlitzQueryStore.SelectedItem)
-                                If ddlStoredProcName_BlitzQueryStore.SelectedItem <> "<All>" Then
+                                If ddlStoredProcName_BlitzQueryStore.SelectedItem <> "< All >" Then
                                     returnString &= String.Format("@StoredProcName = '{0}', ",
                                                                   ddlStoredProcName_BlitzQueryStore.SelectedItem)
                                 End If
