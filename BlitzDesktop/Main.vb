@@ -919,6 +919,11 @@ Public Class BlitzDesktop
 
                     Case "sp_BlitzLock"
 
+                        If ddl.Name = "ddlDatabaseName_BlitzLock" Then
+                            returnString &= String.Format("@DatabaseName = '{0}', ",
+                                                          ddlDatabaseName_BlitzLock.SelectedItem)
+                        End If
+
                         If ddl.Name = "ddlTableName_Internal_BlitzLock" Then
                             If Not selectedItem = "< Select >" Then
                                 returnString &= String.Format("@ObjectName = '{0}.{1}.{2}', ",
