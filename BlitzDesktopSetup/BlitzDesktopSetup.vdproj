@@ -64,7 +64,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_358858E0680DE2385A56670565BE6690"
+        "OwnerKey" = "8:_49653CEC6C8327615169A92643507887"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -76,7 +76,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_49653CEC6C8327615169A92643507887"
+        "OwnerKey" = "8:_358858E0680DE2385A56670565BE6690"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -201,6 +201,11 @@
             "AssemblyAsmDisplayName" = "8:System.Threading.Tasks, Version=4.0.11.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
+                    "_358858E0680DE2385A56670565BE6690"
+                    {
+                    "Name" = "8:System.Threading.Tasks.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:System.Threading.Tasks.dll"
             "TargetName" = "8:"
@@ -247,6 +252,11 @@
             "AssemblyAsmDisplayName" = "8:Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_49653CEC6C8327615169A92643507887"
+                    {
+                    "Name" = "8:Newtonsoft.Json.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:Newtonsoft.Json.dll"
             "TargetName" = "8:"
@@ -293,6 +303,11 @@
             "AssemblyAsmDisplayName" = "8:EPPlus, Version=3.1.3.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_C8E780063463E7621CDC68D29B6FD589"
+                    {
+                    "Name" = "8:EPPlus.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:EPPlus.dll"
             "TargetName" = "8:"
@@ -379,15 +394,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:BlitzDesktop"
-        "ProductCode" = "8:{7982D9D0-6016-44A6-9A22-4C304F6F8405}"
-        "PackageCode" = "8:{0A215958-44C4-4794-9289-4C8823383454}"
+        "ProductCode" = "8:{79A51C76-16C2-4B36-B5E5-B65390636D96}"
+        "PackageCode" = "8:{29B0FC75-AA2D-40E3-AB3A-C088B821EF6A}"
         "UpgradeCode" = "8:{0C752D49-A828-401A-8196-75484D134DFF}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:26.4.3"
+        "ProductVersion" = "8:26.7.1"
         "Manufacturer" = "8:Mikael Ljunghorn"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"

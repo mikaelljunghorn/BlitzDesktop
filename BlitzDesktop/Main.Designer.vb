@@ -125,6 +125,8 @@ Partial Class BlitzDesktop
         Me.intTop_BlitzCache = New System.Windows.Forms.TextBox()
         Me.lblTop_BlitzCache = New System.Windows.Forms.Label()
         Me.sp_BlitzFirst = New System.Windows.Forms.TabPage()
+        Me.ddlEmergencyMode_BlitzFirst = New System.Windows.Forms.ComboBox()
+        Me.lblEmergencyMode_BlitzFirst = New System.Windows.Forms.Label()
         Me.ddlExpertMode_BlitzFirst = New System.Windows.Forms.ComboBox()
         Me.lblExportMode_BlitzFirst = New System.Windows.Forms.Label()
         Me.chkBlitzWhoEnd_BlitzFirst = New System.Windows.Forms.CheckBox()
@@ -284,6 +286,9 @@ Partial Class BlitzDesktop
         Me.lblSelectDatabase = New System.Windows.Forms.Label()
         Me.ddlDatabases = New System.Windows.Forms.ComboBox()
         Me.lblDatabasesNotSelectable = New System.Windows.Forms.Label()
+        Me.strThresholdMB_BlitzIndex = New System.Windows.Forms.TextBox()
+        Me.lblThresholdMB_BlitzIndex = New System.Windows.Forms.Label()
+        Me.chkSkipExecutionPlans_BlitzLock = New System.Windows.Forms.CheckBox()
         CType(Me.dgvResults, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tcFilters.SuspendLayout()
         Me.sp_Blitz.SuspendLayout()
@@ -1379,6 +1384,8 @@ Partial Class BlitzDesktop
         '
         'sp_BlitzFirst
         '
+        Me.sp_BlitzFirst.Controls.Add(Me.ddlEmergencyMode_BlitzFirst)
+        Me.sp_BlitzFirst.Controls.Add(Me.lblEmergencyMode_BlitzFirst)
         Me.sp_BlitzFirst.Controls.Add(Me.ddlExpertMode_BlitzFirst)
         Me.sp_BlitzFirst.Controls.Add(Me.lblExportMode_BlitzFirst)
         Me.sp_BlitzFirst.Controls.Add(Me.chkBlitzWhoEnd_BlitzFirst)
@@ -1411,10 +1418,29 @@ Partial Class BlitzDesktop
         Me.sp_BlitzFirst.Text = "Parameters BlitzFirst"
         Me.sp_BlitzFirst.UseVisualStyleBackColor = True
         '
+        'ddlEmergencyMode_BlitzFirst
+        '
+        Me.ddlEmergencyMode_BlitzFirst.FormattingEnabled = True
+        Me.ddlEmergencyMode_BlitzFirst.Items.AddRange(New Object() {"0", "1 (Default)"})
+        Me.ddlEmergencyMode_BlitzFirst.Location = New System.Drawing.Point(850, 9)
+        Me.ddlEmergencyMode_BlitzFirst.Name = "ddlEmergencyMode_BlitzFirst"
+        Me.ddlEmergencyMode_BlitzFirst.Size = New System.Drawing.Size(160, 21)
+        Me.ddlEmergencyMode_BlitzFirst.TabIndex = 68
+        Me.ddlEmergencyMode_BlitzFirst.Tag = "EmergencyMode;1"
+        '
+        'lblEmergencyMode_BlitzFirst
+        '
+        Me.lblEmergencyMode_BlitzFirst.AutoSize = True
+        Me.lblEmergencyMode_BlitzFirst.Location = New System.Drawing.Point(754, 14)
+        Me.lblEmergencyMode_BlitzFirst.Name = "lblEmergencyMode_BlitzFirst"
+        Me.lblEmergencyMode_BlitzFirst.Size = New System.Drawing.Size(90, 13)
+        Me.lblEmergencyMode_BlitzFirst.TabIndex = 67
+        Me.lblEmergencyMode_BlitzFirst.Text = "EmergencyMode:"
+        '
         'ddlExpertMode_BlitzFirst
         '
         Me.ddlExpertMode_BlitzFirst.FormattingEnabled = True
-        Me.ddlExpertMode_BlitzFirst.Items.AddRange(New Object() {"0", "1", "2 (Skip sp_BlitzWho)"})
+        Me.ddlExpertMode_BlitzFirst.Items.AddRange(New Object() {"0", "1", "2 (Skip sp_BlitzWho)", "3 (Include sp_BlitzWho)"})
         Me.ddlExpertMode_BlitzFirst.Location = New System.Drawing.Point(353, 10)
         Me.ddlExpertMode_BlitzFirst.Name = "ddlExpertMode_BlitzFirst"
         Me.ddlExpertMode_BlitzFirst.Size = New System.Drawing.Size(160, 21)
@@ -1692,6 +1718,8 @@ Partial Class BlitzDesktop
         '
         'sp_BlitzIndex
         '
+        Me.sp_BlitzIndex.Controls.Add(Me.strThresholdMB_BlitzIndex)
+        Me.sp_BlitzIndex.Controls.Add(Me.lblThresholdMB_BlitzIndex)
         Me.sp_BlitzIndex.Controls.Add(Me.Label3)
         Me.sp_BlitzIndex.Controls.Add(Me.Label1)
         Me.sp_BlitzIndex.Controls.Add(Me.ddlMode_BlitzIndex)
@@ -1928,6 +1956,7 @@ Partial Class BlitzDesktop
         '
         'sp_BlitzLock
         '
+        Me.sp_BlitzLock.Controls.Add(Me.chkSkipExecutionPlans_BlitzLock)
         Me.sp_BlitzLock.Controls.Add(Me.ddlDeadlockType_BlitzLock)
         Me.sp_BlitzLock.Controls.Add(Me.Label2)
         Me.sp_BlitzLock.Controls.Add(Me.dtpEndTime_BlitzLock)
@@ -2013,7 +2042,7 @@ Partial Class BlitzDesktop
         'chkExportToExcel_BlitzLock
         '
         Me.chkExportToExcel_BlitzLock.AutoSize = True
-        Me.chkExportToExcel_BlitzLock.Location = New System.Drawing.Point(372, 109)
+        Me.chkExportToExcel_BlitzLock.Location = New System.Drawing.Point(372, 140)
         Me.chkExportToExcel_BlitzLock.Name = "chkExportToExcel_BlitzLock"
         Me.chkExportToExcel_BlitzLock.Size = New System.Drawing.Size(95, 17)
         Me.chkExportToExcel_BlitzLock.TabIndex = 64
@@ -2025,7 +2054,7 @@ Partial Class BlitzDesktop
         'chkVictimsOnly_BlitzLock
         '
         Me.chkVictimsOnly_BlitzLock.AutoSize = True
-        Me.chkVictimsOnly_BlitzLock.Location = New System.Drawing.Point(372, 90)
+        Me.chkVictimsOnly_BlitzLock.Location = New System.Drawing.Point(372, 117)
         Me.chkVictimsOnly_BlitzLock.Name = "chkVictimsOnly_BlitzLock"
         Me.chkVictimsOnly_BlitzLock.Size = New System.Drawing.Size(80, 17)
         Me.chkVictimsOnly_BlitzLock.TabIndex = 63
@@ -3059,6 +3088,34 @@ Partial Class BlitzDesktop
         Me.lblDatabasesNotSelectable.TabIndex = 31
         Me.lblDatabasesNotSelectable.Text = "Not available since sprocs are not in the master database."
         '
+        'strThresholdMB_BlitzIndex
+        '
+        Me.strThresholdMB_BlitzIndex.Location = New System.Drawing.Point(992, 8)
+        Me.strThresholdMB_BlitzIndex.Name = "strThresholdMB_BlitzIndex"
+        Me.strThresholdMB_BlitzIndex.Size = New System.Drawing.Size(98, 20)
+        Me.strThresholdMB_BlitzIndex.TabIndex = 67
+        Me.strThresholdMB_BlitzIndex.Tag = "ThresholdMB"
+        '
+        'lblThresholdMB_BlitzIndex
+        '
+        Me.lblThresholdMB_BlitzIndex.AutoSize = True
+        Me.lblThresholdMB_BlitzIndex.Location = New System.Drawing.Point(895, 11)
+        Me.lblThresholdMB_BlitzIndex.Name = "lblThresholdMB_BlitzIndex"
+        Me.lblThresholdMB_BlitzIndex.Size = New System.Drawing.Size(82, 13)
+        Me.lblThresholdMB_BlitzIndex.TabIndex = 66
+        Me.lblThresholdMB_BlitzIndex.Text = "Threshold (MB):"
+        '
+        'chkSkipExecutionPlans_BlitzLock
+        '
+        Me.chkSkipExecutionPlans_BlitzLock.AutoSize = True
+        Me.chkSkipExecutionPlans_BlitzLock.Location = New System.Drawing.Point(372, 92)
+        Me.chkSkipExecutionPlans_BlitzLock.Name = "chkSkipExecutionPlans_BlitzLock"
+        Me.chkSkipExecutionPlans_BlitzLock.Size = New System.Drawing.Size(120, 17)
+        Me.chkSkipExecutionPlans_BlitzLock.TabIndex = 70
+        Me.chkSkipExecutionPlans_BlitzLock.Tag = "SkipExecutionPlans;0"
+        Me.chkSkipExecutionPlans_BlitzLock.Text = "SkipExecutionPlans"
+        Me.chkSkipExecutionPlans_BlitzLock.UseVisualStyleBackColor = True
+        '
         'BlitzDesktop
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -3371,4 +3428,9 @@ Partial Class BlitzDesktop
     Friend WithEvents strOutputSchemaName_Kill As TextBox
     Friend WithEvents strOutputTableName_Kill As TextBox
     Friend WithEvents intRequestsOlderThanSeconds_Kill As TextBox
+    Friend WithEvents ddlEmergencyMode_BlitzFirst As ComboBox
+    Friend WithEvents lblEmergencyMode_BlitzFirst As Label
+    Friend WithEvents strThresholdMB_BlitzIndex As TextBox
+    Friend WithEvents lblThresholdMB_BlitzIndex As Label
+    Friend WithEvents chkSkipExecutionPlans_BlitzLock As CheckBox
 End Class

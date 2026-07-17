@@ -108,6 +108,7 @@ Public Class BlitzDesktop
             ' BlitzFirst
             ddlOutputType_BlitzFirst.SelectedIndex = 0
             ddlExpertMode_BlitzFirst.SelectedIndex = 0
+            ddlEmergencyMode_BlitzFirst.SelectedIndex = 1
 
             ' BlitzIndex
             ddlSortDirection_BlitzIndex.SelectedIndex = 0
@@ -769,6 +770,15 @@ Public Class BlitzDesktop
                                                                dtpStartTime_BlitzLock.Value.ToString("HH:mm:ss"),
                                                                dtpEndDate_BlitzLock.Value.ToString("yyyy-MM-dd"),
                                                                dtpEndTime_BlitzLock.Value.ToString("HH:mm:ss"))
+                            End If
+                        Else
+                            ' If checked but default value is False (0)
+                            If (chk.Checked = True) AndAlso (chk.Tag.ToString().Split(";").Last() = 0) Then
+                                returnString &= "@" & paramName & " = 1, "
+                            End If
+                            ' If not checked but default value is True (1)
+                            If (chk.Checked = False) AndAlso (chk.Tag.ToString().Split(";").Last() = 1) Then
+                                returnString &= "@" & paramName & " = 0, "
                             End If
                         End If
 

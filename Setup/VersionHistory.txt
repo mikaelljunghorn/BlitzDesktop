@@ -1,3 +1,9 @@
+26.7.1
+New parameter @EmergencyMode for sp_BlitzFirst.
+Added option "3" for parameter @ExpertMode for sp_BlitzFirst.
+Added parameter @ThresholdMB for sp_BlitzIndex.
+New parameter @SkipExecutionPlans for sp_BlitzLock.
+
 26.4.3
 Parameter @DatabaseName was not triggered for sp_BlitzLock.
 
